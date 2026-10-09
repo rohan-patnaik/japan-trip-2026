@@ -89,6 +89,27 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
  .bk td:nth-child(6){grid-column:2/4;grid-row:4;font-size:13px;color:var(--mut)}
 }
 @media print{nav,#next{display:none}}
+.meal-intro{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}.meal-intro p{flex:1;min-width:240px;margin:0;padding:12px 14px;background:var(--chip);border-radius:8px;font-size:14px}
+#meal-chooser{margin:20px 0 24px;scroll-margin-top:110px}
+.meal-dates{display:flex;gap:7px;overflow-x:auto;padding:3px 0 10px;scrollbar-width:thin}
+.meal-dates button,.meal-periods button{padding:9px 12px;min-height:42px}
+.meal-dates button[aria-pressed=true]{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.meal-periods{display:flex;gap:6px;padding:10px 0;border-bottom:1px solid var(--line)}
+.meal-periods button[aria-pressed=true]{background:var(--acc2);border-color:var(--acc2);color:var(--bg)}
+#meal-chooser button:focus-visible,.meal-links a:focus-visible{outline:3px solid var(--acc2);outline-offset:3px}
+.meal-heading{padding:16px 0}.meal-heading h3{font-size:21px;margin:5px 0}.meal-route{color:var(--acc);font-size:12px;font-weight:600;margin:0}.meal-note{color:var(--mut);margin:4px 0 0;font-size:14px}
+.meal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.meal-option{display:flex;flex-direction:column;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:17px;min-width:0}
+.meal-number{font-size:10px;letter-spacing:.12em;color:var(--acc);font-weight:700}
+.meal-option h4{font-family:var(--serif);font-size:21px;line-height:1.25;margin:8px 0 6px;overflow-wrap:anywhere}
+.meal-area{font-size:12px;color:var(--mut);margin:0 0 14px}.meal-orders{display:grid;gap:10px;margin:0 0 12px}
+.meal-order{border-left:2px solid var(--line);padding-left:10px}.meal-order b{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--acc2)}.meal-order p{font-size:14px;margin:3px 0 0}
+.meal-price{font-size:13px;font-weight:600;margin:0 0 12px}.meal-status{align-self:flex-start;font-size:11px;background:var(--chip);border-radius:5px;padding:3px 7px}
+.meal-check{font-size:12.5px;color:var(--mut);margin:10px 0 14px}.meal-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:auto;font-size:12px}
+.meal-full-day{padding:10px 0;border-bottom:1px solid var(--line)}.meal-full-day summary{cursor:pointer;font-weight:600}.meal-full-day li{font-size:13px;margin:12px 0}.meal-guide{margin-top:28px}
+@media(max-width:1000px){.meal-grid{grid-template-columns:1fr}.meal-orders{grid-template-columns:1fr 1fr}.meal-option h4{font-size:20px}}
+@media(max-width:460px){.meal-orders{grid-template-columns:1fr}.meal-dates button{font-size:12px}.meal-intro p{min-width:0;flex-basis:100%}}
+@media print{.meal-dates,.meal-periods,.meal-panel{display:none}#meal-all-days,#meal-all-days details>*{display:block!important}.meal-full-day{break-inside:avoid}.meal-full-day li{font-size:10px}}
 </style>
 </head>
 <body data-mode="cheat">
@@ -96,7 +117,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
  <div class="bar">
   <b>🇯🇵 20–28 Nov</b>
   <div class="links">
-   <a href="#now">Now</a><a href="#book">Book</a><a href="#days">Days</a><a href="#fly">Flights·Hotels</a><a href="#move">Transit</a><a href="#food">Veg food</a><a href="#cash">Cards·Cash</a><a href="#money">Money</a><a href="#splurge">Splurge</a><a href="#shop">Shop</a>
+   <a href="#now">Now</a><a href="#book">Book</a><a href="#days">Days</a><a href="#fly">Flights·Hotels</a><a href="#move">Transit</a><a href="#food">Meals</a><a href="#cash">Cards·Cash</a><a href="#money">Money</a><a href="#splurge">Splurge</a><a href="#shop">Shop</a>
   </div>
   <div class="seg"><button id="mC" class="on">Cheat</button><button id="mE">Explained</button></div>
   <div class="wd"><div class="grp" title="Content width"><button id="wm" aria-label="Narrower">−</button><span id="wv">80%</span><button id="wp" aria-label="Wider">+</button></div><button id="fit" class="on" title="Wrap tables to fit the width (off: one line per cell, scroll sideways)">Fit tables</button></div>
@@ -177,7 +198,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td class="t">≈18:15</td><td>Check in</td><td>Walk 15–20 min, or taxi ≈¥1,000</td><td>n/a</td></tr>
 <tr><td class="t">19:30</td><td>Dinner, then Senso-ji temple lit up at night</td><td>Walk</td><td>Free</td></tr>
 </table></div>
-<div class="eat"><div><b>Dinner:</b> Gyumon Halal Ramen Asakusa. <b>Both: spicy vegan ramen 🌶</b>. The rest of the menu is wagyu (beef), so he should skip it. Open daily 12–22, ≈¥2,600 each.</div><div><b>Backup:</b> T's Tantan inside the Ueno station gates (vegan) or convenience-store salt onigiri.</div></div>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-20-breakfast">3 breakfast choices</a> · <a href="#meals-20-lunch">3 flight-lunch choices</a> · <a href="#meals-20-dinner">3 Asakusa dinner choices</a>, each with an order for both of you.</div><div><b>Dinner shortlist:</b> GYUMON’s vegan menu, Kaminoya’s vegan monja / okonomiyaki, or reserved Marugoto Vegan dinner. Regular chicken ramen at GYUMON can have beef broth.</div></div>
 <p class="x mut">You'll be up all night on the overnight flight, so keep this evening light. Message the property on Agoda that you'll arrive ≈18:30 (check-in time isn't on your confirmation).</p>
 </div>
 
@@ -193,7 +214,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td class="t">17:45</td><td><b>Shibuya PARCO 6F</b>: Pokémon Center, Nintendo TOKYO, JUMP SHOP</td><td>Walk 8 min. Open until 21:00</td><td>Shopping</td></tr>
 <tr><td class="t">20:15</td><td>Back to the hotel</td><td>Ginza Line → Ueno → Hibiya Line</td><td>≈¥520</td></tr>
 </table></div>
-<div class="eat"><div><b>Lunch:</b> Hitokokyu, 4 min from Mitaka Station. Vegan macrobiotic set ¥1,200–1,800. Cash only, ≈4 tables.</div><div><b>Dinner:</b> Jikasei Mensho, PARCO B1. Her: vegan tantanmen 🌶. Him: a non-beef ramen (chicken or pork; <b>not the wagyu</b>) ≈. ≈¥1,300. Queue ≈30 min.</div></div>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-21-breakfast">3 early breakfasts</a> · <a href="#meals-21-lunch">3 Mitaka / Kichijoji lunches</a> · <a href="#meals-21-dinner">3 Shibuya-area dinners</a>.</div><div><b>Lunch:</b> SORAE’s vegan Thai curry / bolognese, Crayonhouse’s vegan buffet dishes, or Hitokokyu after confirming operation. <b>Dinner:</b> MENSHO’s vegan bowls (his pork topping if confirmed), Jangara Harajuku or participating CoCo.</div></div>
 </div>
 
 <div class="card day"><h3><span>Sun 22 · Akihabara (AM) + Shin-chan (PM)</span></h3>
@@ -209,7 +230,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td class="t">17:45</td><td>Tokyo Station: Jump Shop (B1) and Dragon Ball Store (1F), Ichibangai. Open until 20:30 ✅</td><td>Walk inside the station</td><td>Shopping</td></tr>
 <tr><td class="t">20:30</td><td>Hotel, pack</td><td>JR → Ueno → Hibiya Line</td><td>≈¥520</td></tr>
 </table></div>
-<div class="eat"><div><b>Lunch:</b> Kyushu Jangara Akihabara. Her: vegan soy-sauce ramen (egg-free noodles). Him: tonkotsu (pork), and ask for it spicy (<i>karakuchi</i>). ≈¥1,200.</div><div><b>Dinner:</b> Soranoiro, Tokyo Station Ramen Street. Her: vegan tantanmen 🌶. Him: tantanmen or a chicken/pork ramen.</div></div>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-22-breakfast">3 breakfasts</a> · <a href="#meals-22-lunch">3 lunches before Kasukabe</a> · <a href="#meals-22-dinner">3 Tokyo Station-area dinners</a>.</div><div><b>Lunch:</b> T’s Tantan at ecute Akihabara is the simplest choice. <b>Jangara Akihabara is temporarily closed</b> (since 30 Sep). The Ueno lunch alternative requires a detour before returning to the Kasukabe route. <b>Dinner:</b> Soranoiro, T’s Tantan or Jangara Ginza.</div></div>
 <p class="x mut">Akihabara goes first because small shops close early in the evening and it's quieter in the morning. Radio Kaikan itself is open 10–20 ✅. Asakusa is calm before ≈10:00. LaLa Garden has no verified vegetarian dish, so lunch stays in Akihabara.</p>
 </div>
 
@@ -219,12 +240,12 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td class="t">08:15</td><td>Check out</td><td>Hibiya Line → Ueno → JR to Tokyo Station, or taxi ≈¥2,500</td><td>≈¥700</td></tr>
 <tr><td class="t">≈09:30</td><td><b>Nozomi, seats D+E</b> (Fuji side). Fuji appears ≈40–45 min after Tokyo</td><td>2 h 27 m</td><td>¥29,040 ✅</td></tr>
 <tr><td class="t">≈12:00</td><td>Shin-Osaka → Dobutsuen-mae</td><td>Midosuji Line, direct, ≈20 min. Leave bags at the hotel if they allow it</td><td>≈¥580</td></tr>
-<tr><td class="t">13:00</td><td>Lunch in Shinsekai</td><td>Walk</td><td>n/a</td></tr>
-<tr><td class="t">14:15</td><td><b>Den Den Town</b>: Mandarake Grand Chaos (opens 12:00), Animate, Super Potato</td><td>Sakaisuji Line to Ebisucho, 1 stop</td><td>Shopping</td></tr>
+<tr><td class="t">13:00</td><td>Lunch in Namba</td><td>Midosuji Line from Dobutsuen-mae, then walk; choose a confirmed veg menu</td><td>Metro extra</td></tr>
+<tr><td class="t">14:15</td><td><b>Den Den Town</b>: Mandarake Grand Chaos (opens 12:00), Animate, Super Potato</td><td>Walk from the Namba lunch stop</td><td>Shopping</td></tr>
 <tr><td class="t">16:30</td><td><b>Bic Camera Namba 3F</b>: Casio watch</td><td>Walk 10 min</td><td>See Shop</td></tr>
 <tr><td class="t">17:30</td><td>Check in (from 15:00)</td><td>Midosuji Line, Namba → Dobutsuen-mae</td><td>≈¥480</td></tr>
 </table></div>
-<div class="eat"><div><b>Train:</b> Him: ekiben (station bento) ≈¥1,200–1,800. Her: salt onigiri or a cheese sandwich from a convenience store (check the label for 卵, egg).</div><div><b>Lunch:</b> Kasu Udon Ebisuya 2nd shop. Her: vegan kombu-broth udon (ask about egg in the tempura batter). Him: shrimp tempura or chicken udon (<b>kasu udon is beef offal</b>). Add shichimi chilli 🌶.<br><b>Dinner:</b> Playpen Friends vegan ramen (closed Thursdays) or The Fire Bar, Namba.</div></div>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-23-breakfast">3 takeaway breakfasts</a> · <a href="#meals-23-lunch">3 Namba lunches</a> · <a href="#meals-23-dinner">3 Osaka dinners</a>.</div><div><b>Lunch:</b> Ryukishin RIZE’s named vegan ramen, GYUMON’s vegan section, or participating CoCo. <b>Dinner:</b> Paprika, The Fire or participating CoCo. These choices replace the unverified vegetarian udon suggestion.</div></div>
 </div>
 
 <div class="card day"><h3><span>Tue 24 · Kyoto: Inari, Higashiyama, teamLab</span></h3>
@@ -237,7 +258,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td class="t">16:30</td><td><b>teamLab Biovortex</b>, 7 min from the Hachijo East exit ✅</td><td>2–2.5 h. Indoors, so sunset doesn't matter ≈</td><td>¥7,600+ ✅</td></tr>
 <tr><td class="t">20:30</td><td>Back to the hotel</td><td>JR, ≈55 min</td><td>¥1,920</td></tr>
 </table></div>
-<div class="eat"><div><b>Lunch:</b> Uno Yukiko soy-milk ramen, Gion. Vegan, ≈¥1,200, 11–20:30. It's mild, so ask for chilli oil (<i>rāyu</i>) 🌶.</div><div><b>Dinner:</b> Uno Ramen, Kyoto Station 10F (vegan) or Kyoto Soba Morihei (her: yuba soba marked vegan, ask about the broth; him: tempura soba).</div></div>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-24-breakfast">3 pre-train breakfasts</a> · <a href="#meals-24-lunch">3 Kyoto lunches</a> · <a href="#meals-24-dinner">3 dinner choices</a>.</div><div><b>Lunch:</b> UNO Gion fits best; CHOICE near Sanjo or Veg Out near Shichijo add a detour. <b>Dinner:</b> UNO Kyoto Station, participating CoCo, or The Fire after returning to Osaka (later hotel arrival). Itadakizen is closed Tuesdays.</div></div>
 </div>
 
 <div class="card day"><h3><span>Wed 25 · ❤️ Anniversary: Arashiyama + Itadakizen</span></h3>
@@ -252,6 +273,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td class="t">20:00</td><td>Back to the hotel</td><td>Taxi to Kyoto Station (≈¥2,500) → JR</td><td>≈¥4,400</td></tr>
 </table></div>
 <p class="x mut">Arashiyama in peak autumn colours is very crowded after 10:00, so start early. Dinner is a full vegan feast, so the Tsuki lunch course is enough.</p>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-25-breakfast">3 light breakfasts</a> · <a href="#meals-25-lunch">3 anniversary lunch choices</a> · <a href="#meals-25-dinner">3 dinner choices</a>.</div><div><b>Main plan:</b> Shigetsu lunch + Itadakizen dinner, both subject to reservation. Alternatives are listed if you change the plan; no new bookings have been made.</div></div>
 </div>
 
 <div class="card day"><h3><span>Thu 26 · Universal Studios Japan (no Express Pass)</span></h3>
@@ -261,7 +283,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td class="t">Opening</td><td>Request <b>Area Timed Entry</b> in the app → Super Nintendo World (Mario Kart, Yoshi, Donkey Kong)</td><td>Use single-rider lines where available</td><td>Pass ≈¥18.8–23.8k ≈</td></tr>
 <tr><td class="t">≈20:00</td><td>Back to the hotel</td><td>JR</td><td>n/a</td></tr>
 </table></div>
-<div class="eat"><div><b>Lunch (in the park):</b> look for the green plant-based icon: no meat, fish, egg, dairy or honey ≈. Toad Cafe tomato spaghetti ¥2,500. Three Broomsticks vegetable stew ¥2,700.</div><div><b>Dinner:</b> Paprika Shokudo near the hotel (vegan, closes 21:00) or a convenience store.</div></div>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-26-breakfast">3 breakfasts before the queue</a> · <a href="#meals-26-lunch">3 in-park lunches</a> · <a href="#meals-26-dinner">3 in-park dinners</a>.</div><div><b>Her:</b> choose the official plant-based dishes at Kinopio’s Café, Three Broomsticks, SAIDO or Beverly Hills Boulangerie. <b>Him:</b> pork ribs, fish-and-chips or a confirmed chicken dish; skip beef burgers and beef-containing pie combinations. Eat dinner before leaving.</div></div>
 </div>
 
 <div class="card day"><h3><span>Fri 27 · Osaka: Pokémon + Umeda + Harukas</span></h3>
@@ -273,7 +295,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td class="t">16:15</td><td><b>Abeno Harukas 300</b> observation deck, sunset ≈16:50</td><td>Midosuji Line → Tennoji</td><td>≈¥4,000 ≈</td></tr>
 <tr><td class="t">19:00</td><td>Dinner, pack (tax-free goods go in your <b>carry-on</b>)</td><td>Walk</td><td>n/a</td></tr>
 </table></div>
-<div class="eat"><div><b>Lunch:</b> Playpen Friends vegan ramen, Nishi-Shinsaibashi (open Friday).</div><div><b>Dinner:</b> CoCo Ichibanya vegetarian curry, <b>spice level 3–5</b> 🌶 (him: chicken or pork katsu curry). Or Kasu Udon Ebisuya (him: shrimp or chicken, not the kasu).</div></div>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-27-breakfast">3 breakfasts</a> · <a href="#meals-27-lunch">3 shopping-route lunches</a> · <a href="#meals-27-dinner">3 final Osaka dinners</a>.</div><div><b>Lunch:</b> Paprika, Ryukishin RIZE or participating CoCo. <b>Dinner:</b> a confirmed hotel-area CoCo branch, The Fire or Paprika (both require travelling back towards Shinsaibashi). Buy tomorrow’s breakfast tonight.</div></div>
 </div>
 
 <div class="card day"><h3><span>Sat 28 · Fly home</span></h3>
@@ -285,6 +307,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td class="t">09:20</td><td>VJ939 → Hanoi (6 h 05 m) → VJ971 → Delhi 22:50</td><td>n/a</td><td>n/a</td></tr>
 </table></div>
 <p class="x mut">The night before, check the first trains from Shin-Imamiya in Google Maps. Any train leaving between 06:00 and 06:30 is fine.</p>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-28-breakfast">3 breakfasts bought ahead</a> · <a href="#meals-28-lunch">3 flight / transit lunches</a> · <a href="#meals-28-dinner">3 transit / flight dinners</a>.</div><div><b>Her:</b> carry separate sealed portions; an egg-free vegetarian airline meal has not been confirmed. Eat before arrival at Delhi 22:50, and prioritise airport formalities over finding a hot breakfast.</div></div>
 </div>
 </section>
 
@@ -368,17 +391,24 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 
 <!-- ============ FOOD ============ -->
 <section id="food">
-<h2>Vegetarian food (no egg, dairy OK)</h2>
+<h2>Meals for both of you</h2>
+<p>Pick a date, then breakfast, lunch or dinner. Every meal has <b>3 options for each of you</b>, paired by place so you can eat together. Choose one option per meal; some restaurants offer a shared vegan meal.</p>
+<div class="meal-intro"><p><b>Husband</b><br>Chicken, pork, fish, shrimp and egg; no beef, beef broth or beef sauces.</p><p><b>Wife</b><br>Vegetarian, no egg, fish dashi, meat extracts or gelatin. Dairy is OK. Vegan dishes fit these ingredient restrictions.</p></div>
+<p class="legend" data-noinr>Menus checked 10 Oct 2026. <b>Costs are for two</b>, usually estimated, excluding transport and extra drinks. INR uses this page’s planning rate ¥1 = ₹0.6099. “Check” options need branch/menu confirmation; flight-day food is a practical fallback, not a confirmed airline vegetarian meal. Kitchen sharing is possible.</p>
+<div id="meal-chooser" data-noinr></div>
+<noscript><p>Enable JavaScript to browse the day-by-day meal choices. The dietary guide below remains available.</p></noscript>
+<details class="card" data-noinr><summary><b>All 9 days · full meal list / print copy</b></summary><div id="meal-all-days"></div></details>
+<h3 class="meal-guide">Dietary guide · show this to restaurant staff</h3>
 <div class="card"><b>Show this to staff:</b>
 <div class="jp">私はベジタリアンです。肉・魚・魚介類・卵、かつお節、魚のだし、肉エキス、ゼラチンは食べられません。乳製品（牛乳・チーズ・バター）と、昆布・しいたけのだしは大丈夫です。</div>
 <p class="x mut">"I'm vegetarian. I can't eat meat, fish, seafood, eggs, bonito flakes, fish stock, meat extract or gelatin. Dairy and kombu or shiitake stock are fine."</p></div>
 <div class="grid">
 <div class="card"><b>Words to check on labels</b><ul><li>卵 egg · かつお/鰹 bonito · だし/出汁 stock</li><li>魚介エキス seafood extract · 肉/チキンエキス meat/chicken extract</li><li>ゼラチン gelatin · 動物性油脂 animal fat · 乳 milk (OK)</li></ul></div>
-<div class="card"><b>Convenience-store backups</b><ul><li><b>Safe:</b> salt onigiri 塩むすび ✅, edamame, nuts, milk, yogurt, cheese. 7-Eleven curry labelled 動物性原材料不使用 ("no animal ingredients").</li><li><b>Avoid:</b> umeboshi onigiri (FamilyMart's contains sardine), mayonnaise sandwiches, kombu or inari onigiri unless the label is clear.</li><li>Onigiri ¥178–235. Bento for him ¥500–800.</li></ul></div>
-<div class="card"><b>Spicy, not bland 🌶</b><ul><li>Go-to chain: <b>CoCo Ichibanya</b>. The vegetarian curry has no meat, fish, egg or dairy in the roux ≈, and you pick spice levels 1–10. Everywhere in Tokyo and Osaka.</li><li>Tantanmen (sesame-chilli ramen) at T's Tantan, Soranoiro and Jikasei Mensho is the spiciest vegan option.</li><li>On any table: <b>shichimi</b> (chilli mix) and <b>rāyu</b> (chilli oil).</li><li>Say <b>辛くしてください</b> (<i>karaku shite kudasai</i>, "make it spicy").</li><li>Shojin (Shigetsu) and vegan kaiseki (Itadakizen) are <i>delicate</i>, not hot. Ask for shichimi.</li></ul></div>
+<div class="card"><b>Convenience-store backups</b><ul><li><b>Read current ingredients:</b> plain salt onigiri 塩むすび, plain edamame, nuts, milk, plain yogurt without gelatin, cheese and egg-free oats / crackers. Select explicitly animal-free products when available.</li><li><b>Check carefully:</b> umeboshi, kombu and inari rice can include fish stock. Mayonnaise sandwiches and many breads contain egg. A vegetable picture is not an ingredient guarantee.</li><li>Planning prices: onigiri ≈¥180–260; his bento ≈¥500–900. Refrigerate chilled food overnight.</li></ul></div>
+<div class="card"><b>Spicy, not bland 🌶</b><ul><li><a href="https://www.ichibanya.co.jp/english/" target="_blank" rel="noopener">CoCo Ichibanya’s specifically named vegetarian curry</a> uses a plant-based sauce, but <b>some branches do not offer it</b>. Regular vegetable curry can contain pork. Start at spice 2–3 and increase if wanted; confirm toppings too.</li><li>Vegan tantanmen (sesame-chilli ramen) at T’s Tantan, Soranoiro and Jikasei MENSHO offers a spicy option.</li><li>Ask for <b>shichimi</b> (chilli mix) or <b>rāyu</b> (chilli oil), and check added ingredients.</li><li>Say <b>辛くしてください</b> (<i>karaku shite kudasai</i>, "make it spicy").</li><li>Shojin (Shigetsu) and vegan dinner at Itadakizen are delicate, not necessarily hot.</li></ul></div>
 <div class="card"><b>Him: no beef</b><ul><li>He eats chicken, fish, egg, pork and shrimp only.</li><li>Watch for 牛 (<i>gyū</i>, beef), 和牛 (wagyu), ホルモン (offal), すき焼き (sukiyaki), and "kasu" in udon (beef offal).</li><li>Show: <b>牛肉は食べられません</b> ("I can't eat beef").</li></ul></div>
 <div class="card"><b>Ask before ordering</b><ul><li>Tempura batter often contains egg.</li><li>Noodles at restaurants that also serve meat.</li><li>Fried rice: say "no egg" (卵なし).</li><li>Pokémon Café: everything except plain drinks contains egg ✅.</li></ul>
-<p class="x mut">Apps: HappyCow, Vegewel, Japan VegeMap. Fully vegan places (T's Tantan, Shojin Ramen Sai, Uno, Itadakizen, Shigetsu, Playpen Friends, Paprika) are egg-free.</p></div>
+<p class="x mut">Apps: HappyCow, Vegewel, Japan VegeMap. Use recent listings to check holiday closures, then confirm directly. The named vegan dishes above exclude egg; ordinary vegetarian dishes may not.</p></div>
 </div>
 </section>
 
@@ -506,7 +536,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <li><b>Den Den Town:</b> Mandarake Grand Chaos (12–20), Animate, Super Potato ✅.</li>
 <li><b>Osaka:</b> Jump Shop at HEP FIVE 6F ✅.</li></ul></div>
 </div>
-<p class="mut" style="margin-top:30px;font-size:12px">Planning document. Prices, opening hours and rules change, so re-check official sites before you book. Last updated 1 Oct 2026 (outbound flight booked).</p>
+<p class="mut" style="margin-top:30px;font-size:12px">Planning document. Prices, opening hours and rules change, so re-check official sites before you book. Last updated 10 Oct 2026 (daily meal choices for both travellers; AU card limits retained).</p>
 </section>
 </main>
 <script>
@@ -542,5 +572,6 @@ ns.forEach(n=>{const fr=document.createDocumentFragment();let last=0,t=n.nodeVal
   fr.append(t.slice(last,m.index)+m[0]);const sp=document.createElement('span');sp.className='inrv';sp.textContent=' / '+f(a)+(b!=null?'–'+f(b).slice(1):'')+(m[5]||'');fr.append(sp);last=re.lastIndex}
  fr.append(t.slice(last));n.replaceWith(fr)});
 </script>
+<script src="meal-options.js?v=20261010"></script>
 </body>
 </html>
