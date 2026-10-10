@@ -44,10 +44,11 @@ th,td{text-align:left;vertical-align:top;padding:7px 10px;border-bottom:1px soli
 tr:last-child td{border-bottom:0}
 th{font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
 td.t{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
-.day td:nth-child(1){width:70px}
-.day td:nth-child(2){width:44%}
+.day td:nth-child(1){width:110px}
+.day td:nth-child(2){width:36%}
 .day td:nth-child(3){color:var(--mut)}
-.day td:nth-child(4),.day th:nth-child(4){white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+.day td:nth-child(4),.day th:nth-child(4){width:20%;white-space:normal;text-align:right;font-variant-numeric:tabular-nums}
+.day td:nth-child(4) .inrv{display:block}
 .bk td:nth-child(1){width:44px;text-align:center}
 .bk td:nth-child(2){white-space:nowrap}
 .bk td:nth-child(5){min-width:150px}
@@ -72,13 +73,14 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
  body{font-size:14.5px}.wd{display:none}.bar,#next,main{max-width:none}.bar{gap:6px;padding:7px 10px}.bar b{display:none}
  .day table,.day tbody,.bk table,.bk tbody{display:block}
  .day tr:first-child,.bk tr:first-child{display:none}
- .day tr{display:grid;grid-template-columns:48px 1fr auto;column-gap:10px;row-gap:2px;padding:9px 0;border-bottom:1px solid var(--line)}
+ .day tr{display:grid;grid-template-columns:80px minmax(0,1fr);column-gap:10px;row-gap:4px;padding:9px 0;border-bottom:1px solid var(--line)}
  .day tr:last-child{border-bottom:0}
  .day td{border:0;padding:0;width:auto!important}
- .day td:nth-child(1){grid-row:1/3}
+ .day td:nth-child(1){grid-row:1/4;white-space:normal;font-size:12px;overflow-wrap:anywhere}
  .day td:nth-child(2){grid-column:2;grid-row:1}
- .day td:nth-child(4){grid-column:3;grid-row:1}
- .day td:nth-child(3){grid-column:2/4;grid-row:2;font-size:13px}
+ .day td:nth-child(4){grid-column:2;grid-row:3;text-align:left;font-size:12px}
+ .day td:nth-child(4) .inrv{display:inline;white-space:normal}
+ .day td:nth-child(3){grid-column:2;grid-row:2;font-size:13px;overflow-wrap:anywhere}
  .bk tr{display:grid;grid-template-columns:40px 1fr auto;column-gap:8px;row-gap:2px;padding:10px 0;border-bottom:1px solid var(--line)}
  .bk td{border:0;padding:0;width:auto!important;white-space:normal!important}
  .bk td:nth-child(1){grid-row:1/5}
@@ -137,9 +139,8 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <li><b>Flight out: BOOKED</b>, Vietjet VJ972 + VJ934, DEL 20 Nov 00:05 → Hanoi → NRT 15:25, ₹51,815 for 2. The e-ticket is due by <b>2 Oct 20:15 IST</b>. When it arrives, check (a) that the checked bags are included and (b) that both flights are on one PNR (see Flights).</li>
 <li><b>Flight back: BOOKED</b> on Trip.com, ₹59,414 for 2. The ticket will be issued by <b>3 Oct 01:55 IST</b> (05:25 Osaka time); watch for the confirmation email. Vietjet VJ939 + VJ971, KIX 28 Nov 09:20 → Hanoi (6 h 05 m, bags go straight through ✅ booking page) → DEL 22:50.</li>
 <li><b>Hotels.</b> Add a Tokyo night for 22–23 Nov. Rebook Osaka as a <b>Queen</b> room for 23–28 Nov, then cancel the old twin. <span class="chip jpy">JPY</span></li>
-<li><b>Shigetsu lunch</b>, 25 Nov 11:00 · <b>Itadakizen dinner</b>, 25 Nov 18:00 · <b>teamLab</b>, 24 Nov 16:30 · <b>USJ</b> pass, 26 Nov. <span class="chip jpy">JPY</span></li>
+<li><b>Shigetsu lunch</b>, 25 Nov 11:00 · <b>Itadakizen dinner</b>, 25 Nov 18:00 · <b>teamLab Biovortex</b>, 24 Nov <b>14:00</b> (14:30 backup) · <b>USJ</b> pass, 26 Nov. These are booking targets, subject to availability. <span class="chip jpy">JPY</span></li>
 <li><b>AU ixigo cards: RECEIVED by both spouses (8 Oct).</b> Husband's approved limit: <b>₹3,50,000</b>; wife's approved limit: <b>₹1,00,000</b>. Activate both, set each PIN, enable international POS/contactless and needed online/ATM usage, and request one free Priority Pass each. See <a href="#cash">Cards·Cash</a>.</li>
-<li><b>Sat 10 Oct, 06:30 IST: Ghibli Museum.</b> Set an alarm.</li>
 </ol>
 <p class="x mut">Pokémon Café: every date was sold out. Walk-ins only get cancelled seats. Last chance: check the booking page after 22:00 JST the night before (that's when free cancellation closes). Otherwise skip it; Pokémon Center Osaka DX needs no booking.</p>
 </div>
@@ -157,11 +158,10 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td><input type="checkbox" data-k="b3" aria-label="done"></td><td class="t">Now</td><td>Hotel changes</td><td>Agoda app</td><td><span class="chip jpy">JPY</span><span class="pr">Tokyo +1 night ≈¥5–9k</span><span class="pr">Osaka 5 nights ≈¥32–45k</span></td><td>Tokyo +1 night · Osaka Queen 23–28</td></tr>
 <tr><td><input type="checkbox" data-k="b4" aria-label="done"></td><td class="t">Now (book ≥3 days ahead)<br>No card needed</td><td>Shigetsu shojin lunch</td><td><a href="https://www.tenryuji.com/shigetsu/contact.html" target="_blank">Form</a> · +81-75-882-9725</td><td><span class="chip jpy">JPY</span> paid at the restaurant<span class="pr">¥14,000 (Tsuki + garden fee)</span></td><td>25 Nov 11:00, Tsuki → 24 Nov. <b>Book now:</b> fills up weeks ahead in foliage season. Book by ≈10 Oct</td></tr>
 <tr><td><input type="checkbox" data-k="b5" aria-label="done"></td><td class="t">Now (book ≥3 days ahead)</td><td>Itadakizen dinner</td><td><a href="https://www.itadakizen-uk.com/kyoto" target="_blank">Official site → booking</a></td><td><span class="chip jpy">JPY</span> paid at the restaurant<span class="pr">≈¥10–16k</span></td><td>Wed 25 Nov 18:00 (dinner only on Wed) → 18:30. Small venue: book by ≈25 Oct</td></tr>
-<tr><td><input type="checkbox" data-k="b6" aria-label="done"></td><td class="t">Now</td><td>teamLab Biovortex</td><td><a href="https://kyoto.tickets.teamlab.art/#/?lang=en" target="_blank">teamLab tickets</a></td><td><span class="chip jpy">JPY</span><span class="pr">¥9,200 (¥4,600 each at 16:30 💹 2 Oct)</span></td><td>24 Nov 16:30 → 25 Nov morning. 94% of the slot unsold on 2 Oct ✅, so it isn't selling out. Price may creep up. Date changes allowed (3×), no refunds. Book by ≈10 Nov</td></tr>
+<tr><td><input type="checkbox" data-k="b6" aria-label="done"></td><td class="t">Now</td><td>teamLab Biovortex</td><td><a href="https://kyoto.tickets.teamlab.art/#/?lang=en" target="_blank">teamLab tickets</a></td><td><span class="chip jpy">JPY</span><span class="pr">≈¥9,200 allowance; check the chosen slot's price</span></td><td><b>24 Nov 14:00 → 14:30 → 15:00</b>. Spend the early afternoon indoors. Availability and price need checking; the old 16:30 quote is not a quote for this slot. Official-ticket changes up to 3×, subject to conditions; no refunds. Book by ≈10 Nov</td></tr>
 <tr><td><input type="checkbox" data-k="b7" aria-label="done"></td><td class="t">Now</td><td>USJ 1-Day Studio Pass (no Express)</td><td><a href="https://www.usj.co.jp/web/en/us" target="_blank">usj.co.jp</a> only</td><td><span class="chip jpy">JPY</span><span class="pr">≈¥18.8–23.8k</span></td><td>Thu 26 Nov → Fri 27 Nov (swap days). Weekdays rarely sell out, but the price can rise with demand ≈. Book by mid-Oct</td></tr>
 <tr><td><input type="checkbox" data-k="b8-au-issued" data-def="1" aria-label="done"></td><td class="t">RECEIVED 8 Oct</td><td>AU ixigo primary credit card ×2</td><td><a href="https://www.au.bank.in/personal-banking/credit-cards/ixigo-au-credit-card" target="_blank">AU ixigo</a></td><td>n/a<span class="pr">Lifetime free · 0% forex ✅</span></td><td>Husband ₹3,50,000 limit; wife's approved limit: <b>₹1,00,000</b>. Activation, controls and Priority Pass requests are separate tasks</td></tr>
 <tr><td><input type="checkbox" data-k="b8-au-ready" aria-label="done"></td><td class="t">Before departure</td><td>Both AU cards ready for Japan + Priority Pass requested ×2</td><td>AU 0101 / ixigo Card Controls · AU customer care</td><td>Free memberships<span class="pr">1 overseas lounge visit each/year</span></td><td>Set PINs and usage limits in India; keep registered Indian SIMs available for OTPs. Save free lounge visits for the return</td></tr>
-<tr class="urgent"><td><input type="checkbox" data-k="b9" aria-label="done"></td><td class="t">Sat 10 Oct 06:30 IST<br>10:00 JST</td><td><b>Ghibli Museum</b> (all of November goes on sale)</td><td><a href="https://l-tike.com/st1/ghibli-en/sitetop" target="_blank">Lawson Ticket (EN)</a></td><td><span class="chip jpy">JPY</span><span class="pr">¥2,000</span></td><td>21 Nov 10:00 → 22 Nov → 23 Nov 10:00. <b>Weekend slots go in under 5 minutes</b> ≈. Both of you log in at 06:25 IST. Returned tickets reappear 10–15 Oct ≈</td></tr>
 <tr><td><input type="checkbox" data-k="b10" aria-label="done"></td><td class="t">Fri 23 Oct ≈06:30 IST<br>≈10:00 JST</td><td>Shinkansen Tokyo → Shin-Osaka (oversized-baggage seats open 1 month ahead ✅; they can't be booked earlier)</td><td><a href="https://smart-ex.jp/en/" target="_blank">smartEX app</a></td><td><span class="chip jpy">JPY</span><span class="pr">¥29,040</span></td><td>23 Nov Nozomi ≈09:30, seats D+E → any Nozomi before 13:00. Holiday morning: book at release, the D+E baggage seats likely go on day one ≈</td></tr>
 <tr><td><input type="checkbox" data-k="b11" aria-label="done"></td><td class="t">≈7 Nov before departure</td><td>eSIM (Ubigi 10 GB/30 days, hotspot allowed)</td><td><a href="https://cellulardata.ubigi.com/" target="_blank">Ubigi</a></td><td><span class="chip usd">USD</span><span class="pr">$16.50 (≈₹1,450)</span></td><td>Install in India, switch on after landing</td></tr>
 <tr class="urgent"><td><input type="checkbox" data-k="b12" aria-label="done"></td><td class="t">Fri 6 Nov 20:30 IST<br>Sat 7 Nov 00:00 JST ≈</td><td><b>Shibuya Sky</b> (on sale 2 weeks ahead ✅)</td><td><a href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank">Official</a></td><td><span class="chip jpy">JPY</span><span class="pr">¥6,800 (sunset slot)</span></td><td>21 Nov 15:40 → 22 Nov 15:40. <b>Weekend sunset slots sell out in minutes</b> ≈. Free cancellation until the day before ✅, so recheck 19–20 Nov if you miss out</td></tr>
@@ -175,7 +175,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <h3>How to book each one</h3>
 <div class="grid">
 <div class="card"><b>Japan eVISA</b> ≈<ul><li>Book an appointment on the VFS site. Submit your passport, photo, application form, bank statements, flight and hotel bookings, and itinerary (check VFS's checklist).</li><li>The visa is issued electronically. At the airport you must show the <b>"visa issuance notice" on your phone, online</b>. Screenshots, PDFs and printouts are not accepted ✅ (embassy).</li><li>Fees: about ₹500 embassy fee + ₹800 VFS fee per person ≈.</li></ul></div>
-<div class="card"><b>Ghibli (Lawson Ticket)</b><ul><li>Create a Lawson account before 10 Oct. Be on the page at 06:25 IST.</li><li>Choose a date and entry time and enter <b>passport names</b>. Pay by card in JPY.</li><li>¥1,000 per adult ✅. No tickets at the door. Avoid resellers.</li></ul></div>
+<div class="card"><b>teamLab Biovortex</b><ul><li>Choose <b>24 Nov 14:00</b>, or 14:30 / 15:00 if available, for two adults. Allow about 3 hours; eat before entering.</li><li>Official hours: 09:00–21:00, last entry 19:30 ✅. The published November closures are 17 and 19 Nov; recheck before paying.</li><li>Official tickets allow up to 3 date/time changes, normally at least 2 hours before entry, subject to availability, ticket type and price conditions. No refunds. <a href="https://www.teamlab.art/e/kyoto/" target="_blank">Official information / FAQ</a>.</li></ul></div>
 <div class="card"><b>Shibuya Sky</b><ul><li>Official web ticket. Pick a slot starting at 15:40 (sunset is ≈16:31).</li><li>¥3,400 per adult online from 15:00 ✅. The counter costs more, and if online is sold out, the counter is too.</li></ul></div>
 <div class="card"><b>smartEX (Shinkansen)</b><ul><li>Install the app and register a foreign Visa, Mastercard or Amex card.</li><li>Search Tokyo → Shin-Osaka, Nozomi. In the seat map choose <b>D+E</b> in the <b>last row ("seat with oversized baggage area")</b>, so all your bags fit.</li><li>Link each person's Suica, then tap it at the gate. ¥14,520 per person ✅.</li></ul></div>
 <div class="card"><b>USJ</b><ul><li>1-Day Studio Pass for a fixed date, from the official site only. Link both tickets in the USJ app.</li><li>Inside the park, request <b>Area Timed Entry for Super Nintendo World</b> in the app right away. It's free ✅.</li></ul></div>
@@ -188,6 +188,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <section id="days">
 <h2>Day by day</h2>
 <p class="mut">Each day starts and ends at the hotel. Costs are for 2 people.</p>
+<div class="card"><b>Your timing preference: indoors in the early afternoon</b><p>Use museums, shopping centres, cafés and trains around <b>12:00–15:00</b>; do longer outdoor walks in the morning or near dusk. Short station-to-venue walks remain, so use a taxi for the exposed Kyoto transfer if wanted. Sunset decks stay late in the day.</p><p class="mut">Morning exceptions: Akihabara at Sunday opening is a planning choice to reduce shopping crowds and leave Kasukabe indoors in the afternoon. Fushimi Inari and Arashiyama retain early outdoor starts; USJ retains opening-time entry for ride queues and Nintendo World access. Afternoon crowd levels at teamLab are not reliably established: 14:00 is chosen for your comfort preference, not a promise of a quiet museum. A 09:00 teamLab alternative would require reworking the temple route before booking. <a href="https://global.kyoto.travel/en/comfort/" target="_blank">Kyoto crowd forecasts</a> · <a href="https://www.teamlab.art/e/kyoto/" target="_blank">teamLab information</a>.</p></div>
 
 <div class="card day"><h3><span>Thu 19 → Fri 20 · Fly to Tokyo</span><span class="chip">Hotel: Senzoku, Tokyo</span></h3>
 <div class="tw"><table>
@@ -202,19 +203,20 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <p class="x mut">You'll be up all night on the overnight flight, so keep this evening light. Message the property on Agoda that you'll arrive ≈18:30 (check-in time isn't on your confirmation).</p>
 </div>
 
-<div class="card day"><h3><span>Sat 21 · Ghibli + Shibuya</span></h3>
+<div class="card day"><h3><span>Sat 21 · Harajuku morning + Shibuya indoors + sunset</span></h3>
 <div class="tw"><table>
 <tr><th>Time</th><th>Do</th><th>How</th><th>Cost</th></tr>
-<tr><td class="t">08:45</td><td>Leave</td><td>Iriya → Hibiya Line to Akihabara → JR Chuo Line to Mitaka, ≈65 min</td><td>≈¥1,400</td></tr>
-<tr><td class="t">09:50</td><td>Mitaka → museum</td><td>Community bus, or walk 15 min</td><td>¥460</td></tr>
-<tr><td class="t">10:00</td><td><b>Ghibli Museum</b></td><td>2–2.5 h</td><td>¥2,000 ✅</td></tr>
-<tr><td class="t">12:30</td><td>Lunch</td><td>Near Mitaka Station</td><td>n/a</td></tr>
-<tr><td class="t">13:45</td><td>To Shibuya</td><td>JR to Kichijoji → Keio Inokashira Line</td><td>≈¥800</td></tr>
-<tr><td class="t">15:40</td><td><b>Shibuya Sky</b>. Sunset ≈16:31</td><td>Leave hats and bags in the 46F lockers ✅</td><td>¥6,800 ✅</td></tr>
-<tr><td class="t">17:45</td><td><b>Shibuya PARCO 6F</b>: Pokémon Center, Nintendo TOKYO, JUMP SHOP</td><td>Walk 8 min. Open until 21:00</td><td>Shopping</td></tr>
+<tr><td class="t">08:45</td><td>Leave for Harajuku</td><td>Iriya → Hibiya Line to Ebisu → JR to Harajuku; allow ≈60 min</td><td>≈¥1,200</td></tr>
+<tr><td class="t">09:45–11:00</td><td><b>Optional Meiji Jingu shrine walk</b>, then a short Harajuku / Omotesando stroll</td><td>Use the Harajuku entrance. Stay on the main shrine route; no museum or paid garden added</td><td>Free shrine visit</td></tr>
+<tr><td class="t">11:30–12:30</td><td>Lunch in Harajuku or Shibuya</td><td>Jangara Harajuku (published hours 10:00–22:00); or JR one stop to Shibuya for MENSHO / confirmed CoCo</td><td>JR extra ≈¥300</td></tr>
+<tr><td class="t">12:45–15:00</td><td><b>Shibuya PARCO 6F</b>: Pokémon Center, Nintendo TOKYO, JUMP SHOP</td><td>Indoor afternoon shopping. Weekend queues are possible; leave by 15:00 for the Sky booking</td><td>Shopping</td></tr>
+<tr><td class="t">15:00–15:30</td><td>Walk to Shibuya Scramble Square; find the Sky entrance</td><td>Allow ≈15 min walking plus entry / lift buffer</td><td>n/a</td></tr>
+<tr><td class="t">15:40</td><td><b>Shibuya Sky</b> booking target. Sunset ≈16:31</td><td>Outdoor rooftop near sunset; leave hats and bags in the 46F lockers ✅</td><td>¥6,800 ✅</td></tr>
+<tr><td class="t">17:15–18:00</td><td>Scramble Crossing / Hachiko photos, then dinner</td><td>Short outdoor stops near dusk. PARCO can be revisited after dinner if a shop queue was too long</td><td>n/a</td></tr>
 <tr><td class="t">20:15</td><td>Back to the hotel</td><td>Ginza Line → Ueno → Hibiya Line</td><td>≈¥520</td></tr>
 </table></div>
-<div class="eat"><div><b>Meals:</b> <a href="#meals-21-breakfast">3 early breakfasts</a> · <a href="#meals-21-lunch">3 Mitaka / Kichijoji lunches</a> · <a href="#meals-21-dinner">3 Shibuya-area dinners</a>.</div><div><b>Lunch:</b> SORAE’s vegan Thai curry / bolognese, Crayonhouse’s vegan buffet dishes, or Hitokokyu after confirming operation. <b>Dinner:</b> MENSHO’s vegan bowls (his pork topping if confirmed), Jangara Harajuku or participating CoCo.</div></div>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-21-breakfast">3 breakfasts</a> · <a href="#meals-21-lunch">3 Harajuku / Shibuya lunches</a> · <a href="#meals-21-dinner">3 Shibuya-area dinners</a>.</div><div><b>Lunch / dinner:</b> Jangara Harajuku, MENSHO in PARCO or participating CoCo; choose different dishes at lunch and dinner. Her orders remain egg-free vegetarian / vegan; his remain free of beef and beef stock.</div></div>
+<p class="x mut">The morning walk is optional after your overnight flight; a slower start and direct trip to Shibuya also work. <a href="https://www.meijijingu.or.jp/en/visit/" target="_blank">Meiji Jingu visiting information</a> · <a href="https://shibuya.parco.jp/info/" target="_blank">PARCO hours</a>: 6F 10:00–21:00, other shops generally 11:00–21:00 ✅.</p>
 </div>
 
 <div class="card day"><h3><span>Sun 22 · Akihabara (AM) + Shin-chan (PM)</span></h3>
@@ -231,7 +233,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td class="t">20:30</td><td>Hotel, pack</td><td>JR → Ueno → Hibiya Line</td><td>≈¥520</td></tr>
 </table></div>
 <div class="eat"><div><b>Meals:</b> <a href="#meals-22-breakfast">3 breakfasts</a> · <a href="#meals-22-lunch">3 lunches before Kasukabe</a> · <a href="#meals-22-dinner">3 Tokyo Station-area dinners</a>.</div><div><b>Lunch:</b> T’s Tantan at ecute Akihabara is the simplest choice. <b>Jangara Akihabara is temporarily closed</b> (since 30 Sep). The Ueno lunch alternative requires a detour before returning to the Kasukabe route. <b>Dinner:</b> Soranoiro, T’s Tantan or Jangara Ginza.</div></div>
-<p class="x mut">Akihabara goes first because small shops close early in the evening and it's quieter in the morning. Radio Kaikan itself is open 10–20 ✅. Asakusa is calm before ≈10:00. LaLa Garden has no verified vegetarian dish, so lunch stays in Akihabara.</p>
+<p class="x mut">Akihabara stays at opening as the <b>indoor morning exception</b>: Sunday afternoons are expected to be busier (planning judgement, not a measured crowd forecast), and this keeps Kasukabe in the afternoon. Radio Kaikan itself is open 10–20 ✅. Travel at 13:30 is mostly on trains; LaLa Garden is a short walk from the station. It has no verified vegetarian dish, so lunch stays in Akihabara.</p>
 </div>
 
 <div class="card day"><h3><span>Mon 23 (public holiday) · Shinkansen → Osaka</span><span class="chip">Hotel: RTI Tennoji</span></h3>
@@ -251,28 +253,36 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <div class="card day"><h3><span>Tue 24 · Kyoto: Inari, Higashiyama, teamLab</span></h3>
 <div class="tw"><table>
 <tr><th>Time</th><th>Do</th><th>How</th><th>Cost</th></tr>
-<tr><td class="t">07:00</td><td>Leave</td><td>JR Tennoji → Osaka → Special Rapid to Kyoto → JR Nara Line to Inari</td><td>≈¥2,220</td></tr>
-<tr><td class="t">08:15</td><td><b>Fushimi Inari</b>, up to the Yotsutsuji viewpoint</td><td>2 h</td><td>Free</td></tr>
-<tr><td class="t">10:30</td><td><b>Kiyomizu-dera</b>, then the Sannenzaka and Ninenzaka slopes</td><td>Keihan Line to Kiyomizu-Gojo</td><td>≈¥1,000</td></tr>
-<tr><td class="t">13:00</td><td>Lunch → Gion, Hanamikoji, Yasaka Shrine</td><td>Walk</td><td>n/a</td></tr>
-<tr><td class="t">16:30</td><td><b>teamLab Biovortex</b>, 7 min from the Hachijo East exit ✅</td><td>2–2.5 h. Indoors, so sunset doesn't matter ≈</td><td>¥7,600+ ✅</td></tr>
-<tr><td class="t">20:30</td><td>Back to the hotel</td><td>JR, ≈55 min</td><td>¥1,920</td></tr>
+<tr><td class="t">06:30</td><td>Leave for Kyoto</td><td>JR Tennoji → Osaka → Special Rapid to Kyoto → JR Nara Line to Inari; allow ≈90 min with transfers</td><td>≈¥2,220</td></tr>
+<tr><td class="t">08:00–09:30</td><td><b>Fushimi Inari</b>, lower torii trails</td><td>Morning outdoor walk. The full Yotsutsuji climb needs extra time; skip it to protect the afternoon booking</td><td>Free</td></tr>
+<tr><td class="t">09:30–10:30</td><td>Transfer to Kiyomizu-dera</td><td>Walk to Keihan Fushimi-Inari → Kiyomizu-Gojo → uphill walk; allow ≈60 min</td><td>Keihan extra</td></tr>
+<tr><td class="t">10:30–12:00</td><td><b>Kiyomizu-dera</b>, then Sannenzaka / Ninenzaka toward Gion</td><td>Outdoor morning route. Shorten the slopes if temple queues run long</td><td>≈¥1,000</td></tr>
+<tr><td class="t">12:00–13:00</td><td>Lunch indoors</td><td>UNO Gion fits best. CHOICE or Veg Out require adjusting the morning route; confirm the restaurant's lunch hours</td><td>n/a</td></tr>
+<tr><td class="t">13:00–13:45</td><td>To teamLab, with entry buffer</td><td>Taxi from your lunch stop for less sun exposure (allow ≈30–45 min in traffic), or Keihan to Shichijo + 11 min walk ✅</td><td>Taxi ≈¥1,500–2,500 extra; rail cheaper</td></tr>
+<tr><td class="t">14:00–17:00</td><td><b>teamLab Biovortex</b> (14:30 backup)</td><td>Indoor afternoon block; allow about 3 h including exhibit queues. 7 min from Kyoto Station Hachijo East exit ✅</td><td>≈¥9,200 allowance; reprice the slot</td></tr>
+<tr><td class="t">17:00–18:00</td><td>Gion, Hanamikoji and Yasaka Shrine near dusk</td><td>Walk to Shichijo → Keihan to Gion-Shijo; short evening walk. If tired or entry was later, skip this extra loop</td><td>Keihan extra</td></tr>
+<tr><td class="t">18:00–19:00</td><td>Dinner in Gion or near Kyoto Station</td><td>Choose the meal stop before taking the return train</td><td>n/a</td></tr>
+<tr><td class="t">≈21:00</td><td>Back to the hotel</td><td>Allow ≈75–90 min from Kyoto Station to the Tennoji hotel with transfers and walking</td><td>≈¥1,920</td></tr>
 </table></div>
-<div class="eat"><div><b>Meals:</b> <a href="#meals-24-breakfast">3 pre-train breakfasts</a> · <a href="#meals-24-lunch">3 Kyoto lunches</a> · <a href="#meals-24-dinner">3 dinner choices</a>.</div><div><b>Lunch:</b> UNO Gion fits best; CHOICE near Sanjo or Veg Out near Shichijo add a detour. <b>Dinner:</b> UNO Kyoto Station, participating CoCo, or The Fire after returning to Osaka (later hotel arrival). Itadakizen is closed Tuesdays.</div></div>
+<div class="eat"><div><b>Meals:</b> <a href="#meals-24-breakfast">3 pre-train breakfasts</a> · <a href="#meals-24-lunch">3 Kyoto lunches</a> · <a href="#meals-24-dinner">3 Kyoto dinners</a>.</div><div><b>Lunch:</b> UNO Gion fits best; CHOICE near Sanjo or Veg Out near Shichijo need a shorter temple route. <b>Dinner:</b> UNO Gion, UNO Kyoto Station or participating CoCo. Itadakizen is closed Tuesdays.</div></div>
+<p class="x mut">The earlier start gives the temple transfers realistic buffer. <a href="https://kyoto.travel/en/travel-inspiration/11-secret-tips-for-enjoying-kyoto-from-a-local-taxi-driver/" target="_blank">Kyoto's tourism guidance</a> recommends early Fushimi Inari / Arashiyama walks. teamLab's official hours are 09:00–21:00; recheck closures and book the afternoon slot. If choosing 14:30 / 15:00, shift the later rows and shorten or skip Gion.</p>
 </div>
 
 <div class="card day"><h3><span>Wed 25 · ❤️ Anniversary: Arashiyama + Itadakizen</span></h3>
 <div class="tw"><table>
 <tr><th>Time</th><th>Do</th><th>How</th><th>Cost</th></tr>
-<tr><td class="t">07:15</td><td>Leave</td><td>JR to Kyoto → Sagano Line to Saga-Arashiyama, ≈75 min</td><td>≈¥2,400</td></tr>
-<tr><td class="t">08:30</td><td>Bamboo grove, then the Tenryu-ji garden (opens 08:30)</td><td>Walk</td><td>¥1,000 ✅</td></tr>
+<tr><td class="t">06:45</td><td>Leave for Arashiyama</td><td>JR to Kyoto → Sagano Line to Saga-Arashiyama; allow ≈100 min with transfers and walking</td><td>≈¥2,400</td></tr>
+<tr><td class="t">08:30–10:00</td><td>Bamboo grove, then the Tenryu-ji garden (opens 08:30)</td><td>Outdoor morning walk</td><td>¥1,000 ✅</td></tr>
+<tr><td class="t">10:00–10:45</td><td>River walk and Togetsukyo Bridge</td><td>Before lunch; optional rowboat only if it fits before the reservation</td><td>Walk free; rowboat ≈¥2,000</td></tr>
 <tr><td class="t">11:00</td><td><b>Shigetsu shojin lunch</b></td><td>Inside Tenryu-ji</td><td>Tsuki ¥13,000 ✅</td></tr>
-<tr><td class="t">12:30</td><td>River walk, Togetsukyo Bridge, optional rowboat</td><td>Walk</td><td>≈¥2,000</td></tr>
-<tr><td class="t">15:00</td><td>Randen tram → Kitano-Hakubaicho. Kitano Tenmangu maple garden, café</td><td>≈25 min</td><td>≈¥500 + garden fee ≈</td></tr>
+<tr><td class="t">12:30–14:00</td><td>Indoor café / rest in Arashiyama</td><td>Choose a nearby indoor seat, confirm drinks / snacks suit her restrictions; no extra meal needed after Shigetsu</td><td>Drinks extra</td></tr>
+<tr><td class="t">14:00–15:00</td><td>Randen tram → Kitano-Hakubaicho → Kitano Tenmangu</td><td>Change at Katabiranotsuji; allow ≈45–60 min including the walk</td><td>Tram fare extra</td></tr>
+<tr><td class="t">15:00–16:00</td><td>Kitano Tenmangu maple garden</td><td>Later outdoor visit. Normal last admission 15:40, closes 16:00 ✅; do not depend on evening extensions without checking</td><td>¥3,000 for 2 ✅</td></tr>
+<tr><td class="t">16:00–17:30</td><td>Indoor café / rest near Kitano, then travel to dinner</td><td>Keep a buffer for the anniversary reservation; 25th-day shrine activity can make the area busy</td><td>Drinks / taxi extra</td></tr>
 <tr><td class="t">18:00</td><td><b>Itadakizen</b> vegan dinner, 199-1 Nibancho, Kamigyo</td><td>Walk or short taxi</td><td>≈¥10–16k ≈</td></tr>
-<tr><td class="t">20:00</td><td>Back to the hotel</td><td>Taxi to Kyoto Station (≈¥2,500) → JR</td><td>≈¥4,400</td></tr>
+<tr><td class="t">20:00</td><td>Leave dinner for the hotel</td><td>Taxi to Kyoto Station (≈¥2,500) → JR; hotel arrival around 22:00 with transfers</td><td>≈¥4,400</td></tr>
 </table></div>
-<p class="x mut">Arashiyama in peak autumn colours is very crowded after 10:00, so start early. Dinner is a full vegan feast, so the Tsuki lunch course is enough.</p>
+<p class="x mut">Arashiyama retains a morning start for foliage-season crowds; the exposed river walk is now before lunch. The early afternoon is lunch / indoor rest / tram travel. Dinner is a full vegan feast, so the Tsuki lunch course is enough. <a href="https://kitanotenmangu.or.jp/" target="_blank">Kitano's 2026 maple garden</a> is listed for 31 Oct–6 Dec, ¥1,500 per adult ✅. Take the later visit only if comfortable with the remaining daylight and walking.</p>
 <div class="eat"><div><b>Meals:</b> <a href="#meals-25-breakfast">3 light breakfasts</a> · <a href="#meals-25-lunch">3 anniversary lunch choices</a> · <a href="#meals-25-dinner">3 dinner choices</a>.</div><div><b>Main plan:</b> Shigetsu lunch + Itadakizen dinner, both subject to reservation. Alternatives are listed if you change the plan; no new bookings have been made.</div></div>
 </div>
 
@@ -281,20 +291,24 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><th>Time</th><th>Do</th><th>How</th><th>Cost</th></tr>
 <tr><td class="t">Opening −75 min</td><td>Arrive at the gates</td><td>JR Loop Line → Nishikujo → Yumesaki Line, ≈30 min</td><td>¥960 return</td></tr>
 <tr><td class="t">Opening</td><td>Request <b>Area Timed Entry</b> in the app → Super Nintendo World (Mario Kart, Yoshi, Donkey Kong)</td><td>Use single-rider lines where available</td><td>Pass ≈¥18.8–23.8k ≈</td></tr>
+<tr><td class="t">12:00–15:00</td><td>Prefer lunch and indoor attractions / shows when your timed entries allow</td><td>Check live waits and the show schedule in the app. Indoor queues can still have outdoor sections; keep fixed ride / area times first</td><td>Included attractions; food extra</td></tr>
 <tr><td class="t">≈20:00</td><td>Back to the hotel</td><td>JR</td><td>n/a</td></tr>
 </table></div>
+<p class="x mut">USJ is the morning exception: with no Express Pass, keep the early arrival for queues and <a href="https://www.usj.co.jp/web/en/us/areas/super-nintendo-world" target="_blank">Nintendo World timed entry</a>. Afternoon indoor breaks help, but a theme-park day still includes outdoor walking.</p>
 <div class="eat"><div><b>Meals:</b> <a href="#meals-26-breakfast">3 breakfasts before the queue</a> · <a href="#meals-26-lunch">3 in-park lunches</a> · <a href="#meals-26-dinner">3 in-park dinners</a>.</div><div><b>Her:</b> choose the official plant-based dishes at Kinopio’s Café, Three Broomsticks, SAIDO or Beverly Hills Boulangerie. <b>Him:</b> pork ribs, fish-and-chips or a confirmed chicken dish; skip beef burgers and beef-containing pie combinations. Eat dinner before leaving.</div></div>
 </div>
 
 <div class="card day"><h3><span>Fri 27 · Osaka: Pokémon + Umeda + Harukas</span></h3>
 <div class="tw"><table>
 <tr><th>Time</th><th>Do</th><th>How</th><th>Cost</th></tr>
-<tr><td class="t">10:00</td><td><b>Pokémon Center Osaka DX</b>, Daimaru Shinsaibashi 9F, then the Shinsaibashi-suji shopping street</td><td>Midosuji Line, 8 min</td><td>≈¥480</td></tr>
-<tr><td class="t">12:00</td><td>Lunch, then Dotonbori</td><td>Walk</td><td>n/a</td></tr>
-<tr><td class="t">14:00</td><td>Umeda: Jump Shop (HEP FIVE 6F), Yodobashi Umeda 2F (watches)</td><td>Midosuji Line</td><td>≈¥480</td></tr>
+<tr><td class="t">09:30–11:15</td><td>Dotonbori canal / Glico photos, then the covered Shinsaibashi-suji street</td><td>Midosuji Line to Namba, then walk north. Morning photos first; shops open at different times</td><td>≈¥480</td></tr>
+<tr><td class="t">11:30–12:30</td><td>Lunch indoors around Namba / Shinsaibashi</td><td>Choose the restaurant first; allow the walk back to Daimaru</td><td>n/a</td></tr>
+<tr><td class="t">13:00–14:00</td><td><b>Pokémon Center Osaka DX</b>, Daimaru Shinsaibashi 9F</td><td>Indoor afternoon visit. If a queue would delay Umeda, shorten shopping rather than missing sunset</td><td>Shopping</td></tr>
+<tr><td class="t">14:00–15:30</td><td>Umeda: Jump Shop (HEP FIVE 6F), Yodobashi Umeda 2F (watches)</td><td>Midosuji Line + walking; about 60–70 min shopping after travel. Leave Umeda by 15:30; choose one store if delayed</td><td>≈¥480</td></tr>
 <tr><td class="t">16:15</td><td><b>Abeno Harukas 300</b> observation deck, sunset ≈16:50</td><td>Midosuji Line → Tennoji</td><td>≈¥4,000 ≈</td></tr>
 <tr><td class="t">19:00</td><td>Dinner, pack (tax-free goods go in your <b>carry-on</b>)</td><td>Walk</td><td>n/a</td></tr>
 </table></div>
+<p class="x mut">Most early-afternoon time is now inside Daimaru / Umeda shops. Keep the 15:30 departure buffer for Harukas; Friday afternoon crowd levels are uncertain. Dotonbori can also be revisited after dinner if you want neon photos.</p>
 <div class="eat"><div><b>Meals:</b> <a href="#meals-27-breakfast">3 breakfasts</a> · <a href="#meals-27-lunch">3 shopping-route lunches</a> · <a href="#meals-27-dinner">3 final Osaka dinners</a>.</div><div><b>Lunch:</b> Paprika, Ryukishin RIZE or participating CoCo. <b>Dinner:</b> a confirmed hotel-area CoCo branch, The Fire or Paprika (both require travelling back towards Shinsaibashi). Buy tomorrow’s breakfast tonight.</div></div>
 </div>
 
@@ -465,7 +479,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <div class="grid">
 <div class="card"><b>JPY or INR?</b><ul>
 <li><span class="chip inr">INR</span> visa fees, and flights booked on Indian airline or OTA sites.</li>
-<li><span class="chip jpy">JPY</span> <b>everything else</b>: Agoda, Ghibli, Shibuya Sky, teamLab, USJ, smartEX, restaurants, shops.</li>
+<li><span class="chip jpy">JPY</span> <b>everything else</b>: Agoda, Shibuya Sky, teamLab, USJ, smartEX, restaurants, shops.</li>
 <li>If a card terminal or ATM offers to charge you in INR (DCC), <b>always say no</b> and pay in JPY. DCC costs ≈3–7% extra.</li>
 <li>Start with <b>¥10,000 cash for both</b>; obtain more only if cash-only shops, temples and Suica top-ups require it. See <a href="#cash">Cards·Cash</a>.</li></ul></div>
 <div class="card"><b>Cards</b><ul>
@@ -494,7 +508,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <tr><td>Osaka hotel, 5 nights (from your confirmation)</td><td>¥31,474</td><td>₹19,196</td><td class="ok">Booked ✅ (change to 23–28 Nov)</td></tr>
 <tr><td>Japan visa ×2</td><td>n/a</td><td>≈₹2,600</td><td>≈</td></tr>
 <tr><td>Transport (incl. Shinkansen ¥29,040, airport trains)</td><td>≈¥58k</td><td>≈₹35,370</td><td>≈</td></tr>
-<tr><td>Attractions (Ghibli, Shibuya Sky, teamLab, USJ, temples, Harukas)</td><td>¥45–50k</td><td>₹27,570–30,620</td><td>≈ (USJ price not verified)</td></tr>
+<tr><td>Attractions (Shibuya Sky, teamLab, USJ, temples, Harukas)</td><td>¥43–48k</td><td>₹26,226–29,275</td><td>≈; removed ¥2,000 museum tickets for 2. Reprice teamLab / USJ before booking</td></tr>
 <tr><td>Meals (incl. Shigetsu ¥13k + Itadakizen ≈¥10–16k)</td><td>¥87–125k</td><td>₹53,060–76,240</td><td>≈ ¥8–12k a day for 2</td></tr>
 <tr><td>eSIM (one, hotspot shared)</td><td>$16.50</td><td>≈₹1,450</td><td>≈</td></tr>
 <tr><td>Cash acquisition / AU ATM fees</td><td>n/a</td><td>India dealer's all-in quote; each AU withdrawal ≥₹590 bank fee + ATM fee + daily interest/GST</td><td>Variable; no longer use the old IDFC ₹370–1,040 allowance</td></tr>
@@ -536,7 +550,7 @@ ul,ol{margin:6px 0;padding-left:20px}li{margin:3px 0}
 <li><b>Den Den Town:</b> Mandarake Grand Chaos (12–20), Animate, Super Potato ✅.</li>
 <li><b>Osaka:</b> Jump Shop at HEP FIVE 6F ✅.</li></ul></div>
 </div>
-<p class="mut" style="margin-top:30px;font-size:12px">Planning document. Prices, opening hours and rules change, so re-check official sites before you book. Last updated 10 Oct 2026 (daily meal choices for both travellers; AU card limits retained).</p>
+<p class="mut" style="margin-top:30px;font-size:12px">Planning document. Prices, opening hours and rules change, so re-check official sites before you book. Last updated 10 Oct 2026 (museum ticket plan removed; afternoon indoor visits and matching meal routes updated). Timed visits remain booking targets unless marked BOOKED.</p>
 </section>
 </main>
 <script>
@@ -552,7 +566,7 @@ const setM=m=>{b.dataset.mode=m;mC.classList.toggle('on',m==='cheat');mE.classLi
 const mC=document.getElementById('mC'),mE=document.getElementById('mE');
 mC.onclick=()=>setM('cheat');mE.onclick=()=>setM('explain');setM(ls.getItem('m')||'cheat');
 // Booking deadlines (times in JST, +09:00)
-const D=[["2026-10-02T20:15+05:30","Vietjet e-ticket due: check bags + PNR"],["2026-10-10T10:00+09:00","Ghibli tickets (06:30 IST)"],["2026-10-23T10:00+09:00","Shinkansen seats ≈ (06:30 IST)"],["2026-10-31T23:59+09:00","Axis Vistara card ends ≈"],["2026-11-07T00:00+09:00","Shibuya Sky for 21 Nov (20:30 IST, 6 Nov)"],["2026-11-15T00:00+09:00","Cancel the old Osaka booking"],["2026-11-19T21:05+05:30","Be at Delhi T3"]];
+const D=[["2026-10-02T20:15+05:30","Vietjet e-ticket due: check bags + PNR"],["2026-10-23T10:00+09:00","Shinkansen seats ≈ (06:30 IST)"],["2026-10-31T23:59+09:00","Axis Vistara card ends ≈"],["2026-11-07T00:00+09:00","Shibuya Sky for 21 Nov (20:30 IST, 6 Nov)"],["2026-11-15T00:00+09:00","Cancel the old Osaka booking"],["2026-11-19T21:05+05:30","Be at Delhi T3"]];
 const now=Date.now(),n=D.find(d=>new Date(d[0])>now);
 document.getElementById('next').innerHTML=n?`Next deadline: <strong>${n[1]}</strong> · in ${Math.ceil((new Date(n[0])-now)/864e5)} day(s)`:'Have a wonderful trip ❤️';
 // Done checkboxes (saved on this device)
@@ -572,6 +586,6 @@ ns.forEach(n=>{const fr=document.createDocumentFragment();let last=0,t=n.nodeVal
   fr.append(t.slice(last,m.index)+m[0]);const sp=document.createElement('span');sp.className='inrv';sp.textContent=' / '+f(a)+(b!=null?'–'+f(b).slice(1):'')+(m[5]||'');fr.append(sp);last=re.lastIndex}
  fr.append(t.slice(last));n.replaceWith(fr)});
 </script>
-<script src="meal-options.js?v=20261010"></script>
+<script src="meal-options.js?v=20261010-afternoon"></script>
 </body>
 </html>

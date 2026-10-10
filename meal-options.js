@@ -1,4 +1,4 @@
-/* Meal planning checked 10 Oct 2026. Costs are planning estimates for TWO.
+/* Meal routes updated 10 Oct 2026 for afternoon indoor visits. Costs are planning estimates for TWO.
    A paired option gives each traveller an order at the same stop. */
 (() => {
   'use strict';
@@ -13,9 +13,6 @@
     gyumonOsaka: 'https://gyumon-group.com/shop/ramen-osaka-dotonbori/',
     monja: 'https://kamiya-kaminarimon-monja.com/en_us/2026/04/09/vegan/',
     marugoto: 'https://dining.marugotovegan.com/dinner-menu/',
-    sorae: 'https://www.tokyuhotels.co.jp/en/kichijoji-e/restaurant/sorae/plan/104252/index.html',
-    crayon: 'https://www.crayonhouse.co.jp/shop/pages/resttest.aspx',
-    hitokokyu: 'https://vegewel.com/ja/style/hitokokyu',
     paprika: 'https://paprikacafe.owst.jp/foods',
     fire: 'https://www.thefireosaka.com/',
     rize: 'https://www.miracore.jp/en/story/ryukishin-namba',
@@ -117,14 +114,14 @@
         option('Kaminoya Kaminarimon — monja / okonomiyaki', '1-34-4 Asakusa, Aqua Building 2F', 'Vegan okonomiyaki, or a pork version only after checking no beef', 'Vegan monja, vegan okonomiyaki or vegan yakisoba', [3500,5500], vegan, 'Friday food last order 21:00; allow about 30 minutes for cooking and a minimum drink order. Select the dedicated vegan menu and vegan broth for her. This is the current Kaminarimon branch.', sources.monja),
         option('Marugoto Vegan Dining Asakusa', '1-3-13 Hanakawado — near Asakusa Station', 'Plant-based curry / seasonal dinner main from the current menu', 'Seasonal vegan dinner plate or curry', [4000,6500], allVegan, 'Dinner service returns 13 Oct 2026. Reserve a dinner slot and check the November calendar and menu before going. A good shared vegan choice; no meat dishes.', sources.marugoto)
       ]}},
-    {date:21, label:'Sat 21 · Ghibli', route:'Asakusa / Iriya → Mitaka → Kichijoji → Shibuya',
-      breakfast:{time:'07:30–08:15 · before leaving', note:'Leave by 08:45. Marugoto’s Saturday breakfast starts at 09:00, too late for your museum slot.', options:breakfasts('Near the Senzoku / Iriya hotel', 'Eat at the hotel before the Mitaka journey.', 0)},
-      lunch:{time:'12:30–13:30 · Mitaka / Kichijoji', note:'Kichijoji is on your onward route. Limit queues so you still reach Shibuya Sky at 15:40.', options:[
-        option('SORAE · Kichijoji Excel Hotel Tokyu', '2F, 2-4-14 Kichijoji Honcho', 'Vegan soy-meat bolognese + minestrone', 'Oriental-vegan vegetable Thai curry + minestrone', [6000,6000], vegan, 'Both vegan dishes are officially listed at ¥3,000 each, including tax and service. Lunch 11:30–14:30, last order 14:00. Reserve if possible; ~10-minute walk from Kichijoji Station.', sources.sorae),
-        option('Crayonhouse · organic buffet', '2-15-6 Kichijoji Honcho', 'Vegan buffet dishes; add the day’s meat/fish dish only if it fits his restrictions', 'Rice, vegetables and vegan dishes from the buffet', [4000,6000], vegan, 'Official page says buffet dishes are vegan except one meat/fish dish. Ask staff to identify it and confirm Saturday lunch hours/price; use separate serving utensils. About 7 minutes from Kichijoji Station.', sources.crayon),
-        option('Hitokokyu · macrobiotic lunch', 'Near Mitaka Station, Tokyo', 'Vegan millet-fritter set', 'Vegan vegetable-gyoza set, if offered that day', [2800,4500], 'Confirm current operation', 'A local vegan listing documents these sets, but current official hours/menu could not be verified. Call/check the current listing before relying on this small venue; choose SORAE if confirmation fails.', sources.hitokokyu)
+    {date:21, label:'Sat 21 · Harajuku / Shibuya', route:'Asakusa / Iriya → optional Meiji Jingu / Harajuku → Shibuya PARCO → Shibuya Sky',
+      breakfast:{time:'07:30–08:15 · before leaving', note:'Leave by 08:45 for the optional morning shrine walk, or start later and go straight to Shibuya.', options:breakfasts('Near the Senzoku / Iriya hotel', 'Eat before the Harajuku / Shibuya journey.', 0)},
+      lunch:{time:'11:30–12:30 · Harajuku / Shibuya', note:'Eat before the 12:45–15:00 indoor PARCO block. Choose a different venue or dish from dinner; keep the 15:00 departure for Shibuya Sky.', options:[
+        option('Kyushu Jangara Harajuku', 'Near JR Harajuku Station, Tokyo', 'Karabon spicy pork ramen', 'Vegan shoyu or vegan black-garlic ramen', [2800,4200], vegan, 'Fits after the optional Meiji Jingu walk. Confirm current lunch hours and vegan-menu availability. Official menu distinguishes pork/chicken broths from vegan bowls. Do not substitute the temporarily closed Akihabara branch.', sources.jangara, ['https://kyushujangara.co.jp/en/shoplist/']),
+        option('Jikasei MENSHO', 'Shibuya PARCO B1, 15-1 Udagawacho', 'Vegan miso ramen + pork-chashu topping only if staff confirms no beef', 'Vegan tantanmen or spicy vegan miso ramen', [3000,4500], vegan, 'Opens 11:30 on the published schedule. Convenient before the 6F shops. Avoid his signature chicken-paitan bowl with A5 wagyu; use the vegan base and confirm any added pork topping. Her bowl stays entirely vegan.', sources.mensho),
+        coco('Shibuya — choose a branch with vegetarian curry', 'Confirm lunch hours and the vegetarian menu before choosing the outlet; reach PARCO around 12:45.')
       ]},
-      dinner:{time:'18:00–19:30 · Shibuya / Harajuku', note:'Eat after the PARCO shops; the Harajuku option adds a short train ride or walk.', options:[
+      dinner:{time:'18:00–19:30 · Shibuya / Harajuku', note:'Eat after Shibuya Sky and the crossing photos. The Harajuku option adds a short train ride; PARCO can be revisited if needed.', options:[
         option('Jikasei MENSHO', 'Shibuya PARCO B1, 15-1 Udagawacho', 'Vegan miso ramen + pork-chashu topping if staff confirms availability and no beef', 'Vegan tantanmen or spicy vegan miso ramen', [3000,4500], vegan, '11:30–23:00, last order 22:00. His signature chicken-paitan bowl includes A5 wagyu: skip it. Use a vegan base for his pork addition; her bowl stays entirely vegan.', sources.mensho),
         option('Kyushu Jangara Harajuku', 'Near JR Harajuku Station, Tokyo', 'Karabon spicy pork ramen', 'Vegan shoyu or vegan black-garlic ramen', [2800,4200], vegan, 'Official menu distinguishes pork/chicken broth from vegan bowls. Harajuku branch is a detour from Shibuya; confirm its current vegan menu. The Akihabara branch is temporarily closed, so do not substitute it.', sources.jangara, ['https://kyushujangara.co.jp/en/shoplist/']),
         coco('Shibuya — choose a branch with vegetarian curry', 'Fit this around PARCO or Shibuya Station; confirm the branch first.')
@@ -145,20 +142,20 @@
       breakfast:{time:'07:00–08:00 · hotel / train takeaway', note:'Public holiday. Buy ahead; do not queue for a restaurant just before the 09:30 Nozomi.', options:breakfasts('Senzoku / Iriya; eat before check-out or take onto the train', 'Do not rely on station restaurants opening in time.', 2)},
       lunch:{time:'13:00 · Namba, before Den Den Town', note:'Use Namba for lunch rather than relying on unverified vegetarian udon in Shinsekai. It adds a short metro trip / walk.', options:[rize(), gyumonOsaka(), coco('Namba / Nipponbashi — participating branch', 'Eat before browsing Den Den Town. Holiday queues may be longer.')]},
       dinner:{time:'18:30–20:00 · Osaka', note:'After checking into RTI Tennoji, travel back to the Shinsaibashi / Namba area for these options.', options:[paprika(), fire(), coco('Namba or Tennoji — participating branch', 'Choose a confirmed vegetarian-curry branch convenient to the hotel.', 'Pork-katsu curry on pork or vegetarian sauce')] }},
-    {date:24, label:'Tue 24 · Kyoto', route:'Tennoji → Fushimi Inari → Higashiyama / Gion → Kyoto Station',
-      breakfast:{time:'06:00–06:45 · before the Kyoto train', note:'Buy tonight’s supplies on 23 Nov. Eat before leaving at 07:00.', options:breakfasts('Near RTI Tennoji / Shin-Imamiya', 'Takeaway, bought the previous night.', 0)},
-      lunch:{time:'12:30–13:30 · Kyoto', note:'UNO fits Gion best. The other two need a detour and a small change to the walking route. Itadakizen is closed Tuesdays.', options:[
+    {date:24, label:'Tue 24 · Kyoto', route:'Tennoji → Fushimi Inari → Higashiyama → lunch → teamLab 14:00 → optional dusk Gion → Kyoto Station',
+      breakfast:{time:'05:45–06:15 · before the Kyoto train', note:'Buy supplies on 23 Nov. Eat before leaving at 06:30; the earlier departure protects the temple transfers and afternoon booking.', options:breakfasts('Near RTI Tennoji / Shin-Imamiya', 'Takeaway, bought the previous night.', 0)},
+      lunch:{time:'12:00–13:00 · Kyoto, before teamLab', note:'UNO fits Gion best. CHOICE and Veg Out need a shorter temple / slopes visit and adjusted travel. Leave lunch by 13:00 for the 14:00 entry; do not join a long restaurant queue. Itadakizen is closed Tuesdays.', options:[
         uno('Gion, 40 Kameicho, Yamato-oji'),
-        option('CHOICE · vegan café', '89-1 Ohashicho, Sanjo Keihan, Kyoto', 'Vegan cheese burger or bean-and-grain patty plate', 'Mushroom stroganoff + sprouted brown rice', [3200,5000], allVegan, 'Lunch 11:00–15:00; closed Wednesday, open Tuesday on the published schedule. ~20-minute walk north from central Gion. All food is vegan, including “egg” sandwiches and cheese.', sources.choice, [sources.choiceHours]),
-        option('Veg Out', '44 Inaricho, Shichijo / Kamo River, Kyoto', 'Seasonal vegan lunch plate', 'Vegan curry or the day’s plant-based lunch', [3200,5000], allVegan, 'Backtrack south from Higashiyama to Shichijo (~20–30 minutes depending on your stop). Confirm the current lunch menu, Tuesday opening and last order; do not use this as a late-dinner plan.', sources.vegout)
+        option('CHOICE · vegan café', '89-1 Ohashicho, Sanjo Keihan, Kyoto', 'Vegan cheese burger or bean-and-grain patty plate', 'Mushroom stroganoff + sprouted brown rice', [3200,5000], allVegan, 'Lunch 11:00–15:00; closed Wednesday, open Tuesday on the published schedule. ~20-minute walk north from central Gion: shorten the slopes visit, eat by 12:00, then allow 30–45 minutes by taxi to teamLab. All food is vegan, including “egg” sandwiches and cheese.', sources.choice, [sources.choiceHours]),
+        option('Veg Out', '44 Inaricho, Shichijo / Kamo River, Kyoto', 'Seasonal vegan lunch plate', 'Vegan curry or the day’s plant-based lunch', [3200,5000], allVegan, 'From Higashiyama go south to Shichijo (~20–30 minutes depending on your stop), shortening the slopes route. Confirm Tuesday lunch hours; leave by 13:00. This is nearer the museum, but the remaining walk is exposed: taxi if wanted.', sources.vegout)
       ]},
-      dinner:{time:'19:00 · after teamLab, or later in Osaka', note:'Choose Kyoto dinner before returning. The Osaka alternative moves hotel arrival later than 20:30.', options:[
-        uno('Kyoto Station 10F · Kyoto Ramen Koji', 'Near the station after teamLab; check last order and queue.'),
-        coco('Kyoto Station area — participating branch', 'Confirm hours and vegetarian curry; eat before the return train.', 'Chicken-katsu curry on vegetarian or pork sauce'),
-        fire('Return to Osaka and stop at Shinsaibashi before the hotel. Confirm the kitchen will still be serving.', 'Tomato ramen + vegan gyoza', 'Sesame ramen + a vegan side')
+      dinner:{time:'18:00–19:00 · Gion or Kyoto Station', note:'Eat in Kyoto after the optional dusk Gion walk, or skip that loop and eat by the station. Allow hotel arrival around 21:00.', options:[
+        uno('Gion, 40 Kameicho, Yamato-oji', 'Fits the evening Gion loop. Confirm Tuesday dinner service and last order; avoid repeating your lunch dish.'),
+        uno('Kyoto Station 10F · Kyoto Ramen Koji', 'Useful if skipping the Gion loop or returning from it; check last order and queue.'),
+        coco('Kyoto Station area — participating branch', 'Confirm hours and vegetarian curry; eat before the return train.', 'Chicken-katsu curry on vegetarian or pork sauce')
       ]}},
     {date:25, label:'Wed 25 · Anniversary', route:'Tennoji → Arashiyama → Kitano → Itadakizen → Osaka',
-      breakfast:{time:'06:15–07:00 · light breakfast', note:'Keep breakfast light for the anniversary lunch; leave at 07:15.', options:breakfasts('Near RTI Tennoji / Shin-Imamiya', 'Buy before this early start.', 1)},
+      breakfast:{time:'05:45–06:30 · light breakfast', note:'Keep breakfast light for the anniversary lunch; leave at 06:45 to allow the Arashiyama transfers.', options:breakfasts('Near RTI Tennoji / Shin-Imamiya', 'Buy before this early start.', 1)},
       lunch:{time:'11:00 · Arashiyama', note:'Shigetsu is the planned anniversary meal, subject to reservation. The other two are alternatives if you change the plan.', options:[
         option('Shigetsu · Tenryu-ji', 'Inside Tenryu-ji, Arashiyama', 'Tsuki shojin set', 'Tsuki shojin set — seasonal temple vegetables and tofu', [13000,13000], allVegan, 'Planned 11:00, not marked booked. Reserve at least 3 days ahead for Tsuki (¥6,500 each); garden admission ¥500 each is separate and already in your sightseeing plan. Yuki ¥3,800 / Hana ¥9,000 are other course choices. Lunch 11:00–14:00; closed Thursday.', sources.shigetsu),
         option('M’s Bento', 'Across from JR Saga-Arashiyama Station, Nagai Sangyo Building 3F', 'Premium vegan nori-roll set', 'Premium vegan nori-roll set with tofu fritter and vegetable sides', [5160,5160], allVegan, 'Official set ¥2,580 each; kombu/shiitake-based miso soup. Small venue: confirm Wednesday service and reserve. Allow ~10–15 minutes between the temple / bamboo grove and the station.', sources.ms),
@@ -181,12 +178,12 @@
         option('Beverly Hills Boulangerie', 'Hollywood area, USJ', 'Plant-based mixed-vegetable sandwich set', 'Plant-based mixed-vegetable sandwich set + berry dessert if wanted', [3600,4400], allVegan, 'Published set ¥1,800 each, with cup salad and soft drink. Lighter dinner near the entrance; confirm serving hours before your last rides.', sources.usj),
         option('Kinopio’s Café / Toad Café', 'Super Nintendo World, USJ', 'Bacon-and-mushroom pizza bowl, after confirming no beef', 'Plant-based portobello-mushroom pizza', [3800,5000], vegan, 'Currently ¥1,900 each. Only practical if you still have access to this area and a café place. Otherwise choose the Hollywood or Harry Potter option. Her pizza must be the explicitly plant-based one.', sources.usj, [sources.kinopio])
       ]}},
-    {date:27, label:'Fri 27 · Osaka', route:'Tennoji → Shinsaibashi / Dotonbori → Umeda → Harukas',
-      breakfast:{time:'08:00–09:00 · before the shops', note:'Eat near the hotel before travelling to the 10:00 Pokémon Center opening.', options:breakfasts('Near RTI Tennoji / Shin-Imamiya', 'Also buy tomorrow’s early-airport breakfast tonight.', 0)},
-      lunch:{time:'12:00–13:00 · Shinsaibashi / Namba', note:'Three choices along or near the shopping route. Paprika needs a short walk west to Shinmachi.', options:[
+    {date:27, label:'Fri 27 · Osaka', route:'Tennoji → morning Dotonbori → lunch → Pokémon Center 13:00 → Umeda → Harukas',
+      breakfast:{time:'08:00–09:00 · before the morning walk', note:'Eat near the hotel before the 09:30 Dotonbori photo stop. Pokémon Center is now planned for 13:00.', options:breakfasts('Near RTI Tennoji / Shin-Imamiya', 'Also buy tomorrow’s early-airport breakfast tonight.', 0)},
+      lunch:{time:'11:30–12:30 · Shinsaibashi / Namba', note:'Eat before the 13:00 indoor Pokémon Center visit. Paprika needs a walk west to Shinmachi; reserve the return-walk buffer.', options:[
         option('Paprika Shokudo Vegan', 'Shinmachi / Yotsubashi, Osaka', 'Vegan burger', 'Soy-karaage lunch / current plant-based lunch plate', [3000,4500], allVegan, 'About 10–20 minutes on foot from Shinsaibashi depending on your starting point. Confirm Friday lunch hours and lunch menu rather than using the dinner menu prices.', sources.paprika),
         rize(),
-        coco('Dotonbori / Namba — participating branch', 'Choose a confirmed branch before the 14:00 trip to Umeda.', 'Pork-katsu curry on pork or vegetarian sauce')
+        coco('Dotonbori / Namba — participating branch', 'Choose a confirmed lunch branch and return to Daimaru by 13:00.', 'Pork-katsu curry on pork or vegetarian sauce')
       ]},
       dinner:{time:'18:30–20:00 · after Harukas', note:'Choose the hotel-area curry if confirmed, or make a final Namba / Shinsaibashi food stop. Pack after dinner.', options:[
         coco('Tennoji / Abeno, or a confirmed Namba branch', 'Check vegetarian-curry availability; do not assume every outlet serves it.'),
