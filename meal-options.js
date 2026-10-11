@@ -3,9 +3,6 @@
 (() => {
   'use strict';
   const sources = {
-    table36: 'https://swissotelnankaiosaka.com/restaurants-and-bars/table36/',
-    table36Menu: 'https://swissotelnankaiosaka.com/wp-content/uploads/sites/168/2026/08/Table36_Dinner_Menu_A3_2609.pdf',
-    table36Book: 'https://www.tablecheck.com/en/shops/swissotelnankaiosaka-table36/reserve',
     ts: 'https://ts-restaurant.jp/tantan/',
     coco: 'https://www.ichibanya.co.jp/english/',
     cocoStores: 'https://www.ichibanya.co.jp/cocoichicurry/search.html',
@@ -39,6 +36,171 @@
   };
   const option = (venue, area, husband, wife, cost, status, note, source, extra = []) =>
     ({venue, area, husband, wife, cost, status, note, sources: [source, ...extra].filter(Boolean)});
+  const anniversaryRestaurants = [
+  {
+    "venue": "Table36 · best for night views / Namba convenience",
+    "area": "Swissôtel Nankai Osaka, 36F · above Nankai Namba",
+    "husband": "Recommended: half roast chicken. Three dish choices below.",
+    "wife": "Recommended: pumpkin pasta. Three item choices below; two are starters.",
+    "cost": [
+      13000,
+      16000
+    ],
+    "status": "Menu verified · preparation / booking to confirm",
+    "time": "20:00–21:30",
+    "vibe": "Upscale Modern European dining with panoramic city views; easiest after the Namba arrival.",
+    "transfer": "From a nearby Namba hotel, allow ≈10–20 min walking plus the lift; ≈20–35 min if elsewhere locally. Planning estimates, final hotel dependent.",
+    "note": "Dinner Sun–Thu 18:00–23:30, last order 22:45. Three choices for each person, not three compulsory courses. Her pumpkin pasta is a main; vegetable fritters and mushroom rice croquettes are starters, so combine starters / add a vegetable side for a full meal. Ask for the vegan fritter option and omit the egg aioli or request vegan sauce for the croquettes; confirm stock has no pieces or noticeable animal smell. His sauces must contain no beef. Sample chicken + pumpkin pasta + shared vegan tomatoes and yuzu granita = ¥10,700 food. Prices include tax and 13% service; the couple range allows drinks. Window table, candle / LED candle and dessert message are requests, not confirmed. No advertised Wednesday live music.",
+    "sources": [
+      "https://swissotelnankaiosaka.com/restaurants-and-bars/table36/",
+      "https://swissotelnankaiosaka.com/wp-content/uploads/sites/168/2026/08/Table36_Dinner_Menu_A3_2609.pdf",
+      "https://www.tablecheck.com/en/shops/swissotelnankaiosaka-table36/reserve"
+    ],
+    "husbandChoices": [
+      [
+        "Half roast chicken",
+        4800,
+        "main"
+      ],
+      [
+        "Herb-butter barramundi",
+        4500,
+        "main"
+      ],
+      [
+        "Koji pork chop with apple",
+        4200,
+        "main"
+      ]
+    ],
+    "wifeChoices": [
+      [
+        "Pumpkin rigatoni · vegan version available",
+        3500,
+        "main"
+      ],
+      [
+        "Vegetable fritters · request vegan version",
+        1600,
+        "starter"
+      ],
+      [
+        "Truffle mushroom arancini · omit egg aioli; check stock",
+        1600,
+        "starter"
+      ]
+    ]
+  },
+  {
+    "venue": "XEX WEST · Salvatore Cuomo Bros. · best Italian variety",
+    "area": "HERBIS ENT, 7F · Nishi-Umeda / Osaka Station",
+    "husband": "Recommended: honey-mustard chicken. Three main choices below.",
+    "wife": "Recommended: tomato & mozzarella pizza. Three substantial choices below.",
+    "cost": [
+      14000,
+      18000
+    ],
+    "status": "Linked menu verified · preparation / booking to confirm",
+    "time": "20:00–21:30",
+    "vibe": "Luxury Italian restaurant on the top floor of HERBIS ENT, in a restaurant / bar complex with a sky garden.",
+    "transfer": "From Namba, allow ≈35–45 min door to door via Yotsubashi Line to Nishi-Umeda, then HERBIS ENT and lift. Leave around 19:00–19:10; allow more from a distant hotel. Planning estimate.",
+    "note": "Italian dining room 17:30–23:00, last food order 21:30. Book Salvatore Cuomo Bros., not the sushi room; live singers are advertised for The BAR and are not guaranteed at the Italian table. Choose à la carte: standard anniversary courses include beef. Published dish prices carry an additional 10% service charge and ¥580 per person table charge; the couple budget allows these plus a shared starter/dessert and drinks. Confirm the final all-in quote. Wife pizza / tomato pasta must have no meat/fish toppings or noticeable animal smell; ask about sauces. His jus/sauces must have no beef. Smart casual; men should avoid shorts, sleeveless tops and sandals. Candle / LED candle and anniversary dessert message need confirmation. The linked à la carte menu is undated; recheck November dishes.",
+    "sources": [
+      "https://www.xexgroup.jp/west/",
+      "https://www.xexgroup.jp/images/menus/xexwest/salvatore/salvatore_carte.pdf",
+      "https://res-reserve.com/en/restaurants/xex-west"
+    ],
+    "husbandChoices": [
+      [
+        "Honey-mustard chicken",
+        3200,
+        "main"
+      ],
+      [
+        "Pork loin cutlet with tomato sauce",
+        4500,
+        "main"
+      ],
+      [
+        "Fish and clam acqua pazza",
+        4800,
+        "main"
+      ]
+    ],
+    "wifeChoices": [
+      [
+        "Tomato & buffalo-mozzarella pizza",
+        2800,
+        "pizza"
+      ],
+      [
+        "Cheese pizza with truffle honey",
+        3200,
+        "pizza"
+      ],
+      [
+        "Tomato spaghetti with stracciatella cheese",
+        3800,
+        "pasta"
+      ]
+    ]
+  },
+  {
+    "venue": "eu · Sheraton Miyako Osaka · best value / dedicated veg menu",
+    "area": "Sheraton Miyako Hotel Osaka, 2F · Osaka-Uehommachi",
+    "husband": "Recommended: chicken in red wine. Three non-beef choices below.",
+    "wife": "Recommended: soy-milk carbonara. Three vegetable / plant-based mains below.",
+    "cost": [
+      10000,
+      14000
+    ],
+    "status": "Veg menu verified · preparation / booking to confirm",
+    "time": "19:45–21:00",
+    "vibe": "Quiet, stylish hotel restaurant with French cooking and warm lounge lighting; a more restrained anniversary setting.",
+    "transfer": "From Osaka-Namba, allow ≈20–30 min by Kintetsu to Osaka-Uehommachi, hotel access and lift. Leave the hotel by ≈19:10 for a 19:45 table; route depends on final hotel. Planning estimate.",
+    "note": "Dinner closes 21:00, food last order 20:30: reserve 19:45 and place food orders promptly. Published prices include tax and 10% service. Couple range allows one main each, a shared starter, desserts and drinks; decoration extra if charged. Chicken ¥3,300 + soy-milk carbonara ¥2,700 = ¥6,000 for mains alone. Carbonara and soy-mince bolognese are explicitly vegan; the mince is plant-based, but choose curry / carbonara if a meat-like appearance bothers her. Confirm chicken / seafood sauce has no beef. Hotel advertises anniversary message plates in set plans; ask whether one can be added to this à la carte order and quote its charge. Do not buy a standard beef anniversary course. Candles and romantic table need confirmation.",
+    "sources": [
+      "https://www.miyakohotels.ne.jp/osaka/restaurant/eu/",
+      "https://www.miyakohotels.ne.jp/osaka/restaurant/eu/menu/18988/",
+      "https://www.miyakohotels.ne.jp/osaka/restaurant/eu/menu/18429/",
+      "https://www.tablecheck.com/en/shops/osaka-miyako-eu/reserve"
+    ],
+    "husbandChoices": [
+      [
+        "Chicken braised in red wine",
+        3300,
+        "main"
+      ],
+      [
+        "Fried shrimp with warm vegetables",
+        3300,
+        "main"
+      ],
+      [
+        "Seafood tomato pasta",
+        2900,
+        "pasta"
+      ]
+    ],
+    "wifeChoices": [
+      [
+        "Vegetable curry",
+        2300,
+        "main"
+      ],
+      [
+        "Vegan soy-milk carbonara",
+        2700,
+        "pasta"
+      ],
+      [
+        "Vegan soy-mince bolognese",
+        2700,
+        "pasta"
+      ]
+    ]
+  }
+];
   const vegan = 'Vegan menu';
   const check = 'Check before ordering';
   const label = 'Check package label';
@@ -172,11 +334,7 @@
         option('M’s Bento', 'Across from JR Saga-Arashiyama Station, Nagai Sangyo Building 3F', 'Premium vegan nori-roll set', 'Premium vegan nori-roll set with tofu fritter and vegetable sides', [5160,5160], allVegan, 'Official set ¥2,580 each; kombu/shiitake-based miso soup. Small venue: confirm Wednesday service and reserve. Allow ~10–15 minutes between the temple / bamboo grove and the station.', sources.ms),
         option('musubi cafe Arashiyama', '1-8 Arashiyama Nishiichikawacho, near Hankyu Arashiyama', 'Chickpea-and-tomato curry set', 'Vegetable tomato spaghetti set, without visible non-veg pieces or noticeable smell', [3400,4000], check, 'Lunch starts 11:30, so change the 11:00 lunch slot. Across the river from Tenryu-ji. Published sets ¥1,700 each; ask for no visible animal pieces or noticeable non-veg smell; incorporated egg and stocks are acceptable under her updated preference.', sources.musubi)
       ]},
-      dinner:{time:'20:00–21:30 · Table36 anniversary dinner together', note:'After AONIYOSHI 16:50–18:16, check in and freshen up; aim to reach Swissôtel Nankai by 19:50. Three order combinations at the same upscale restaurant. Request a romantic window table, candle / LED candle and dessert message; arrangements and any extra charge need confirmation. Not booked.', options:[
-        option('Table36 · recommended chicken pairing', 'Swissôtel Nankai Osaka 36F, directly above Nankai Namba', 'Roast boneless half chicken', 'Pumpkin rigatoni; vegan version available if preferred', [13000,16000], check, 'Chicken ¥4,800 + rigatoni ¥3,500 + shared vegan tomatoes ¥1,200 and yuzu granita ¥1,200 = ¥10,700 food, tax/service included. Allow the displayed range with drinks; decoration extra if charged. Confirm no beef in his sauce and no visible non-veg or noticeable smell in her dish.', sources.table36, [sources.table36Menu, sources.table36Book]),
-        option('Table36 · fish pairing', 'Same restaurant / same table', 'Barramundi steamed in herb butter', 'Pumpkin rigatoni; vegan version available if preferred', [13000,16000], check, 'Fish ¥4,500: same shared starter/dessert gives ¥10,400 food, tax/service included. Displayed range allows drinks. Her plate remains vegetable-based; confirm suitable preparation and candle request.', sources.table36, [sources.table36Menu, sources.table36Book]),
-        option('Table36 · pork pairing', 'Same restaurant / same table', 'Koji-marinated pork chop', 'Pumpkin rigatoni; vegan version available if preferred', [13000,16000], check, 'Pork ¥4,200: same shared starter/dessert gives ¥10,100 food, tax/service included. Displayed range allows drinks. Confirm no beef stock in his sauce; request anniversary plating and quote any charge.', sources.table36, [sources.table36Menu, sources.table36Book])
-      ]}},
+      dinner:{time:'25 Nov · 3 anniversary restaurants · 19:45 / 20:00', note:'Choose ONE restaurant for both of you. Each has 3 item choices for him and 3 for her, listed with individual menu prices. Table36 and XEX target 20:00–21:30; eu 19:45–21:00. All are unbooked, and candle / LED candle arrangements are unconfirmed. Keep Shigetsu lunch and AONIYOSHI 16:50–18:16; check in, then transfer with the restaurant-specific buffer.', options:anniversaryRestaurants}},
     {date:26, label:'Thu 26 · USJ', route:'Osaka hotel → Universal Studios Japan → Osaka hotel',
       breakfast:{time:'Before leaving for the opening queue', note:'Buy on 25 Nov and eat before entering the park. Do not spend your opening-hour ride time looking for breakfast.', options:breakfasts('Near your final Osaka hotel (Namba or Tennoji)', 'Eat before the gates; park food rules apply.', 2)},
       lunch:{time:'11:00–13:00 · inside USJ', note:'Three in-park options. Choose by the area you are in and confirm the green plant-based menu on the day.', options:[
@@ -284,9 +442,16 @@
       [['Husband', choice.husband], ['Wife', choice.wife]].forEach(([person, dish]) => {
         const order = el('div', 'meal-order');
         order.append(el('b', '', person), el('p', '', dish));
+        const choices = choice[person.toLowerCase() + 'Choices'];
+        if (choices) {
+          const items = el('ol', 'meal-dish-choices');
+          choices.forEach(([name, yen, type]) => items.append(el('li', '', name + ' (' + type + ') — ¥' + yen.toLocaleString('en-US') + ' / ≈₹' + Math.round(yen * 0.6099).toLocaleString('en-IN'))));
+          order.append(items);
+        }
         orders.append(order);
       });
       card.append(orders, el('p', 'meal-price', price(choice.cost)), el('span', 'meal-status', choice.status), el('p', 'meal-check', choice.note));
+      if (choice.time) card.append(el('p', 'meal-check', '25 Nov target: ' + choice.time + '. ' + choice.transfer));
       const links = el('div', 'meal-links');
       const flight = /airside|cabin|flight|VJ\d|transit/i.test(choice.area);
       if (!flight) links.append(link('Find on Maps ↗', 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(choice.venue + ' ' + choice.area)));
@@ -318,6 +483,11 @@
       day[period].options.forEach(choice => {
         const item = el('li');
         item.append(el('b', '', choice.venue + ': '), el('span', '', 'Husband — ' + choice.husband + '. Wife — ' + choice.wife + '. ' + price(choice.cost) + '. ' + choice.note + ' '));
+        ['husband','wife'].forEach(person => {
+          const choices = choice[person + 'Choices'];
+          if (choices) item.append(el('p', '', person[0].toUpperCase() + person.slice(1) + ' choices: ' + choices.map(([name, yen, type]) => name + ' (' + type + ') ¥' + yen.toLocaleString('en-US') + ' / ≈₹' + Math.round(yen * 0.6099).toLocaleString('en-IN')).join('; ') + '.'));
+        });
+        if (choice.time) item.append(el('p', '', '25 Nov target: ' + choice.time + '. ' + choice.transfer));
         choice.sources.forEach(source => item.append(link('Details ↗', source), ' '));
         list.append(item);
       });
