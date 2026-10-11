@@ -1,4 +1,4 @@
-/* Meal routes updated 11 Oct 2026 for Kyoto 23–25 / Osaka 25–28, booked teamLab and AONIYOSHI. Costs are planning estimates for TWO.
+/* Meal routes updated 11 Oct 2026 for Kyoto 23–25 / Osaka 25–28, booked teamLab, proposed Sagano and AONIYOSHI. Costs are planning estimates for TWO.
    A paired option gives each traveller an order at the same stop. */
 (() => {
   'use strict';
@@ -162,8 +162,8 @@
         uno('Kyoto Station 10F · Kyoto Ramen Koji', 'Useful if skipping the Gion loop or returning from it; check last order and queue.'),
         coco('Kyoto Station area — participating branch', 'Confirm hours and vegetarian curry; eat before the short hotel return.', 'Chicken-katsu curry on vegetarian or pork sauce')
       ]}},
-    {date:25, label:'Wed 25 · Anniversary', route:'Kyoto hotel checkout / bag storage → Arashiyama → Shigetsu → collect bags → AONIYOSHI 16:50 → Osaka',
-      breakfast:{time:'07:00–07:30 · light Kyoto breakfast', note:'Keep breakfast light for Shigetsu; checkout, store bags and allow travel to Arashiyama by 08:30.', options:breakfasts('Near your Kyoto Station hotel', 'Buy before this early start.', 1)},
+    {date:25, label:'Wed 25 · Anniversary', route:'Kyoto hotel checkout / bag storage → early bamboo walk → Sagano 09:02 → JR return → Shigetsu → collect bags → AONIYOSHI 16:50 → Osaka',
+      breakfast:{time:'06:45–07:15 · light Kyoto breakfast', note:'Keep breakfast light for Shigetsu; checkout, store bags and aim for Arashiyama by 08:00. Short bamboo walk, then Torokko Saga by 08:40 for the 09:02 train. If skipping Sagano, the original later breakfast is fine.', options:breakfasts('Near your Kyoto Station hotel', 'Buy before this early start.', 1)},
       lunch:{time:'11:00 · Arashiyama', note:'Shigetsu is the planned anniversary meal, subject to reservation. The other two are alternatives if you change the plan.', options:[
         option('Shigetsu · Tenryu-ji', 'Inside Tenryu-ji, Arashiyama', 'Tsuki shojin set', 'Tsuki shojin set — seasonal temple vegetables and tofu', [13000,13000], allVegan, 'Planned 11:00, not marked booked. Reserve at least 3 days ahead for Tsuki (¥6,500 each); garden admission ¥500 each is separate and already in your sightseeing plan. Yuki ¥3,800 / Hana ¥9,000 are other course choices. Lunch 11:00–14:00; closed Thursday.', sources.shigetsu),
         option('M’s Bento', 'Across from JR Saga-Arashiyama Station, Nagai Sangyo Building 3F', 'Premium vegan nori-roll set', 'Premium vegan nori-roll set with tofu fritter and vegetable sides', [5160,5160], allVegan, 'Official set ¥2,580 each; kombu/shiitake-based miso soup. Small venue: confirm Wednesday service and reserve. Allow ~10–15 minutes between the temple / bamboo grove and the station.', sources.ms),
