@@ -1,0 +1,744 @@
+[
+  {
+    "id": "tokyo",
+    "title": "Tokyo · your itinerary",
+    "sub": "20–23 November 2026 • central city • Kasukabe has a separate detail map",
+    "center": [
+      35.693,
+      139.748
+    ],
+    "z": 13,
+    "scale": 2000,
+    "pins": [
+      {
+        "name": "Sensō-ji + Nakamise",
+        "lat": 35.7148,
+        "lon": 139.7967,
+        "kind": "sight",
+        "note": "Asakusa visit"
+      },
+      {
+        "name": "Kappabashi shopping street",
+        "lat": 35.714,
+        "lon": 139.7885,
+        "kind": "sight",
+        "note": "Street midpoint; souvenir shopping"
+      },
+      {
+        "name": "Onitsuka Tiger · Ginza",
+        "lat": 35.6704,
+        "lon": 139.7624,
+        "kind": "sight",
+        "note": "Ginza store area; confirm embroidery branch"
+      },
+      {
+        "name": "Shibuya SKY",
+        "lat": 35.6584,
+        "lon": 139.7022,
+        "kind": "sight",
+        "note": "Shibuya Scramble Square"
+      },
+      {
+        "name": "Crossing + Hachikō",
+        "lat": 35.6591,
+        "lon": 139.7006,
+        "kind": "sight",
+        "note": "Shibuya station area"
+      },
+      {
+        "name": "Shibuya PARCO",
+        "lat": 35.662,
+        "lon": 139.6987,
+        "kind": "sight",
+        "note": "Nintendo / Pokémon / Jump shops"
+      },
+      {
+        "name": "Akihabara Radio Kaikan",
+        "lat": 35.6979,
+        "lon": 139.7715,
+        "kind": "sight",
+        "note": ""
+      },
+      {
+        "name": "Yodobashi Akiba",
+        "lat": 35.6989,
+        "lon": 139.7746,
+        "kind": "sight",
+        "note": ""
+      },
+      {
+        "name": "Tokyo Station shops",
+        "lat": 35.6812,
+        "lon": 139.7671,
+        "kind": "sight",
+        "note": "Character Street / planned shopping"
+      },
+      {
+        "name": "Iriya Station",
+        "lat": 35.72,
+        "lon": 139.7846,
+        "kind": "station",
+        "note": ""
+      },
+      {
+        "name": "Senzoku accommodation area",
+        "lat": 35.7223,
+        "lon": 139.792,
+        "kind": "area",
+        "note": "Approximate area ONLY; hotel address unverified"
+      },
+      {
+        "name": "Shinjuku Station",
+        "lat": 35.6907,
+        "lon": 139.7003,
+        "kind": "optional",
+        "note": "Orientation only; separate optional detail map"
+      }
+    ],
+    "pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "notes": [
+      "Ghibli is removed from this itinerary.",
+      "Narita Airport is outside this central map.",
+      "No claim that all nearby sights are walkable."
+    ],
+    "distances": [
+      {
+        "from_id": 1,
+        "to_id": 2,
+        "metres": 746
+      },
+      {
+        "from_id": 2,
+        "to_id": 3,
+        "metres": 5391
+      },
+      {
+        "from_id": 4,
+        "to_id": 6,
+        "metres": 510
+      },
+      {
+        "from_id": 7,
+        "to_id": 9,
+        "metres": 1899
+      }
+    ]
+  },
+  {
+    "id": "kyoto",
+    "title": "Kyoto · your itinerary",
+    "sub": "23–25 November 2026 • booked teamLab + planned temples, Arashiyama and rail connections",
+    "center": [
+      35.003,
+      135.727
+    ],
+    "z": 13,
+    "scale": 2000,
+    "pins": [
+      {
+        "name": "Kyoto Station",
+        "lat": 34.9858,
+        "lon": 135.7588,
+        "kind": "station",
+        "note": "Shinkansen arrival / AONIYOSHI departure"
+      },
+      {
+        "name": "teamLab Biovortex",
+        "lat": 34.98375,
+        "lon": 135.76542,
+        "kind": "sight",
+        "note": "BOOKED: 24 Nov, 14:30–15:00 entry"
+      },
+      {
+        "name": "Fushimi Inari Taisha",
+        "lat": 34.9671,
+        "lon": 135.7727,
+        "kind": "sight",
+        "note": "24 Nov morning"
+      },
+      {
+        "name": "Kiyomizu-dera",
+        "lat": 34.9949,
+        "lon": 135.785,
+        "kind": "sight",
+        "note": "24 Nov; hillside approach"
+      },
+      {
+        "name": "Sannenzaka / Ninenzaka",
+        "lat": 34.9978,
+        "lon": 135.7807,
+        "kind": "sight",
+        "note": "Historic streets; area midpoint"
+      },
+      {
+        "name": "Gion / Yasaka Shrine",
+        "lat": 35.0037,
+        "lon": 135.7785,
+        "kind": "sight",
+        "note": "Arrival-day option"
+      },
+      {
+        "name": "Arashiyama bamboo grove",
+        "lat": 35.017,
+        "lon": 135.6711,
+        "kind": "sight",
+        "note": "25 Nov morning"
+      },
+      {
+        "name": "Tenryū-ji / Shigetsu",
+        "lat": 35.0158,
+        "lon": 135.6742,
+        "kind": "sight",
+        "note": "25 Nov lunch proposed, not confirmed"
+      },
+      {
+        "name": "Saga-Arashiyama / Torokko Saga",
+        "lat": 35.0187,
+        "lon": 135.6814,
+        "kind": "station",
+        "note": "Adjacent JR / sightseeing train stations"
+      },
+      {
+        "name": "Togetsukyō Bridge",
+        "lat": 35.0135,
+        "lon": 135.6778,
+        "kind": "optional",
+        "note": ""
+      },
+      {
+        "name": "Sanjo Keihan",
+        "lat": 35.0093,
+        "lon": 135.7722,
+        "kind": "station",
+        "note": "Direct Keishin / Tozai access from Hama-Ōtsu"
+      },
+      {
+        "name": "Shijō / Karasuma",
+        "lat": 35.0034,
+        "lon": 135.759,
+        "kind": "station",
+        "note": "Two Karasuma subway stops from Kyoto"
+      },
+      {
+        "name": "Nijō Station",
+        "lat": 35.0108,
+        "lon": 135.7416,
+        "kind": "station",
+        "note": "JR Sagano + Tozai subway"
+      }
+    ],
+    "pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "notes": [
+      "Ōtsu / Seta and Kameoka are on the regional map.",
+      "Kyoto Station is in the southern central city.",
+      "Pins do not indicate confirmed reservations except teamLab."
+    ],
+    "distances": [
+      {
+        "from_id": 1,
+        "to_id": 2,
+        "metres": 645
+      },
+      {
+        "from_id": 1,
+        "to_id": 3,
+        "metres": 2435
+      },
+      {
+        "from_id": 1,
+        "to_id": 11,
+        "metres": 2884
+      },
+      {
+        "from_id": 7,
+        "to_id": 9,
+        "metres": 957
+      }
+    ]
+  },
+  {
+    "id": "kyoto-otsu",
+    "title": "Kyoto ↔ Ōtsu · regional context",
+    "sub": "Bonus map • JR corridor, direct central-Kyoto access and the Sagano excursion",
+    "center": [
+      35.015,
+      135.783
+    ],
+    "z": 12,
+    "scale": 5000,
+    "pins": [
+      {
+        "name": "Kyoto Station",
+        "lat": 34.9858,
+        "lon": 135.7588,
+        "kind": "station",
+        "note": ""
+      },
+      {
+        "name": "Yamashina",
+        "lat": 34.9923,
+        "lon": 135.8171,
+        "kind": "station",
+        "note": "Change JR → Tozai for central Kyoto"
+      },
+      {
+        "name": "JR Ōtsu",
+        "lat": 35.0029,
+        "lon": 135.8647,
+        "kind": "station",
+        "note": "Direct westbound JR to Kyoto"
+      },
+      {
+        "name": "Zeze",
+        "lat": 34.9994,
+        "lon": 135.8806,
+        "kind": "station",
+        "note": "Some services skip this station"
+      },
+      {
+        "name": "Ishiyama",
+        "lat": 34.9809,
+        "lon": 135.8999,
+        "kind": "station",
+        "note": "le Lac: about 150 m from station"
+      },
+      {
+        "name": "Seta",
+        "lat": 34.9865,
+        "lon": 135.9256,
+        "kind": "station",
+        "note": "Smile Hotel: about 1 min walk"
+      },
+      {
+        "name": "Biwako-Hamaōtsu",
+        "lat": 35.0118,
+        "lon": 135.8643,
+        "kind": "station",
+        "note": "Keishin through trains to Tozai subway"
+      },
+      {
+        "name": "Kamisakaemachi",
+        "lat": 35.0064,
+        "lon": 135.8618,
+        "kind": "station",
+        "note": "Also on the through-train route"
+      },
+      {
+        "name": "Sanjo Keihan",
+        "lat": 35.0093,
+        "lon": 135.7722,
+        "kind": "station",
+        "note": "About 25 min from Hama-Ōtsu"
+      },
+      {
+        "name": "Saga-Arashiyama / Torokko Saga",
+        "lat": 35.0187,
+        "lon": 135.6814,
+        "kind": "station",
+        "note": ""
+      },
+      {
+        "name": "Torokko Kameoka",
+        "lat": 35.0132,
+        "lon": 135.606,
+        "kind": "station",
+        "note": "Sightseeing train terminus"
+      },
+      {
+        "name": "JR Umahori",
+        "lat": 35.0106,
+        "lon": 135.6028,
+        "kind": "station",
+        "note": "Walk from Torokko; JR return"
+      }
+    ],
+    "pairs": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        11,
+        12
+      ]
+    ],
+    "notes": [
+      "These are selected stations, not a full stopping pattern.",
+      "JR Ōtsu and Keihan Hama-Ōtsu are different stations.",
+      "Rail distances and travel times exceed straight-line distances."
+    ],
+    "distances": [
+      {
+        "from_id": 1,
+        "to_id": 3,
+        "metres": 9832
+      },
+      {
+        "from_id": 3,
+        "to_id": 6,
+        "metres": 5840
+      },
+      {
+        "from_id": 7,
+        "to_id": 9,
+        "metres": 8393
+      },
+      {
+        "from_id": 11,
+        "to_id": 12,
+        "metres": 411
+      }
+    ]
+  },
+  {
+    "id": "osaka",
+    "title": "Osaka · your itinerary",
+    "sub": "25–28 November 2026 • USJ booked 26 Nov • dining and shopping locations",
+    "center": [
+      34.675,
+      135.482
+    ],
+    "z": 13,
+    "scale": 2000,
+    "pins": [
+      {
+        "name": "Universal Studios Japan",
+        "lat": 34.6654,
+        "lon": 135.4323,
+        "kind": "sight",
+        "note": "BOOKED: 26 Nov; park centre"
+      },
+      {
+        "name": "Universal City Station",
+        "lat": 34.6678,
+        "lon": 135.4387,
+        "kind": "station",
+        "note": ""
+      },
+      {
+        "name": "Osaka-Namba Station",
+        "lat": 34.667,
+        "lon": 135.5,
+        "kind": "station",
+        "note": "AONIYOSHI arrival station"
+      },
+      {
+        "name": "Nankai Namba / Table36",
+        "lat": 34.6651,
+        "lon": 135.5019,
+        "kind": "sight",
+        "note": "Swissôtel dinner proposal, not booked"
+      },
+      {
+        "name": "Dōtonbori",
+        "lat": 34.6687,
+        "lon": 135.5013,
+        "kind": "sight",
+        "note": "Canal / Glico sign area"
+      },
+      {
+        "name": "Den Den Town",
+        "lat": 34.6599,
+        "lon": 135.5064,
+        "kind": "sight",
+        "note": "Electronics / anime shopping area"
+      },
+      {
+        "name": "Bic Camera Namba",
+        "lat": 34.6668,
+        "lon": 135.5037,
+        "kind": "sight",
+        "note": ""
+      },
+      {
+        "name": "Tennoji Station",
+        "lat": 34.6473,
+        "lon": 135.5138,
+        "kind": "station",
+        "note": ""
+      },
+      {
+        "name": "Shin-Imamiya Station",
+        "lat": 34.6501,
+        "lon": 135.501,
+        "kind": "station",
+        "note": ""
+      },
+      {
+        "name": "Dōbutsuen-mae Station",
+        "lat": 34.6488,
+        "lon": 135.5031,
+        "kind": "station",
+        "note": ""
+      },
+      {
+        "name": "RTI Tennoji · Sannō area",
+        "lat": 34.6445,
+        "lon": 135.5025,
+        "kind": "area",
+        "note": "Approximate current stay area; not exact entrance"
+      },
+      {
+        "name": "Osaka / Umeda Station",
+        "lat": 34.7025,
+        "lon": 135.4959,
+        "kind": "optional",
+        "note": "Optional shopping area"
+      },
+      {
+        "name": "Nishikujō Station",
+        "lat": 34.6827,
+        "lon": 135.4663,
+        "kind": "station",
+        "note": "Useful transfer for USJ"
+      }
+    ],
+    "pairs": [
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        8,
+        4
+      ]
+    ],
+    "notes": [
+      "Kansai Airport is southwest, outside this city map.",
+      "Dinner location is proposed, not a confirmed booking.",
+      "Hotel area pin must not be used as its exact address."
+    ],
+    "distances": [
+      {
+        "from_id": 4,
+        "to_id": 5,
+        "metres": 404
+      },
+      {
+        "from_id": 4,
+        "to_id": 6,
+        "metres": 710
+      },
+      {
+        "from_id": 10,
+        "to_id": 2,
+        "metres": 6258
+      },
+      {
+        "from_id": 8,
+        "to_id": 4,
+        "metres": 2259
+      }
+    ]
+  },
+  {
+    "id": "kasukabe",
+    "title": "Kasukabe · Shin-chan afternoon",
+    "sub": "22 November 2026 • Kasukabe City, Saitama Prefecture • local walking-scale map",
+    "center": [
+      35.979,
+      139.7528
+    ],
+    "z": 17,
+    "scale": 200,
+    "pins": [
+      {
+        "name": "Kasukabe Station",
+        "lat": 35.9803,
+        "lon": 139.7523,
+        "kind": "station",
+        "note": "Tobu Skytree / Urban Park lines"
+      },
+      {
+        "name": "LaLa Garden Kasukabe",
+        "lat": 35.97716,
+        "lon": 139.75539,
+        "kind": "sight",
+        "note": "3F: Crayon Shin-chan Buriburi Cinema Studio"
+      }
+    ],
+    "pairs": [
+      [
+        1,
+        2
+      ]
+    ],
+    "notes": [
+      "Use the west side of Kasukabe Station for LaLa Garden.",
+      "Allow about 5–10 min walking, depending on exit.",
+      "Station construction can alter the walking approach.",
+      "The scale is metres here, not kilometres."
+    ],
+    "distances": [
+      {
+        "from_id": 1,
+        "to_id": 2,
+        "metres": 446
+      }
+    ]
+  },
+  {
+    "id": "shinjuku",
+    "title": "Shinjuku · optional orientation",
+    "sub": "A ward within Tokyo • these landmarks are NOT currently scheduled in your itinerary",
+    "center": [
+      35.6917,
+      139.7016
+    ],
+    "z": 16,
+    "scale": 500,
+    "pins": [
+      {
+        "name": "Shinjuku Station",
+        "lat": 35.6907,
+        "lon": 139.7003,
+        "kind": "station",
+        "note": "Large interchange; choose the right exit"
+      },
+      {
+        "name": "Tokyo Metropolitan Government",
+        "lat": 35.6896,
+        "lon": 139.6917,
+        "kind": "optional",
+        "note": ""
+      },
+      {
+        "name": "Omoide Yokochō",
+        "lat": 35.6932,
+        "lon": 139.6996,
+        "kind": "optional",
+        "note": ""
+      },
+      {
+        "name": "Godzilla Head / Hotel Gracery",
+        "lat": 35.6952,
+        "lon": 139.702,
+        "kind": "optional",
+        "note": ""
+      },
+      {
+        "name": "Golden Gai",
+        "lat": 35.6942,
+        "lon": 139.7048,
+        "kind": "optional",
+        "note": ""
+      },
+      {
+        "name": "Shinjuku Gyoen · Shinjuku Gate",
+        "lat": 35.6881,
+        "lon": 139.7063,
+        "kind": "optional",
+        "note": "Park entrance, not park centre"
+      },
+      {
+        "name": "Shinjuku-sanchōme Station",
+        "lat": 35.6908,
+        "lon": 139.7049,
+        "kind": "station",
+        "note": ""
+      },
+      {
+        "name": "Seibu-Shinjuku Station",
+        "lat": 35.6957,
+        "lon": 139.7002,
+        "kind": "station",
+        "note": ""
+      }
+    ],
+    "pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "notes": [
+      "Adding this area would use time from the Tokyo plan.",
+      "Shinjuku Station has JR, private rail and subway lines.",
+      "Pins are approximate centres unless labelled entrance."
+    ],
+    "distances": [
+      {
+        "from_id": 1,
+        "to_id": 2,
+        "metres": 786
+      },
+      {
+        "from_id": 1,
+        "to_id": 4,
+        "metres": 523
+      },
+      {
+        "from_id": 1,
+        "to_id": 6,
+        "metres": 614
+      },
+      {
+        "from_id": 4,
+        "to_id": 5,
+        "metres": 276
+      }
+    ]
+  }
+]
