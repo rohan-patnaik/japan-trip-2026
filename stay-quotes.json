@@ -7,28 +7,33 @@
     "rooms": 1
   },
   "indicativeInrPerJpy": 0.5991152416356877,
-  "checked": "2026-10-21T02:28:00+05:30",
-  "verification": "Lowest usable offer checked per hotel, before guest information/payment. Conditional offers and estimated city tax are explicit. Not a market-wide price guarantee.",
+  "checked": "2026-10-21T03:08:00+05:30",
+  "verification": "Smile INR and JPY payment screens checked in Chrome; Sanjo checkout reviewed; other main-table hotels retain 02:28 checks. Not a market-wide lowest-price guarantee.",
   "hotels": [
     {
       "id": "smile",
       "name": "Smile Hotel Ōtsu Seta",
       "city": "Ōtsu",
-      "provider": "Hotel official · new-member offer",
-      "url": "https://go-smile-hotel-chain.reservation.jp/en/hotels/otsuseta/plans/10155053?room_id=10031958&checkin_date=20261123&checkout_date=20261125&adults=2&children=0&rooms=1",
-      "total": 15397.26,
-      "jpy": 25700,
+      "provider": "Agoda · AGODASPONSORED",
+      "url": "https://www.agoda.com/en-in/smile-hotel-otsu-seta/hotel/otsu-jp.html?checkin=2026-11-23&los=2&rooms=1&adults=2&children=0",
+      "total": 14716.61,
+      "jpy": 24523,
       "estimated": false,
       "converted": false,
-      "room": "Non-smoking double · 140 cm bed · 15 m²",
+      "room": "Non-smoking double · 15 m² · private bathroom",
       "access": "JR Seta: 1-minute walk",
-      "review": "Booking.com 7.1/10 · 73 reviews",
-      "fees": "Taxes and fees included; no mandatory extra shown.",
-      "condition": "Free new A Card membership + app registration required. Pay at hotel. Free cancellation until 21 Nov, 23:59 JST.",
-      "check": "Official booking cart",
+      "review": "Agoda 7.6/10",
+      "fees": "Tax 10% and service 10% included. No separate mandatory fee shown.",
+      "condition": "Pay later 19 Nov; free cancellation before 22 Nov. INR pay-now total identical when checked.",
+      "check": "Separate INR and JPY payment-screen quotes, not one converted price",
       "sources": [
         "https://otsu.or.jp/en/hotels_ryokan/hotel168"
-      ]
+      ],
+      "currencyQuotes": {
+        "INR": 14716.61,
+        "JPY": 24523
+      },
+      "checked": "2026-10-21T03:08:00+05:30"
     },
     {
       "id": "apa-seta",
@@ -133,5 +138,52 @@
     "Agoda": "Dated Smile Seta, le Lac Ishiyama and Daido pages checked. Room grid failed to load; headline prices cannot be used as verified offers.",
     "Skyscanner": "Verification challenge; no usable quote.",
     "Smile official": "Dated plan and booking-cart total checked."
-  }
+  },
+  "previousSmileOfficial": {
+    "id": "smile",
+    "name": "Smile Hotel Ōtsu Seta",
+    "city": "Ōtsu",
+    "provider": "Hotel official · new-member offer",
+    "url": "https://go-smile-hotel-chain.reservation.jp/en/hotels/otsuseta/plans/10155053?room_id=10031958&checkin_date=20261123&checkout_date=20261125&adults=2&children=0&rooms=1",
+    "total": 15397.26,
+    "jpy": 25700,
+    "estimated": false,
+    "converted": false,
+    "room": "Non-smoking double · 140 cm bed · 15 m²",
+    "access": "JR Seta: 1-minute walk",
+    "review": "Booking.com 7.1/10 · 73 reviews",
+    "fees": "Taxes and fees included; no mandatory extra shown.",
+    "condition": "Free new A Card membership + app registration required. Pay at hotel. Free cancellation until 21 Nov, 23:59 JST.",
+    "check": "Official booking cart",
+    "sources": [
+      "https://otsu.or.jp/en/hotels_ryokan/hotel168"
+    ]
+  },
+  "centralKyotoChecks": [
+    {
+      "name": "M’s Hotel Sanjo Wakoku",
+      "jpy": 48872,
+      "stage": "checkout",
+      "room": "Non-smoking semi-double, private bathroom, 14 m²",
+      "excludedTax": "City tax inclusion unresolved; provisional allowance JPY1600",
+      "decision": "Too expensive; semi-double compromise"
+    },
+    {
+      "name": "Smile Hotel Kyoto-Shijo",
+      "jpy": 38977,
+      "stage": "room list",
+      "decision": "Over budget; semi-double; shared bathroom displayed; not shortlisted"
+    },
+    {
+      "name": "Laon Inn Gion Nawate",
+      "stage": "property dated availability",
+      "decision": "Sold out"
+    },
+    {
+      "name": "Carta Hotel KyotoBettei",
+      "jpy": 27584,
+      "stage": "room list",
+      "decision": "Only 3 single beds; not shortlisted"
+    }
+  ]
 }

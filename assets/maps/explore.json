@@ -1,0 +1,700 @@
+[
+  {
+    "id": "tokyo",
+    "title": "Tokyo–Kasukabe",
+    "pins": [
+      {
+        "name": "Sensō-ji + Nakamise",
+        "lat": 35.7148,
+        "lon": 139.7967,
+        "kind": "visit",
+        "note": "Asakusa visit",
+        "id": "tokyo-0"
+      },
+      {
+        "name": "Kappabashi shopping street",
+        "lat": 35.714,
+        "lon": 139.7885,
+        "kind": "visit",
+        "note": "Street midpoint; souvenir shopping",
+        "id": "tokyo-1"
+      },
+      {
+        "name": "Onitsuka Tiger · Ginza",
+        "lat": 35.6704,
+        "lon": 139.7624,
+        "kind": "visit",
+        "note": "Ginza store area; confirm embroidery branch",
+        "id": "tokyo-2"
+      },
+      {
+        "name": "Shibuya SKY",
+        "lat": 35.6584,
+        "lon": 139.7022,
+        "kind": "visit",
+        "note": "Shibuya Scramble Square",
+        "id": "tokyo-3"
+      },
+      {
+        "name": "Crossing + Hachikō",
+        "lat": 35.6591,
+        "lon": 139.7006,
+        "kind": "visit",
+        "note": "Shibuya station area",
+        "id": "tokyo-4"
+      },
+      {
+        "name": "Shibuya PARCO",
+        "lat": 35.662,
+        "lon": 139.6987,
+        "kind": "visit",
+        "note": "Nintendo / Pokémon / Jump shops",
+        "id": "tokyo-5"
+      },
+      {
+        "name": "Akihabara Radio Kaikan",
+        "lat": 35.6979,
+        "lon": 139.7715,
+        "kind": "visit",
+        "note": "",
+        "id": "tokyo-6"
+      },
+      {
+        "name": "Yodobashi Akiba",
+        "lat": 35.6989,
+        "lon": 139.7746,
+        "kind": "visit",
+        "note": "",
+        "id": "tokyo-7"
+      },
+      {
+        "name": "Tokyo Station shops",
+        "lat": 35.6812,
+        "lon": 139.7671,
+        "kind": "visit",
+        "note": "Character Street / planned shopping",
+        "id": "tokyo-8"
+      },
+      {
+        "name": "Iriya Station",
+        "lat": 35.72,
+        "lon": 139.7846,
+        "kind": "station",
+        "note": "",
+        "id": "tokyo-9"
+      },
+      {
+        "name": "Tokyo 1 · Start One Home",
+        "lat": 35.7223,
+        "lon": 139.792,
+        "kind": "held",
+        "note": "Held 20–22 Nov. Approximate Senzoku area; exact entrance unverified. Ask for an extension first.",
+        "id": "tokyo-10",
+        "base": "tokyo"
+      },
+      {
+        "name": "Shinjuku Station",
+        "lat": 35.6907,
+        "lon": 139.7003,
+        "kind": "optional",
+        "note": "Orientation only; separate optional detail map",
+        "id": "tokyo-11"
+      },
+      {
+        "name": "Kasukabe Station",
+        "lat": 35.9803,
+        "lon": 139.7523,
+        "kind": "station",
+        "note": "Tobu Skytree / Urban Park lines",
+        "id": "kasukabe-0"
+      },
+      {
+        "name": "LaLa Garden Kasukabe",
+        "lat": 35.97716,
+        "lon": 139.75539,
+        "kind": "visit",
+        "note": "3F: Crayon Shin-chan Buriburi Cinema Studio",
+        "id": "kasukabe-1"
+      },
+      {
+        "name": "Tokyo Metropolitan Government",
+        "lat": 35.6896,
+        "lon": 139.6917,
+        "kind": "optional",
+        "note": "",
+        "id": "shinjuku-1"
+      },
+      {
+        "name": "Omoide Yokochō",
+        "lat": 35.6932,
+        "lon": 139.6996,
+        "kind": "optional",
+        "note": "",
+        "id": "shinjuku-2"
+      },
+      {
+        "name": "Godzilla Head / Hotel Gracery",
+        "lat": 35.6952,
+        "lon": 139.702,
+        "kind": "optional",
+        "note": "",
+        "id": "shinjuku-3"
+      },
+      {
+        "name": "Golden Gai",
+        "lat": 35.6942,
+        "lon": 139.7048,
+        "kind": "optional",
+        "note": "",
+        "id": "shinjuku-4"
+      },
+      {
+        "name": "Shinjuku Gyoen · Shinjuku Gate",
+        "lat": 35.6881,
+        "lon": 139.7063,
+        "kind": "optional",
+        "note": "Park entrance, not park centre",
+        "id": "shinjuku-5"
+      },
+      {
+        "name": "Shinjuku-sanchōme Station",
+        "lat": 35.6908,
+        "lon": 139.7049,
+        "kind": "optional",
+        "note": "",
+        "id": "shinjuku-6"
+      },
+      {
+        "name": "Seibu-Shinjuku Station",
+        "lat": 35.6957,
+        "lon": 139.7002,
+        "kind": "optional",
+        "note": "",
+        "id": "shinjuku-7"
+      },
+      {
+        "id": "tokyo2",
+        "name": "Tokyo 2 · Ueno candidate area",
+        "lat": 35.7112,
+        "lon": 139.777,
+        "kind": "proposed",
+        "note": "22–23 Nov is unconfirmed. Area only, no property or price selected. Same-hotel extension is the first choice.",
+        "base": "tokyo"
+      },
+      {
+        "id": "kuramae",
+        "name": "Kuramae cafés & crafts",
+        "lat": 35.7047,
+        "lon": 139.7906,
+        "kind": "optional",
+        "note": "Easy add-on to Asakusa/Kappabashi; allow 30–60 min. No reservation for a neighbourhood walk.",
+        "source": "https://www.gotokyo.org/book/wp-content/uploads/2025/09/2509_taito-kankomap_MY_low.pdf"
+      },
+      {
+        "id": "yanaka",
+        "name": "Yanaka Ginza",
+        "lat": 35.7277,
+        "lon": 139.7651,
+        "kind": "optional",
+        "note": "Old shopping street near Nippori. Add only if there is 1–2 hours spare.",
+        "source": "https://www.gotokyo.org/en/story/walks-and-tours/yanaka-and-nezu/"
+      },
+      {
+        "id": "narita",
+        "name": "Narita Airport · T2 area",
+        "lat": 35.773,
+        "lon": 140.387,
+        "kind": "station",
+        "note": "Airport terminal is not confirmed by this pin; use your flight terminal.",
+        "remote": true
+      }
+    ],
+    "center": [
+      35.704,
+      139.755
+    ],
+    "zoom": 12,
+    "notes": "Tokyo 1: held 20–22 Nov. Tokyo 2: 22–23 Nov still unconfirmed. Kasukabe is in Saitama Prefecture; Shinjuku is part of Tokyo."
+  },
+  {
+    "id": "kyoto",
+    "title": "Kyoto–Ōtsu",
+    "pins": [
+      {
+        "name": "Kyoto Station",
+        "lat": 34.9858,
+        "lon": 135.7588,
+        "kind": "station",
+        "note": "Shinkansen arrival / AONIYOSHI departure",
+        "id": "kyoto-0",
+        "dest": "kyoto"
+      },
+      {
+        "name": "teamLab Biovortex",
+        "lat": 34.98375,
+        "lon": 135.76542,
+        "kind": "visit",
+        "note": "BOOKED: 24 Nov, 14:30–15:00 entry",
+        "id": "kyoto-1",
+        "dest": "teamlab"
+      },
+      {
+        "name": "Fushimi Inari Taisha",
+        "lat": 34.9671,
+        "lon": 135.7727,
+        "kind": "visit",
+        "note": "24 Nov morning",
+        "id": "kyoto-2",
+        "dest": "inari"
+      },
+      {
+        "name": "Kiyomizu-dera",
+        "lat": 34.9949,
+        "lon": 135.785,
+        "kind": "visit",
+        "note": "24 Nov; hillside approach",
+        "id": "kyoto-3",
+        "dest": "kiyomizu"
+      },
+      {
+        "name": "Sannenzaka / Ninenzaka",
+        "lat": 34.9978,
+        "lon": 135.7807,
+        "kind": "visit",
+        "note": "Historic streets; area midpoint",
+        "id": "kyoto-4",
+        "dest": "kiyomizu"
+      },
+      {
+        "name": "Gion / Yasaka Shrine",
+        "lat": 35.0037,
+        "lon": 135.7785,
+        "kind": "visit",
+        "note": "Arrival-day option",
+        "id": "kyoto-5",
+        "dest": "gion"
+      },
+      {
+        "name": "Arashiyama bamboo grove",
+        "lat": 35.017,
+        "lon": 135.6711,
+        "kind": "visit",
+        "note": "25 Nov morning",
+        "id": "kyoto-6",
+        "dest": "arashiyama"
+      },
+      {
+        "name": "Tenryū-ji / Shigetsu",
+        "lat": 35.0158,
+        "lon": 135.6742,
+        "kind": "visit",
+        "note": "25 Nov lunch proposed, not confirmed",
+        "id": "kyoto-7",
+        "dest": "arashiyama"
+      },
+      {
+        "name": "Saga-Arashiyama / Torokko Saga",
+        "lat": 35.0187,
+        "lon": 135.6814,
+        "kind": "station",
+        "note": "Adjacent JR / sightseeing train stations",
+        "id": "kyoto-8",
+        "dest": "arashiyama"
+      },
+      {
+        "name": "Togetsukyō Bridge",
+        "lat": 35.0135,
+        "lon": 135.6778,
+        "kind": "optional",
+        "note": "",
+        "id": "kyoto-9",
+        "dest": ""
+      },
+      {
+        "name": "Sanjo Keihan",
+        "lat": 35.0093,
+        "lon": 135.7722,
+        "kind": "station",
+        "note": "Direct Keishin / Tozai access from Hama-Ōtsu",
+        "id": "kyoto-10",
+        "dest": "sanjo"
+      },
+      {
+        "name": "Shijō / Karasuma",
+        "lat": 35.0034,
+        "lon": 135.759,
+        "kind": "station",
+        "note": "Two Karasuma subway stops from Kyoto",
+        "id": "kyoto-11",
+        "dest": "shijo"
+      },
+      {
+        "name": "Nijō Station",
+        "lat": 35.0108,
+        "lon": 135.7416,
+        "kind": "station",
+        "note": "JR Sagano + Tozai subway",
+        "id": "kyoto-12",
+        "dest": ""
+      },
+      {
+        "name": "Yamashina",
+        "lat": 34.9923,
+        "lon": 135.8171,
+        "kind": "station",
+        "note": "Change JR → Tozai for central Kyoto",
+        "id": "kyoto-otsu-1",
+        "dest": ""
+      },
+      {
+        "name": "JR Ōtsu",
+        "lat": 35.0029,
+        "lon": 135.8647,
+        "kind": "station",
+        "note": "Direct westbound JR to Kyoto",
+        "id": "kyoto-otsu-2",
+        "dest": ""
+      },
+      {
+        "name": "Zeze",
+        "lat": 34.9994,
+        "lon": 135.8806,
+        "kind": "station",
+        "note": "Some services skip this station",
+        "id": "kyoto-otsu-3",
+        "dest": ""
+      },
+      {
+        "name": "Ishiyama",
+        "lat": 34.9809,
+        "lon": 135.8999,
+        "kind": "station",
+        "note": "le Lac: about 150 m from station",
+        "id": "kyoto-otsu-4",
+        "dest": ""
+      },
+      {
+        "name": "Seta",
+        "lat": 34.9865,
+        "lon": 135.9256,
+        "kind": "station",
+        "note": "Smile Hotel: about 1 min walk",
+        "id": "kyoto-otsu-5",
+        "dest": ""
+      },
+      {
+        "name": "Biwako-Hamaōtsu",
+        "lat": 35.0118,
+        "lon": 135.8643,
+        "kind": "station",
+        "note": "Keishin through trains to Tozai subway",
+        "id": "kyoto-otsu-6",
+        "dest": ""
+      },
+      {
+        "name": "Kamisakaemachi",
+        "lat": 35.0064,
+        "lon": 135.8618,
+        "kind": "station",
+        "note": "Also on the through-train route",
+        "id": "kyoto-otsu-7",
+        "dest": ""
+      },
+      {
+        "name": "Torokko Kameoka",
+        "lat": 35.0132,
+        "lon": 135.606,
+        "kind": "station",
+        "note": "Sightseeing train terminus",
+        "id": "kyoto-otsu-10",
+        "dest": ""
+      },
+      {
+        "name": "JR Umahori",
+        "lat": 35.0106,
+        "lon": 135.6028,
+        "kind": "station",
+        "note": "Walk from Torokko; JR return",
+        "id": "kyoto-otsu-11",
+        "dest": ""
+      },
+      {
+        "id": "smile-seta",
+        "name": "Smile Hotel Ōtsu Seta",
+        "lat": 34.9855,
+        "lon": 135.9261,
+        "kind": "proposed",
+        "note": "Agoda checked: INR ₹14,716.61 / JPY ¥24,523 for 2 nights. JR Seta about 1 min. Pin approximate.",
+        "base": "seta",
+        "dest": ""
+      },
+      {
+        "id": "apa-seta",
+        "name": "APA Biwako Seta Ekimae",
+        "lat": 34.9859,
+        "lon": 135.9249,
+        "kind": "proposed",
+        "note": "Earlier checkout INR ₹18,592.38 total. JR Seta ~1 min. Unbooked; pin approximate.",
+        "base": "seta",
+        "dest": ""
+      },
+      {
+        "id": "lelac",
+        "name": "le Lac Ōtsu Ishiyama",
+        "lat": 34.9798,
+        "lon": 135.8992,
+        "kind": "proposed",
+        "note": "Earlier checkout INR ₹22,438.82 total. JR Ishiyama ~150 m. Unbooked; pin approximate.",
+        "base": "ishiyama",
+        "dest": ""
+      },
+      {
+        "id": "otsu-area",
+        "name": "JR Ōtsu · candidate area",
+        "lat": 35.0029,
+        "lon": 135.8635,
+        "kind": "proposed",
+        "note": "Area only, no hotel selected. Kyoto Station is one direct JR ride away.",
+        "base": "otsu",
+        "dest": ""
+      },
+      {
+        "id": "shijo-area",
+        "name": "Shijō–Karasuma · candidate area",
+        "lat": 35.0025,
+        "lon": 135.7578,
+        "kind": "proposed",
+        "note": "Best central balance for your route. Subway to Kyoto; Hankyu to Arashiyama via Katsura. No hotel booked.",
+        "base": "shijo",
+        "dest": ""
+      },
+      {
+        "id": "sanjo-area",
+        "name": "Sanjō · candidate area",
+        "lat": 35.009,
+        "lon": 135.7697,
+        "kind": "proposed",
+        "note": "Good for Gion evenings and Keihan to Inari. No hotel booked.",
+        "base": "sanjo",
+        "dest": ""
+      },
+      {
+        "id": "gion-area",
+        "name": "Gion-Shijō · candidate area",
+        "lat": 35.0031,
+        "lon": 135.7734,
+        "kind": "proposed",
+        "note": "Best for evening strolls; more luggage travel to Kyoto Station. No hotel booked.",
+        "base": "gion",
+        "dest": ""
+      },
+      {
+        "id": "kenninji",
+        "name": "Kennin-ji",
+        "lat": 34.9996,
+        "lon": 135.7733,
+        "kind": "optional",
+        "note": "Temple and gardens beside Gion; allow 45–60 min. Check current opening/entry charge.",
+        "source": "https://shugakuryoko.kyoto.travel/spot/365/",
+        "dest": ""
+      },
+      {
+        "id": "shirakawa",
+        "name": "Gion Shirakawa canal",
+        "lat": 35.0066,
+        "lon": 135.774,
+        "kind": "optional",
+        "note": "Short canal stroll beside Gion; allow 20–30 min. Respect private lanes and photography signs.",
+        "source": "https://kyoto.travel/en/destinations/gion-kiyomizu/",
+        "dest": ""
+      },
+      {
+        "id": "biwa",
+        "name": "Ōtsu lakefront / port",
+        "lat": 35.0132,
+        "lon": 135.867,
+        "kind": "optional",
+        "note": "Add only if staying near central Ōtsu; Seta is farther away. Allow 30–45 min for a lakeside walk.",
+        "source": "https://otsu.or.jp/en/",
+        "dest": ""
+      },
+      {
+        "id": "sanjo-ms",
+        "name": "M’s Hotel Sanjo Wakoku · approximate area",
+        "lat": 35.0113,
+        "lon": 135.7745,
+        "kind": "proposed",
+        "base": "sanjo",
+        "note": "Over-budget alternative only: checkout JPY48,872 / 2 nights, plus unresolved city tax. Semi-double, private bathroom. Location approximate; use hotel address for arrival."
+      }
+    ],
+    "center": [
+      35.002,
+      135.8
+    ],
+    "zoom": 11,
+    "notes": "All stay pins are candidates. Ōtsu is a separate city in Shiga Prefecture. teamLab: booked 24 Nov, 14:30–15:00 entry."
+  },
+  {
+    "id": "osaka",
+    "title": "Osaka",
+    "pins": [
+      {
+        "name": "Universal Studios Japan",
+        "lat": 34.6654,
+        "lon": 135.4323,
+        "kind": "visit",
+        "note": "BOOKED: 26 Nov; park centre",
+        "id": "osaka-0"
+      },
+      {
+        "name": "Universal City Station",
+        "lat": 34.6678,
+        "lon": 135.4387,
+        "kind": "station",
+        "note": "",
+        "id": "osaka-1"
+      },
+      {
+        "name": "Osaka-Namba Station",
+        "lat": 34.667,
+        "lon": 135.5,
+        "kind": "station",
+        "note": "AONIYOSHI arrival station",
+        "id": "osaka-2"
+      },
+      {
+        "name": "Nankai Namba / Table36",
+        "lat": 34.6651,
+        "lon": 135.5019,
+        "kind": "visit",
+        "note": "Swissôtel dinner proposal, not booked",
+        "id": "osaka-3"
+      },
+      {
+        "name": "Dōtonbori",
+        "lat": 34.6687,
+        "lon": 135.5013,
+        "kind": "visit",
+        "note": "Canal / Glico sign area",
+        "id": "osaka-4"
+      },
+      {
+        "name": "Den Den Town",
+        "lat": 34.6599,
+        "lon": 135.5064,
+        "kind": "visit",
+        "note": "Electronics / anime shopping area",
+        "id": "osaka-5"
+      },
+      {
+        "name": "Bic Camera Namba",
+        "lat": 34.6668,
+        "lon": 135.5037,
+        "kind": "visit",
+        "note": "",
+        "id": "osaka-6"
+      },
+      {
+        "name": "Tennoji Station",
+        "lat": 34.6473,
+        "lon": 135.5138,
+        "kind": "station",
+        "note": "",
+        "id": "osaka-7"
+      },
+      {
+        "name": "Shin-Imamiya Station",
+        "lat": 34.6501,
+        "lon": 135.501,
+        "kind": "station",
+        "note": "",
+        "id": "osaka-8"
+      },
+      {
+        "name": "Dōbutsuen-mae Station",
+        "lat": 34.6488,
+        "lon": 135.5031,
+        "kind": "station",
+        "note": "",
+        "id": "osaka-9"
+      },
+      {
+        "name": "RTI Tennoji · held stay area",
+        "lat": 34.6445,
+        "lon": 135.5025,
+        "kind": "held",
+        "note": "Approximate Sannō area. Held voucher dates: 22–27 Nov; proposed Osaka stay: 25–28 Nov. Dates need changing; exact entrance unverified.",
+        "id": "osaka-10",
+        "base": "rti"
+      },
+      {
+        "name": "Osaka / Umeda Station",
+        "lat": 34.7025,
+        "lon": 135.4959,
+        "kind": "optional",
+        "note": "Optional shopping area",
+        "id": "osaka-11"
+      },
+      {
+        "name": "Nishikujō Station",
+        "lat": 34.6827,
+        "lon": 135.4663,
+        "kind": "station",
+        "note": "Useful transfer for USJ",
+        "id": "osaka-12"
+      },
+      {
+        "id": "namba-area",
+        "name": "Namba · candidate stay area",
+        "lat": 34.6639,
+        "lon": 135.4987,
+        "kind": "proposed",
+        "note": "Alternative area only; no room selected. Good for dinner, shopping and KIX.",
+        "base": "namba"
+      },
+      {
+        "id": "hozenji",
+        "name": "Hōzen-ji & alley",
+        "lat": 34.6672,
+        "lon": 135.5021,
+        "kind": "optional",
+        "note": "Easy 20–30 min addition to Dōtonbori evening.",
+        "source": "https://www.japan.travel/en/spot/1109/"
+      },
+      {
+        "id": "namba-yasaka",
+        "name": "Namba Yasaka Shrine",
+        "lat": 34.6616,
+        "lon": 135.4967,
+        "kind": "optional",
+        "note": "Lion-head shrine; ~6 min from Namba. Add 20–30 min before late afternoon.",
+        "source": "https://osaka-info.jp/en/spot/nanbayasakajinja/"
+      },
+      {
+        "id": "shinsekai",
+        "name": "Shinsekai / Tsūtenkaku streets",
+        "lat": 34.6525,
+        "lon": 135.5063,
+        "kind": "optional",
+        "note": "Close to your Sannō stay area; add an evening stroll. Tower admission is separate.",
+        "source": "https://osaka-info.jp/en/spot/"
+      },
+      {
+        "id": "kix",
+        "name": "Kansai Airport · T1",
+        "lat": 34.4358,
+        "lon": 135.2432,
+        "kind": "station",
+        "note": "Airport connection; verify terminal and first train for your flight.",
+        "remote": true
+      }
+    ],
+    "center": [
+      34.671,
+      135.48
+    ],
+    "zoom": 12,
+    "notes": "RTI: held area; dates need reconciling. Proposed Osaka stay 25–28 Nov. USJ: 26 Nov. Dinner remains a proposal."
+  }
+]
