@@ -424,7 +424,7 @@
         "lat": 34.9855,
         "lon": 135.9261,
         "kind": "proposed",
-        "note": "Agoda checked: INR ₹14,716.61 / JPY ¥24,523 for 2 nights. JR Seta about 1 min. Pin approximate.",
+        "note": "Candidate, not booked. Skyscanner → Agoda checkout INR13,363.65 / 2 nights (JPY≈22,306). Non-smoking double/private bath. JR Seta 1–2 min; referral/profile discount may vary.",
         "base": "seta",
         "dest": ""
       },
@@ -434,7 +434,7 @@
         "lat": 34.9859,
         "lon": 135.9249,
         "kind": "proposed",
-        "note": "Earlier checkout INR ₹18,592.38 total. JR Seta ~1 min. Unbooked; pin approximate.",
+        "note": "Candidate, not booked. Skyscanner → Agoda checkout INR16,101.67 / 2 nights (JPY≈26,876). Non-smoking double/private bath, 10 m². JR Seta about 1 min.",
         "base": "seta",
         "dest": ""
       },
@@ -444,7 +444,7 @@
         "lat": 34.9798,
         "lon": 135.8992,
         "kind": "proposed",
-        "note": "Earlier checkout INR ₹22,438.82 total. JR Ishiyama ~150 m. Unbooked; pin approximate.",
+        "note": "Candidate, not booked. Agoda INR ₹21,463.24 / 2 nights (JPY ≈¥35,825). Non-smoking double/private bathroom; taxes included. JR Ishiyama about 150 m.",
         "base": "ishiyama",
         "dest": ""
       },

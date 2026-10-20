@@ -7,137 +7,245 @@
     "rooms": 1
   },
   "indicativeInrPerJpy": 0.5991152416356877,
-  "checked": "2026-10-21T03:08:00+05:30",
-  "verification": "Smile INR and JPY payment screens checked in Chrome; Sanjo checkout reviewed; other main-table hotels retain 02:28 checks. Not a market-wide lowest-price guarantee.",
+  "checked": "2026-10-21T03:39:16+05:30",
+  "verification": "All six primary offers checked in actual Chrome on 21 Oct 2026, approximately 03:27–03:40 IST. Agoda guest-information checkout summaries and APA official guest form; payment submission not reached. Dynamic profile/referral discounts. Not a market-wide lowest-price guarantee.",
   "hotels": [
     {
       "id": "smile",
       "name": "Smile Hotel Ōtsu Seta",
       "city": "Ōtsu",
-      "provider": "Agoda · AGODASPONSORED",
-      "url": "https://www.agoda.com/en-in/smile-hotel-otsu-seta/hotel/otsu-jp.html?checkin=2026-11-23&los=2&rooms=1&adults=2&children=0",
-      "total": 14716.61,
-      "jpy": 24523,
+      "provider": "Skyscanner referral → Agoda",
+      "url": "https://www.skyscanner.co.in/hotels/japan/otsu-hotels/smile-hotel-otsu-seta/ht-123727614?adults=2&checkin=2026-11-23&checkout=2026-11-25&rooms=1",
+      "total": 13363.65,
+      "jpy": 22305.641838646825,
       "estimated": false,
-      "converted": false,
+      "converted": true,
       "room": "Non-smoking double · 15 m² · private bathroom",
       "access": "JR Seta: 1-minute walk",
-      "review": "Agoda 7.6/10",
-      "fees": "Tax 10% and service 10% included. No separate mandatory fee shown.",
-      "condition": "Pay later 19 Nov; free cancellation before 22 Nov. INR pay-now total identical when checked.",
-      "check": "Separate INR and JPY payment-screen quotes, not one converted price",
+      "review": "Agoda 7.6/10, 4590 reviews",
+      "fees": "Tax 10% and service charge 10% included; booking fees FREE. No separate mandatory fee shown.",
+      "condition": "Pay 19 Nov; cancel free before 22 Nov. Skyscanner referral + signed-in Agoda profile; coupon already applied.",
+      "check": "Agoda guest-details checkout summary",
       "sources": [
         "https://otsu.or.jp/en/hotels_ryokan/hotel168"
       ],
-      "currencyQuotes": {
+      "checked": "2026-10-21T03:33:00+05:30",
+      "checkedLabel": "21 Oct · 03:33 IST",
+      "recommendation": "Best checked value · within latest JPY budget",
+      "display": {
+        "total": "INR ₹13,363.65",
+        "totalSecondary": "JPY ≈¥22,305.64",
+        "nightly": "INR ₹6,681.83",
+        "nightlySecondary": "JPY ≈¥11,152.82"
+      },
+      "bullets": [
+        "Open link → choose Agoda → non-smoking double for 2",
+        "Tax 10% + service 10% included; no extra mandatory fee shown",
+        "Pay 19 Nov · free cancellation before 22 Nov",
+        "Referral/profile coupon included; rate may vary"
+      ],
+      "previousCurrencyQuotes": {
         "INR": 14716.61,
         "JPY": 24523
       },
-      "checked": "2026-10-21T03:08:00+05:30"
+      "currencyQuotes": {
+        "INR": 13363.65
+      },
+      "reproduction": "Open public dated Skyscanner property/search, select Agoda Go to site, open the property, click Rooms, select the explicit 2-adult non-smoking double. The plain Agoda URL showed a higher coupon/rate; do not imply the lower rate is reproduced by that URL alone. Agoda referral channel ID observed: 1846370. Prices remain dynamic.",
+      "savingVsPreviousINR": 1352.96
     },
     {
       "id": "apa-seta",
       "name": "APA Hotel Biwako Seta Ekimae",
       "city": "Ōtsu",
-      "provider": "Booking.com · Partner Offer",
-      "url": "https://www.booking.com/hotel/jp/seta-urban.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0&selected_currency=INR",
-      "total": 18592.38,
-      "jpy": 31033.06126754446,
+      "provider": "Skyscanner referral → Agoda",
+      "url": "https://www.skyscanner.co.in/hotels/japan/otsu-hotels/apa-hotel-biwako-seta-ekimae/ht-90732514?adults=2&checkin=2026-11-23&checkout=2026-11-25&rooms=1",
+      "total": 16101.67,
+      "jpy": 26875.7475707673,
       "estimated": false,
       "converted": true,
-      "room": "Non-smoking double · one double bed",
+      "room": "Non-smoking double · 10 m² · private bathroom",
       "access": "JR Seta: 1-minute walk",
-      "review": "Booking.com 7.6/10 · 916 reviews",
-      "fees": "Taxes and charges included; no mandatory extra shown.",
-      "condition": "Pay now. Free cancellation before 23 Nov JST. No amendments.",
-      "check": "Checkout summary",
+      "review": "Agoda 8.0/10, 1960 reviews",
+      "fees": "Tax 10% and service charge 10% included; booking fees FREE. No separate mandatory fee shown.",
+      "condition": "Pay 19 Nov; cancel free before 22 Nov. Skyscanner referral + signed-in Agoda profile; coupon already applied.",
+      "check": "Agoda guest-details checkout summary",
       "sources": [
         "https://www3.apahotel.com/hotel/kansai/shiga/biwako-seta-ekimae/"
-      ]
+      ],
+      "checkedLabel": "21 Oct · 03:34 IST",
+      "recommendation": "Lower verified non-smoking offer",
+      "display": {
+        "total": "INR ₹16,101.67",
+        "totalSecondary": "JPY ≈¥26,875.75",
+        "nightly": "INR ₹8,050.84",
+        "nightlySecondary": "JPY ≈¥13,437.87"
+      },
+      "bullets": [
+        "Open link → choose Agoda → non-smoking double for 2",
+        "Tax 10% + service 10% included; no extra mandatory fee shown",
+        "Pay 19 Nov · free cancellation before 22 Nov",
+        "Referral/profile coupon included; rate may vary"
+      ],
+      "previousCurrencyQuotes": null,
+      "checked": "2026-10-21T03:34:00+05:30",
+      "currencyQuotes": {
+        "INR": 16101.67
+      },
+      "reproduction": "Open public dated Skyscanner property/search, select Agoda Go to site, open the property, click Rooms, select the explicit 2-adult non-smoking double. The plain Agoda URL showed a higher coupon/rate; do not imply the lower rate is reproduced by that URL alone. Agoda referral channel ID observed: 1846370. Prices remain dynamic.",
+      "savingVsPreviousINR": 2490.71
     },
     {
       "id": "ishiyama",
       "name": "le Lac HOTEL Ōtsu Ishiyama",
       "city": "Ōtsu",
-      "provider": "Booking.com · Partner Offer",
-      "url": "https://www.booking.com/hotel/jp/reiah-hotel-otsu-ishiyama.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0&selected_currency=INR",
-      "total": 22438.82,
-      "jpy": 37453.261811096905,
+      "provider": "Agoda · signed-in offer",
+      "url": "https://www.agoda.com/en-in/good-location-reiah-hotel-otsu-ishiyama/hotel/otsu-jp.html?checkin=2026-11-23&los=2&rooms=1&adults=2&children=0",
+      "total": 21463.24,
+      "jpy": 35824.893957632696,
       "estimated": false,
       "converted": true,
-      "room": "Non-smoking small double · 15 m²",
+      "room": "Non-smoking double · 15 m² · private bathroom",
       "access": "JR Ishiyama: about 150 m from listing",
-      "review": "Booking.com 7.6/10 · 250 reviews",
-      "fees": "Taxes and charges included; no mandatory extra shown.",
-      "condition": "Pay now. Free cancellation before 23 Nov JST. No amendments.",
-      "check": "Checkout summary at 02:00 IST",
-      "sources": []
+      "review": "Agoda 8.1/10, 2,663 reviews",
+      "fees": "Tax 10% and service charge 10% included; booking fees FREE; no additional mandatory charge shown",
+      "condition": "Pay 20 Nov; cancel free before 23 Nov. Signed-in coupon included.",
+      "check": "Agoda guest-details checkout summary",
+      "sources": [],
+      "checkedLabel": "21 Oct · 03:39 IST",
+      "recommendation": "Lower verified non-smoking offer",
+      "display": {
+        "total": "INR ₹21,463.24",
+        "totalSecondary": "JPY ≈¥35,824.89",
+        "nightly": "INR ₹10,731.62",
+        "nightlySecondary": "JPY ≈¥17,912.45"
+      },
+      "bullets": [
+        "Tax 10% + service 10% included; no extra mandatory fee shown",
+        "Pay 20 Nov · free cancellation before 23 Nov",
+        "Signed-in coupon included; rate may vary"
+      ],
+      "checked": "2026-10-21T03:39:16+05:30",
+      "savingVsPreviousINR": 975.58,
+      "currencyQuotes": {
+        "INR": 21463.24
+      }
     },
     {
       "id": "daido",
       "name": "Daido Garden Hotel Kyoto",
       "city": "Kyoto",
-      "provider": "Booking.com · Partner Offer",
-      "url": "https://www.booking.com/hotel/jp/da-tong-gadenhoterujing-du.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0&selected_currency=INR",
-      "total": 26153.13,
-      "jpy": 43652.92047753192,
+      "provider": "Agoda · AGODASPONSORED",
+      "url": "https://www.agoda.com/en-in/h65462908/hotel/kyoto-jp.html?checkin=2026-11-23&los=2&rooms=1&adults=2&children=0",
+      "total": 25360.53,
+      "jpy": 42329.96965785979,
       "estimated": true,
       "converted": true,
-      "room": "Double room · private bathroom",
+      "room": "Non-smoking double · 10 m² · private bathroom",
       "access": "Keihan Fujinomori: 8–10-minute walk",
       "review": "Booking.com 8.0/10 · 163 reviews",
-      "fees": "Checkout ₹25,194.55 includes ₹4,653.32 service charge + ₹2,923.75 tax. Add provisional city-tax allowance ₹958.58 (JPY ¥1,600).",
-      "condition": "City-tax total needs confirmation; smoking status not stated on selected offer. Pay now; cancel before 17 Nov JST. No amendments.",
-      "check": "Checkout summary + estimated local tax",
+      "fees": "Review INR ₹24,401.95 includes displayed tax/service charges. City tax collected separately; allowance JPY ¥1,600 / INR ₹958.58 is provisional.",
+      "condition": "Pay 14 Nov; cancel free before 17 Nov. AGODASPONSORED ₹792.88 applied; signed-in profile.",
+      "check": "Guest-details checkout review; city tax unresolved",
       "sources": [
         "https://travel.yahoo.co.jp/00922005/access/",
         "https://www.agoda.com/h65462908/hotel/kyoto-jp.html"
-      ]
+      ],
+      "checkedLabel": "21 Oct · 03:34 IST",
+      "recommendation": "Lower checked review price; total estimated",
+      "display": {
+        "total": "INR ₹25,360.53 est.",
+        "totalSecondary": "JPY ≈¥42,330",
+        "nightly": "INR ₹12,680.27 est.",
+        "nightlySecondary": "JPY ≈¥21,165"
+      },
+      "bullets": [
+        "Checkout review ₹24,401.95; tax/service included",
+        "Add provisional city tax ¥1,600 / ₹958.58",
+        "Pay 14 Nov · free cancellation before 17 Nov",
+        "Signed-in AGODASPONSORED coupon applied"
+      ],
+      "checked": "2026-10-21T03:34:11+05:30"
     },
     {
       "id": "cocoro",
       "name": "COCORO HOTEL Kyoto",
       "city": "Kyoto",
-      "provider": "Booking.com · Genius sign-in price",
-      "url": "https://www.booking.com/hotel/jp/cocoro.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0&selected_currency=INR",
-      "total": 27918.77,
-      "jpy": 46600,
-      "estimated": false,
-      "converted": false,
-      "room": "Non-smoking double · 20 m² · private bath / kitchenette",
+      "provider": "Skyscanner referral → Agoda",
+      "url": "https://www.skyscanner.co.in/hotels/japan/kyoto-hotels/cocoro-hotel/ht-200548597?adults=2&checkin=2026-11-23&checkout=2026-11-25&rooms=1",
+      "total": 26705.64,
+      "jpy": 44575.130365718964,
+      "estimated": true,
+      "converted": true,
+      "room": "Non-smoking double · 20 m² · private bathroom",
       "access": "Misasagi subway station: immediately outside",
-      "review": "Booking.com 8.1/10 · 159 reviews",
-      "fees": "JPY ¥45,000 room + ¥1,600 city tax = ¥46,600. VAT included; no cleaning fee shown.",
-      "condition": "Genius sign-in required. Pay at property in JPY. Free cancellation before 22 Nov JST. Non-member total approximately INR ₹30,914.35.",
-      "check": "Checkout summary including separately listed city tax",
+      "review": "Agoda 8.7/10, 75 reviews",
+      "fees": "10% service charge included, booking fees FREE. This supplier checkout did not disclose VAT or a separate city-tax line. Cannot claim fully reconciled all-in total.",
+      "condition": "Pay 18 Nov; cancel free before 21 Nov. Referral/profile coupon included.",
+      "check": "Guest-details checkout; VAT/city-tax detail unresolved",
       "sources": [
         "https://cocoro-hotel.jp/en/ourhotel/"
-      ]
+      ],
+      "checkedLabel": "21 Oct · 03:39 IST",
+      "recommendation": "Lower checked offer; total estimated",
+      "display": {
+        "total": "INR ₹26,705.64 est.",
+        "totalSecondary": "JPY ≈¥44,575.13",
+        "nightly": "INR ₹13,352.82 est.",
+        "nightlySecondary": "JPY ≈¥22,287.57"
+      },
+      "bullets": [
+        "Open link → choose Agoda → non-smoking double for 2",
+        "Review INR ₹25,747.06; add provisional JPY ¥1,600 / INR ₹958.58",
+        "VAT / city-tax detail missing; total remains estimated",
+        "Pay 18 Nov · free cancellation before 21 Nov"
+      ],
+      "checked": "2026-10-21T03:39:16+05:30",
+      "savingVsPreviousINR": 1213.13,
+      "currencyQuotes": {
+        "INR": 25747.06
+      },
+      "reproduction": "Skyscanner COCORO Hotel result > Go to site Agoda > COCORO property > Rooms > Double Room Offer 1. Referral changed discount and supplier; direct link may reprice."
     },
     {
       "id": "apa",
       "name": "APA Hotel Kyoto Ekikita",
       "city": "Kyoto",
-      "provider": "Booking.com · Partner Offer",
-      "url": "https://www.booking.com/hotel/jp/apa-kyoto-station-kita.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0&selected_currency=INR",
-      "total": 33499.52,
-      "jpy": 55914.98541839887,
-      "estimated": true,
-      "converted": true,
-      "room": "Non-smoking double · private bathroom",
+      "provider": "APA official · guest room-only rate",
+      "url": "https://www3.apahotel.com/search_result/?econ_hotel_id=587&book-checkin=2026-11-23&book-no-night=2&book-no-room=1&book-no-people=2&book-smoking=1&book-breakfast=",
+      "total": 30315.23,
+      "jpy": 50600,
+      "estimated": false,
+      "converted": false,
+      "room": "Non-smoking double · 140 cm bed · 11 m² · private bath",
       "access": "Kyoto Station central exit: about 5-minute walk",
       "review": "Booking.com 8.4/10 · 1,375 reviews",
-      "fees": "Checkout ₹32,540.94 + provisional city-tax allowance ₹958.58 (JPY ¥1,600). No cleaning fee shown.",
-      "condition": "City-tax inclusion unresolved; allowance is not a confirmed extra charge. Pay now; cancel before 22 Nov JST. No amendments.",
-      "check": "Checkout summary at 02:00 IST + estimated local tax",
-      "sources": []
+      "fees": "Service, consumption tax and Kyoto lodging tax included; no additional mandatory charge shown.",
+      "condition": "Pay at hotel. English guest form supports overseas country; no membership required. Arrival-day cancellation costs first night JPY ¥21,800; no earlier charge shown. Exact cutoff not stated.",
+      "check": "Official English guest reservation form",
+      "sources": [],
+      "checkedLabel": "21 Oct · 03:38 IST",
+      "recommendation": "Cheapest checked APA Kyoto offer",
+      "display": {
+        "total": "JPY ¥50,600",
+        "totalSecondary": "INR ≈₹30,315.23",
+        "nightly": "JPY ¥25,300",
+        "nightlySecondary": "INR ≈₹15,157.62"
+      },
+      "bullets": [
+        "Service + consumption + lodging tax included",
+        "English guest form · overseas country field · pay at hotel",
+        "Select Room Only · Double (1 bed) · 2 adults",
+        "Cancellation charges start arrival day; exact cutoff not stated"
+      ],
+      "checked": "2026-10-21T03:38:35+05:30"
     }
   ],
   "coverage": {
-    "Booking.com": "Dated Kyoto and Otsu searches filtered for double beds; selected room and checkout checks.",
-    "Agoda": "Dated Smile Seta, le Lac Ishiyama and Daido pages checked. Room grid failed to load; headline prices cannot be used as verified offers.",
-    "Skyscanner": "Verification challenge; no usable quote.",
-    "Smile official": "Dated plan and booking-cart total checked."
+    "Agoda": "Five primary guest-information checkout offers; explicit two-adult non-smoking doubles with private bathrooms. Daido/COCORO taxes remain provisional.",
+    "Skyscanner": "Referrals yielded lower Smile, APA Seta and COCORO Agoda checkout quotes. Ishiyama cheaper referral was smoking; APA Kyoto search blocked.",
+    "Booking.com": "Dated room tables compared; earlier checkout baselines retained only as historical comparisons.",
+    "Official / Japanese sites": "Smile official, APA official, leLac Tripla and COCORO official-linked Airbnb checked. Yahoo Travel did not yield a comparable dated quote; no directly verified Rakuten/Jalan rate."
   },
   "previousSmileOfficial": {
     "id": "smile",
@@ -184,6 +292,134 @@
       "jpy": 27584,
       "stage": "room list",
       "decision": "Only 3 single beds; not shortlisted"
+    }
+  ],
+  "siteComparisons": [
+    {
+      "hotel": "Smile Seta",
+      "provider": "Booking.com",
+      "result": "INR ₹16,116 total / ₹8,058 nightly",
+      "qualification": "23–25 Nov room table; non-smoking double; taxes included; pay at property; no breakfast.",
+      "url": "https://www.booking.com/hotel/jp/smile-hotel-otsu-seta.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0"
+    },
+    {
+      "hotel": "APA Seta",
+      "provider": "Booking.com",
+      "result": "INR ₹20,705 total / ₹10,352.50 nightly",
+      "qualification": "Room table; non-smoking double; tax included; breakfast EXTRA; pay at property.",
+      "url": "https://www.booking.com/hotel/jp/seta-urban.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0&selected_currency=INR"
+    },
+    {
+      "hotel": "APA Seta",
+      "provider": "Agoda · supplied screenshot",
+      "result": "INR ₹18,772.98 total / ₹9,386.49 nightly",
+      "qualification": "Smoking allowed; private bath, 1 double; not a guaranteed non-smoking offer. Coupon already included.",
+      "url": ""
+    },
+    {
+      "hotel": "le Lac Ishiyama",
+      "provider": "Booking.com",
+      "result": "INR ₹28,901 total / ₹14,450.50 nightly",
+      "qualification": "Room table; non-smoking small double; taxes included; higher than earlier partner quote.",
+      "url": "https://www.booking.com/hotel/jp/reiah-hotel-otsu-ishiyama.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0&selected_currency=INR"
+    },
+    {
+      "hotel": "Daido Garden Hotel Kyoto",
+      "provider": "Agoda",
+      "url": "https://www.agoda.com/en-in/h65462908/hotel/kyoto-jp.html?checkin=2026-11-23&los=2&rooms=1&adults=2&children=0",
+      "result": "INR ₹24,401.95 review / ₹12,200.98 nightly",
+      "qualification": "2 adults, non-smoking double; OTA city-tax amount unresolved. Checkout selected Pay on 14 November 2026"
+    },
+    {
+      "hotel": "APA Hotel Kyoto Ekikita",
+      "provider": "Agoda",
+      "url": "https://www.agoda.com/en-in/apa-hotel-kyoto-ekikita/hotel/kyoto-jp.html?checkin=2026-11-23&los=2&rooms=1&adults=2&children=0",
+      "result": "INR ₹32,017.83 review / ₹16,008.92 nightly",
+      "qualification": "2 adults, non-smoking double; OTA city-tax amount unresolved. Checkout selected Pay on 19 November 2026"
+    },
+    {
+      "hotel": "Daido Garden Hotel Kyoto",
+      "provider": "Booking.com",
+      "url": "https://www.booking.com/hotel/jp/da-tong-gadenhoterujing-du.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0&selected_currency=INR",
+      "result": "JPY ¥45,900 room-table total / ¥22,950 nightly",
+      "qualification": "Additional charges may apply; no new checkout total obtained. Dated room-selection table."
+    },
+    {
+      "hotel": "APA Hotel Kyoto Ekikita",
+      "provider": "Booking.com",
+      "url": "https://www.booking.com/hotel/jp/apa-kyoto-station-kita.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0&selected_currency=INR",
+      "result": "JPY ¥57,060 room-table total / ¥28,530 nightly",
+      "qualification": "Table says includes taxes and charges; no fresh checkout total obtained. Dated room-selection table."
+    },
+    {
+      "hotel": "Daido Garden Hotel Kyoto",
+      "provider": "Yahoo Travel",
+      "url": "https://travel.yahoo.co.jp/00922005/",
+      "result": "No comparable quote",
+      "qualification": "Date selection unresolved; no comparable two-night quote."
+    },
+    {
+      "hotel": "APA Hotel Kyoto Ekikita",
+      "provider": "Skyscanner",
+      "url": "https://www.skyscanner.gg/hotels/japan/kyoto-hotels/apa-hotel-kyoto-ekikita/ht-153318962",
+      "result": "No comparable quote",
+      "qualification": "Verification challenge; no comparable quote."
+    },
+    {
+      "hotel": "Smile Hotel Ōtsu Seta",
+      "provider": "Agoda direct entry",
+      "url": "https://www.agoda.com/en-in/smile-hotel-otsu-seta/hotel/otsu-jp.html?checkin=2026-11-23&los=2&rooms=1&adults=2&children=0",
+      "result": "INR ₹14,716.78 total / ₹7,358.39 nightly",
+      "qualification": "customer-information checkout summary. Tax 10%, service charge 10% included"
+    },
+    {
+      "hotel": "APA Hotel Biwako Seta Ekimae",
+      "provider": "Agoda direct entry",
+      "url": "https://www.agoda.com/en-in/apa-hotel-biwako-seta-ekimae/hotel/otsu-jp.html?checkin=2026-11-23&los=2&rooms=1&adults=2&children=0",
+      "result": "INR ₹18,800.16 total / ₹9,400.08 nightly",
+      "qualification": "customer-information checkout summary. Tax 10%, service charge 10% included"
+    },
+    {
+      "hotel": "APA Hotel Biwako Seta Ekimae",
+      "provider": "APA official",
+      "url": "https://www3.apahotel.com/search_result/?econ_hotel_id=615&book-checkin=2026-11-23&book-no-night=2&book-no-room=1&book-no-people=2&book-smoking=1&book-room-type=",
+      "result": "JPY ¥30,500.00 total / ¥15,250.00 nightly",
+      "qualification": "Official reservation form; non-smoking double; tax included. No additional mandatory fee shown."
+    },
+    {
+      "hotel": "Smile Hotel Ōtsu Seta",
+      "provider": "Smile official",
+      "url": "https://go-smile-hotel-chain.reservation.jp/en/hotels/otsuseta/plans/10155053?room_id=10031958&checkin_date=20261123&checkout_date=20261125&adults=2&children=0&rooms=1",
+      "result": "JPY ¥25,700.00 total / ¥12,850.00 nightly",
+      "qualification": "dated plan details. Tax & fee included; consumption taxes included. New A Card membership/app required."
+    },
+    {
+      "hotel": "le Lac Ishiyama",
+      "provider": "Official leLac / Tripla",
+      "url": "https://booking.lachotel.co.jp/booking/result?code=019a51e5-054a-778b-a5e1-59c9da5158ea&checkin=2026%2F11%2F23&checkout=2026%2F11%2F25&type=plan&adults=2&room_count=1&mcp_currency=INR",
+      "result": "INR ₹25,681.14 member / ₹27,548.17 regular total",
+      "qualification": "Dated plan grid; non-smoking double, taxes included. Member rate needs sign-in/up."
+    },
+    {
+      "hotel": "COCORO Kyoto",
+      "provider": "Booking.com",
+      "url": "https://www.booking.com/hotel/jp/cocoro.en-gb.html?checkin=2026-11-23&checkout=2026-11-25&group_adults=2&no_rooms=1&group_children=0&selected_currency=INR",
+      "result": "JPY ¥46,600 total / ¥23,300 nightly",
+      "qualification": "Room table: JPY ¥45,000 + ¥1,600 city tax. Non-smoking double; Genius sign-in; pay at property."
+    },
+    {
+      "hotel": "COCORO Kyoto",
+      "provider": "Official-linked Airbnb",
+      "url": "https://www.airbnb.jp/rooms/32171594?check_in=2026-11-23&check_out=2026-11-25&adults=2",
+      "result": "JPY ¥49,500 before separate city tax",
+      "qualification": "Dated apartment picker, one double; not checkout. Mandatory local tax not reconciled."
+    },
+    {
+      "hotel": "COCORO Kyoto",
+      "provider": "Agoda direct",
+      "url": "https://www.agoda.com/en-in/cocoro-hotel-kyoto/hotel/kyoto-jp.html?checkin=2026-11-23&los=2&rooms=1&adults=2&children=0",
+      "result": "INR ₹25,921.20 + JPY ¥1,600 city tax",
+      "qualification": "Guest-details checkout; smoking status not disclosed by this supplier. Higher than referred offer."
     }
   ]
 }
