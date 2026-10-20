@@ -7,3 +7,5 @@
 
 /* The comparison stays a table at every width; hotel cards are intentionally absent. */
 #prices{margin-top:12px}.quotes{min-width:920px}.quotes td:first-child{width:30%}.quotes td:nth-child(2),.quotes td:nth-child(3){width:18%}.quotes td:last-child{width:34%;font-size:13px}.quotes td{padding-top:18px;padding-bottom:18px}.estimate{display:block;font-size:11px;color:var(--acc);font-weight:600}.mobile-hint{display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}#checks{border-top:1px solid var(--line);padding-top:16px}#checks p{font-size:14px}@media(max-width:720px){.mobile-hint{display:block}.quotes{font-size:13px}.quotes td{padding:14px 10px}header{padding-bottom:10px}}
+
+.conditions{margin:0;padding-left:16px;font-size:12.5px;line-height:1.5}.conditions li{margin:0 0 5px}#checks li{font-size:14px;margin:10px 0}
