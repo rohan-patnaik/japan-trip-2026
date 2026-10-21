@@ -39,7 +39,7 @@ function addCityLabels(){
  const labelLayer=L.layerGroup().addTo(planner);
  function refresh(){labelLayer.clearLayers();const z=planner.getZoom();if(z>11)return;
  const cities=z<=8?[['Tokyo / Kasukabe',35.72,139.76,'right'],['Kyoto / Otsu',35.06,135.8,'right'],['Osaka',34.67,135.48,'left']]:[['Tokyo',35.68,139.76,'left'],['Kasukabe',35.98,139.75,'right'],['Kyoto',35.02,135.75,'left'],['Otsu / Seta',35.01,135.9,'right'],['Osaka',34.67,135.48,'left']];
- cities.forEach(([name,lat,lon,side])=>L.tooltip({permanent:true,direction:side,offset:[side==='left'?-28:28,-22],className:'city-label',interactive:false}).setLatLng([lat,lon]).setContent(name).addTo(labelLayer));
+ cities.forEach(([name,lat,lon,side])=>{const narrow=planner.getSize().x<600&&side==='right';L.tooltip({permanent:true,direction:narrow?'top':side,offset:narrow?[0,-32]:[side==='left'?-28:28,-22],className:'city-label',interactive:false}).setLatLng([lat,lon]).setContent(name).addTo(labelLayer)});
  }planner.on('zoomend',refresh);refresh();
 }
 const setaRoutes={
