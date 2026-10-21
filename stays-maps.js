@@ -55,26 +55,59 @@ function addCityLabels(){
  cities.forEach(([name,lat,lon,side])=>{const narrow=planner.getSize().x<600&&side==='right';L.tooltip({permanent:true,direction:narrow?'top':side,offset:narrow?[0,-32]:[side==='left'?-28:28,-22],className:'city-label',interactive:false}).setLatLng([lat,lon]).setContent(name).addTo(labelLayer)});
  }planner.on('zoomend',refresh);refresh();
 }
-const setaRoutes={
- kyoto:['JR Seta → Kyoto (Biwako Line westbound).','0 changes · 17–20 min on train; allow 25–35 min from hotel.',640],
- teamlab:['Walk to Seta → JR Kyoto → walk ~15–20 min to teamLab.','0 train changes · allow 45–60 min door to door. Aim to arrive by 14:15 on 24 Nov.',640],
- inari:['JR Seta → Kyoto → Nara Line LOCAL → Inari → shrine.','1 change · allow 45–60 min door to door. Rapid trains skip Inari.',640],
- arashiyama:['JR Seta → Kyoto → Sagano Line → Saga-Arashiyama → walk.','1 change · allow 60–80 min to the bamboo grove; train/connection ~40–60 min.',980],
- sanjo:['JR Seta → Yamashina → Tozai subway → Sanjo Keihan.','1 change · allow 40–55 min. Use the subway entrance at Yamashina.',1000],
- gion:['JR Seta → Yamashina → Tozai → Sanjo Keihan → walk south to Gion.','1 change · allow 50–65 min. Walk 15–20 min from Sanjō; a Keihan hop adds another fare.',1000],
- shijo:['JR Seta → Kyoto → Karasuma subway → Shijō.','1 change · allow 35–50 min; Shijō is 2 subway stops north of Kyoto.',1080],
- kiyomizu:['JR Seta → Kyoto → bus 206 to Gojozaka → uphill walk.','1 change · allow 60–90 min; buses can be crowded. Rail alternative via Tofukuji / Kiyomizu-Gojo avoids road delays.',1100]
-};
-function routeAdvice(a,b){if(a.id===b.id)return ['Same pin selected. Choose another destination.'];
- if(['rti','namba'].includes(a.base)&&b.region==='kyoto')return [a.base==='rti'?'From RTI: walk to Shin-Imamiya → JR Osaka Loop Line → Osaka Station → JR Kyoto Line → Kyoto.':'From Namba: Midosuji subway → Umeda; walk to JR Osaka → JR Kyoto Line → Kyoto.',['sanjo','gion'].includes(b.dest)?'For Sanjo / Gion, also compare JR to Kyobashi → Keihan to Sanjo / Gion-Shijo in Live transit.':'Continue from Kyoto Station to the selected attraction. The station-to-station ride is only part of the commute.','Open Live transit for departure-time routes, total duration and fares. Ordinary local/rapid trains use Suica/ICOCA or station tickets; no seat reservation.'];
- if(['seta','otsu','ishiyama'].includes(a.base)&&b.region==='osaka')return ['JR '+({seta:'Seta',otsu:'Otsu',ishiyama:'Ishiyama'}[a.base])+' → Osaka on the Biwako / JR Kyoto corridor; then local train or subway to your destination.','Through services vary. Open Live transit for exact trains, changes and fares.'];
- if(a.base==='seta'&&setaRoutes[b.dest]){const v=setaRoutes[b.dest];return [v[0],v[1],'Planning fare for both, one way: JPY ≈¥'+v[2].toLocaleString()+' / INR ≈₹'+Math.round(v[2]*.59912)+'. Local transport only; admission excluded.','No advance booking: one Suica/ICOCA per person, or buy ordinary tickets at the station.'];}
- if(['otsu','ishiyama'].includes(a.base)&&b.dest){return ['JR '+(a.base==='otsu'?'Ōtsu':'Ishiyama')+' → '+(['gion','sanjo'].includes(b.dest)?'Yamashina → Tozai subway → Sanjo Keihan.':'Kyoto → onward city connection.'),'Same transfer pattern as the Seta guide below; closer to Kyoto. Check departure-time fares in Live transit.'];}
- if(['shijo','sanjo','gion'].includes(a.base)&&b.dest){const base=a.base;if(b.dest==='inari'&&base!=='shijo')return ['Keihan '+(base==='sanjo'?'Sanjo':'Gion-Shijō')+' → Fushimi-Inari on a stopping service → walk.','No reservation for ordinary trains. Check that the service stops at Fushimi-Inari.'];if(b.dest==='arashiyama')return ['Walk / local connection to Hankyu '+(base==='shijo'?'Karasuma':'Kyoto-Kawaramachi')+' → Katsura → Hankyu Arashiyama.','1 train change; allow extra walking to Torokko Saga. For the scenic train, JR Saga-Arashiyama may be the easier arrival.'];return [base==='shijo'?'Karasuma subway: Shijō → Kyoto for Shinkansen, teamLab or JR connections.':'Keihan serves eastern Kyoto; Kyoto Station requires a connection (e.g. Tofukuji → JR).','Use Live transit for this exact pair. Area pins are not hotel entrances.'];}
- if(a.base==='rti'&&b.id==='osaka-0')return ['Walk to Shin-Imamiya → JR Osaka Loop Line → Nishikujō → JR Yumesaki Line → Universal City → USJ.','Usually 1 change; some through trains. Allow 40–55 min from the approximate stay area. Ordinary tickets / Suica / ICOCA; no reservation.'];
- if(a.base==='rti'&&['osaka-3','osaka-4','osaka-6'].includes(b.id))return ['Walk to Dōbutsuen-mae → Midosuji subway → Namba → walk.','Direct train; allow roughly 20–35 min from the stay area. No advance booking.'];
- if(a.base==='tokyo'&&b.id.startsWith('kasukabe'))return ['Reach Kita-Senju → Tobu Skytree Line express towards Kasukabe → walk to LaLa Garden.','From Iriya: Hibiya Line to Kita-Senju, then change. Allow roughly 70–90 min from your stay area. Ordinary express needs no seat reservation; limited express needs a separate ticket.'];
- return [b.kind==='optional'?b.note:'Use Live transit for departure-time trains, transfers and fares.','The dotted line is a geographic comparison, not a walking or train route.'];}
+// Find a simple planning path through the documented corridors, not a live fastest route.
+function railPath(start,end,allowShinkansen=false){
+ const key=(station,line)=>JSON.stringify([station,line]);
+ const first=key(start,'');const costs=new Map([[first,0]]),previous=new Map(),pending=new Set([first]),done=new Set();
+ while(pending.size){let state=null;for(const n of pending)if(state===null||costs.get(n)<costs.get(state))state=n;
+  pending.delete(state);done.add(state);const [at,line]=JSON.parse(state);
+  if(at===end){const path=[];let cursor=state;while(previous.has(cursor)){const step=previous.get(cursor);path.unshift(step.edge);cursor=step.state;}return {edges:path,cost:costs.get(state)};}
+  TRAVEL_GUIDE.edges.forEach(e=>{const next=e.a===at?e.b:e.b===at?e.a:null;if(!next||e.ticket==='shinkansen'&&!allowShinkansen)return;
+   const nextLine=e.ticket==='walk'?line:e.line,n=key(next,nextLine);if(done.has(n))return;
+   const transfer=e.ticket!=='walk'&&line&&line!==e.line?12:0;
+   const cost=costs.get(state)+(e.minutes[0]+e.minutes[1])/2+transfer+(e.ticket==='reserved'?10:0);
+   if(!costs.has(n)||cost<costs.get(n)){costs.set(n,cost);previous.set(n,{state,edge:{...e,from:at,to:next}});pending.add(n);}
+  });
+ }return null;
+}
+function journey(a,b){
+ const from=TRAVEL_GUIDE.access[a.id],to=TRAVEL_GUIDE.access[b.id];if(!from||!to)return null;
+ const options=access=>[access,...(access.alternatives||[])];let best=null;
+ const allowShinkansen=(a.region==='tokyo')!==(b.region==='tokyo');
+ for(const origin of options(from))for(const destination of options(to)){
+  const rail=railPath(origin.station,destination.station,allowShinkansen);if(!rail)continue;
+  const walk=access=>access.walk?(access.walk[0]+access.walk[1])/2:10;
+  const cost=rail.cost+walk(origin)+walk(destination);
+  if(!best||cost<best.cost)best={from:origin,to:destination,path:rail.edges,cost};
+ }return best;
+}
+const timeRange=v=>v[0]===v[1]?String(v[0]):v[0]+'–'+v[1];
+function accessStep(p,arrival=false,a=TRAVEL_GUIDE.access[p.id]){const station=TRAVEL_GUIDE.stations[a.station];
+ if(a.walk===null)return (arrival?'Walk from '+station+' to ':'Walk from ')+p.name+(arrival?'':' to '+station)+' — walking time needs the final hotel address.';
+ if(a.walk[1]===0)return (arrival?'Arrive at ':'Start at ')+station+'.';
+ return 'Walk ≈'+timeRange(a.walk)+' min: '+(arrival?station+' → '+p.name:p.name+' → '+station)+'.'+(a.note?' '+a.note:'');
+}
+function routeAdvice(a,b){
+ if(a.id===b.id)return ['Same place selected. Choose a different destination.'];
+ const trip=journey(a,b);
+ if(!trip)return ['Open Live transit for directions between these places.'];
+ const {from,to,path}=trip;
+ if(!path.length)return ['Both places use '+TRAVEL_GUIDE.stations[from.station]+'. A direct walk may be easier; open Walking route for the actual street route.',accessStep(a,false,from),accessStep(b,true,to)];
+ const merged=[];path.forEach(e=>{const last=merged.at(-1);if(last&&e.ticket!=='walk'&&last.line===e.line&&last.to===e.from){last.to=e.to;last.minutes=last.minutes.map((v,i)=>v+e.minutes[i]);if(e.note&&!last.notes.includes(e.note))last.notes.push(e.note);}else merged.push({...e,minutes:[...e.minutes],notes:e.note?[e.note]:[]});});
+ const steps=[accessStep(a,false,from)];
+ if(merged[0].ticket==='shinkansen')steps.push('At the station, allow another ≈15–20 min to find the Shinkansen gate and platform with luggage.');
+ merged.forEach((e,i)=>{const origin=TRAVEL_GUIDE.stations[e.from],end=TRAVEL_GUIDE.stations[e.to];
+  if(e.ticket==='walk'){steps.push('Change stations on foot, ≈'+timeRange(e.minutes)+' min: '+origin+' → '+end+'.');return;}
+  if(i&&merged[i-1].ticket!=='walk')steps.push('Change at '+origin+': follow signs for '+e.line+'. Allow ≈'+(e.ticket==='shinkansen'||merged[i-1].ticket==='shinkansen'?'15–20':'5–10')+' min to reach the next platform, plus waiting.');
+  steps.push('Train: '+e.line+' — board at '+origin+'; get off at '+end+'. Ride ≈'+timeRange(e.minutes)+' min.'+(e.notes.length?' '+e.notes.join(' '):''));
+ });
+ steps.push(accessStep(b,true,to));
+ const special=merged.some(e=>['shinkansen','reserved'].includes(e.ticket));
+ steps.push(special?'Tickets: this route includes a Shinkansen / reserved airport train. Buy the required ticket separately; tapping a normal Suica/ICOCA balance alone is not enough.':'Tickets: one Suica/ICOCA per person, or ordinary station tickets. No reservation for the ordinary trains shown; metro-only passes do not cover every operator.');
+ if(b.dest==='teamlab')steps.push('24 Nov booking: aim to arrive by 14:15; your entry window is 14:30–15:00.');
+ return steps;
+}
+
 function updateRoute(fit=true){const a=getPin($('from').value),b=getPin($('to').value);if(!a||!b)return;$('distance').textContent=distance(a,b)+' straight-line';$('transit-link').href=directions(a,b);$('walk-link').href=directions(a,b,'walking');$('route-advice').replaceChildren(...routeAdvice(a,b).map(t=>{const li=document.createElement('li');li.textContent=t;return li}));
  if(connector)planner.removeLayer(connector);connector=L.polyline([[a.lat,a.lon],[b.lat,b.lon]],{color:'#9dc6ec',weight:2,dashArray:'5 7',interactive:false}).addTo(planner);if(fit)focusPins([a,b]);
  const near=allPins.filter(p=>p.id!==a.id&&['visit','optional'].includes(p.kind)).sort((x,y)=>km(a,x)-km(a,y));const list=$('nearby-list');list.replaceChildren();near.slice(0,8).forEach(p=>{const li=document.createElement('li');const b=document.createElement('button');b.textContent=categories[p.kind][1]+' '+p.name; b.onclick=()=>{$('to').value=p.id;updateRoute();markers.get(p.id).openPopup()};const d=document.createElement('span');d.textContent=distance(a,p);li.append(b,d);list.append(li)});$('nearby-title').textContent='Closest pins to '+a.name;
