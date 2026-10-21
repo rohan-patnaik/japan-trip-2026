@@ -8,6 +8,19 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 function setTheme(theme){root.dataset.theme=theme;$('theme').textContent=theme==='dark'?'Light mode':'Dark mode';prefs.set('explore-theme',theme);}
 function tileURL(){return 'https://tile.openstreetmap.jp/styles/osm-bright-en/{z}/{x}/{y}.png';}
 setTheme(prefs.get('explore-theme')||'dark');$('theme').onclick=()=>setTheme(root.dataset.theme==='dark'?'light':'dark');
+function setMapTheme(theme){const dark=theme!=='light';$('explore-map').dataset.mapTheme=dark?'dark':'light';$('map-theme').textContent='Map: '+(dark?'Dark':'Light');$('map-theme').setAttribute('aria-pressed',String(dark));$('map-theme').title='Switch map to '+(dark?'light':'dark')+' mode';prefs.set('explore-map-theme',dark?'dark':'light');}
+setMapTheme(prefs.get('explore-map-theme')||'dark');$('map-theme').onclick=()=>setMapTheme($('explore-map').dataset.mapTheme==='dark'?'light':'dark');
+function enableMapShortcuts(){
+ const area=$('explore-map');let hovered=false;
+ area.addEventListener('pointerenter',()=>hovered=true);area.addEventListener('pointerleave',()=>hovered=false);
+ window.addEventListener('blur',()=>hovered=false);
+ document.addEventListener('keydown',e=>{
+  if(!hovered||!e.ctrlKey||e.altKey||e.metaKey||e.target.closest?.('input,textarea,select,[contenteditable="true"]'))return;
+  const direction=['+','='].includes(e.key)||e.code==='NumpadAdd'?1:['-','_'].includes(e.key)||e.code==='NumpadSubtract'?-1:0;
+  if(!direction)return;
+  e.preventDefault();e.stopPropagation();planner.setZoom(planner.getZoom()+direction,{animate:false});
+ },true);
+}
 let width=Number(prefs.get('w'))||80;
 function setWidth(v){width=Math.max(50,Math.min(100,v));root.style.setProperty('--w',width+'vw');$('width').textContent=width+'%';prefs.set('w',width);if(planner)requestAnimationFrame(()=>planner.invalidateSize());}
 setWidth(width);$('less').onclick=()=>setWidth(width-5);$('more').onclick=()=>setWidth(width+5);
@@ -70,5 +83,5 @@ $('from').onchange=()=>updateRoute();$('to').onchange=()=>updateRoute();
 fetch('assets/maps/explore.json').then(r=>{if(!r.ok)throw Error('Map data');return r.json()}).then(data=>{groups=data;allPins=groups.flatMap(g=>g.pins.map(p=>({...p,region:g.id})));if(!window.L)throw Error('Map library');planner=L.map('explore-map',{scrollWheelZoom:false});tiles=L.tileLayer(tileURL(),{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · <a href="https://openmaptiles.org/">OpenMapTiles</a> · <a href="https://tile.openstreetmap.jp/">OSMF Japan</a>'}).addTo(planner);L.control.scale({imperial:false}).addTo(planner);tiles.on('tileerror',()=>{$('map-status').textContent='If the basemap is blank, pin distances and Live transit still work.'});
  groups.forEach((g,i)=>{const b=document.createElement('button');b.textContent=g.title;b.dataset.map=i;b.onclick=()=>showGroup(i);$('map-tabs').append(b)});
  Object.entries(categories).forEach(([k,[label,symbol,color]])=>{const l=document.createElement('label');const c=document.createElement('input');c.type='checkbox';c.checked=true;c.dataset.layer=k;c.onchange=()=>{if(c.checked)layers[k].addTo(planner);else planner.removeLayer(layers[k])};const s=document.createElement('span');s.style.color=color;s.textContent=symbol+' '+label;l.append(c,s);$('map-key').append(l)});
- buildPins();addCityLabels();$('fit-all').onclick=()=>showOverview('japan');$('fit-kansai').onclick=()=>showOverview('kansai');$('fit-region').onclick=()=>focusPins(groups[selected].pins);$('fit-city').onclick=()=>planner.setView(groups[selected].center,groups[selected].zoom,{animate:false});$('fit-pair').onclick=()=>focusPins([getPin($('from').value),getPin($('to').value)]);showGroup(0);new ResizeObserver(()=>planner.invalidateSize()).observe($('explore-map'));
+ buildPins();addCityLabels();enableMapShortcuts();$('fit-all').onclick=()=>showOverview('japan');$('fit-kansai').onclick=()=>showOverview('kansai');$('fit-region').onclick=()=>focusPins(groups[selected].pins);$('fit-city').onclick=()=>planner.setView(groups[selected].center,groups[selected].zoom,{animate:false});$('fit-pair').onclick=()=>focusPins([getPin($('from').value),getPin($('to').value)]);showGroup(0);new ResizeObserver(()=>planner.invalidateSize()).observe($('explore-map'));
 }).catch(e=>{$('map-status').textContent='Interactive map unavailable. Open the static maps below.';console.error(e)});
