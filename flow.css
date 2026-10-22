@@ -1,0 +1,116 @@
+@font-face{font-family:"Virgil";src:url(assets/fonts/Virgil.woff2) format("woff2");font-display:swap}
+:root{
+  --page:#1a1a1e;--board:#121214;--dot:#2c2c33;--ink:#ecebef;--mut:#a9a6b5;--line:#34323b;
+  --sight:#80bfff;--sight-bg:#162b40;--food:#ffbd7a;--food-bg:#392817;--train:#c5a4ff;--train-bg:#2b203e;
+  --hotel:#8cddb1;--hotel-bg:#163126;--deadline:#ff9699;--deadline-bg:#3d1f25;
+  --hand:"Virgil","Segoe Print","Comic Sans MS",cursive;--sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;background:var(--page);color:var(--ink);font:15px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--sight);text-underline-offset:2px}
+:focus-visible{outline:2px solid var(--food);outline-offset:3px}
+.tab-input{position:absolute;opacity:0;pointer-events:none}
+
+/* Top bar: plan tabs and layout switch are radio labels, so they work without JS. */
+.top{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:10px 16px;background:rgba(26,26,30,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{color:var(--ink);text-decoration:none;font-weight:600;white-space:nowrap}
+.tabs,.layout{display:flex;gap:2px;border:1px solid var(--line);border-radius:9px;padding:2px;overflow-x:auto;scrollbar-width:none}
+.tabs label,.layout label{padding:5px 11px;border-radius:7px;cursor:pointer;white-space:nowrap;font-size:13.5px;color:var(--mut)}
+.tabs label:hover,.layout label:hover{color:var(--ink)}
+.layout{margin-left:auto}
+#t-b:checked~.top [for=t-b],#t-a:checked~.top [for=t-a],#t-compare:checked~.top [for=t-compare],#t-whole:checked~.top [for=t-whole],
+#l-canvas:checked~.top [for=l-canvas],#l-stack:checked~.top [for=l-stack]{background:var(--ink);color:var(--page)}
+#t-b:focus-visible~.top [for=t-b],#t-a:focus-visible~.top [for=t-a],#t-compare:focus-visible~.top [for=t-compare],#t-whole:focus-visible~.top [for=t-whole],
+#l-canvas:focus-visible~.top [for=l-canvas],#l-stack:focus-visible~.top [for=l-stack]{outline:2px solid var(--food)}
+.plan{display:none}
+#t-b:checked~main #plan-b,#t-a:checked~main #plan-a,#t-compare:checked~main #plan-compare,#t-whole:checked~main #plan-whole{display:block}
+
+main{padding:0 clamp(12px,3vw,40px) 60px}
+.intro{max-width:78ch;padding:28px 0 8px}
+h1{font:400 clamp(34px,5vw,54px)/1.05 var(--hand);margin:0 0 12px;letter-spacing:-.01em}
+.intro p{margin:6px 0;color:var(--mut)}
+.legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;font-size:13.5px}
+.k{display:inline-flex;align-items:center;gap:6px;font-family:var(--hand);font-size:15px}
+.k:before{content:"";width:18px;height:13px;border:1.5px solid currentColor;border-radius:4px 2px 5px 2px}
+.k.sight{color:var(--sight)}.k.food{color:var(--food)}.k.train{color:var(--train)}.k.hotel{color:var(--hotel)}.k.deadline{color:var(--deadline)}
+.k.paid-k{color:var(--hotel)}.k.paid-k:before{display:none}
+
+.plan-head{padding:26px 0 6px;max-width:78ch}
+.plan-head h2{font:400 30px/1.15 var(--hand);margin:0 0 6px}
+.plan-head p{margin:0 0 12px;color:var(--mut)}
+.days{display:flex;flex-wrap:wrap;gap:6px}
+.days a{font-family:var(--hand);font-size:15px;color:var(--ink);text-decoration:none;border:1.5px solid var(--line);border-radius:8px 3px 9px 4px;padding:2px 10px}
+.days a:hover{border-color:var(--mut)}
+
+/* One board per day. */
+.day{margin:26px 0 0}
+.day-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin-bottom:8px}
+.day-head h3{margin:0;font:400 22px/1.2 var(--hand);color:var(--ink)}
+.day-head .date{color:var(--food);margin-right:8px}
+.zoom{display:flex;align-items:center;gap:4px}
+.zoom button{font:500 13px var(--sans);color:var(--ink);background:#222228;border:1px solid var(--line);border-radius:7px;padding:3px 9px;cursor:pointer}
+.zoom button:hover{border-color:var(--mut)}
+.zoom output{min-width:44px;text-align:center;font-size:12.5px;color:var(--mut)}
+.canvas{position:relative;overflow:auto;background:var(--board) radial-gradient(var(--dot) 1px,transparent 1.2px) 0 0/22px 22px;border:1px solid var(--line);border-radius:12px;cursor:grab;overscroll-behavior-x:contain;scrollbar-color:#3a3842 transparent}
+.canvas.dragging{cursor:grabbing;user-select:none}
+.canvas.space{cursor:grab}
+.flow{display:flex;align-items:stretch;width:max-content;padding:34px 40px}
+.day-note{margin:8px 2px 0;max-width:110ch;color:var(--mut);font-size:13.5px}
+
+/* Cards: sketchy outline via uneven radii. */
+.node{position:relative;flex:0 0 238px;padding:13px 15px 15px;border:1.6px solid var(--c);background:var(--b);border-radius:14px 5px 12px 6px/6px 12px 5px 14px;font-family:var(--hand);cursor:default}
+.node h4{margin:0 0 6px;font:400 19px/1.25 var(--hand);color:#f5f3f7}
+.node p{margin:0 0 4px;font-size:14.5px;line-height:1.35}
+.node .time{color:#eeebf2}
+.node .cost{color:var(--c)}
+.node .note{color:#c9c5d3;font-size:13.5px}
+.node .paid{position:absolute;right:10px;bottom:9px;font-size:13px;color:var(--hotel);border:1.5px solid var(--hotel);background:var(--hotel-bg);border-radius:6px 3px 7px 3px;padding:0 6px}
+.node:has(.paid){padding-bottom:36px}
+.sight{--c:var(--sight);--b:var(--sight-bg)}.food{--c:var(--food);--b:var(--food-bg)}.train{--c:var(--train);--b:var(--train-bg)}
+.hotel{--c:var(--hotel);--b:var(--hotel-bg)}.deadline{--c:var(--deadline);--b:var(--deadline-bg)}
+
+/* Arrows: label above (how), meta below (time + fare). */
+.edge{flex:0 0 168px;display:flex;flex-direction:column;justify-content:center;padding:0 6px;font-family:var(--hand);text-align:center}
+.edge svg{fill:none;stroke:#d6d0df;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.edge .h{width:100%;height:24px;order:2}
+.edge .v{display:none}
+.edge .mode{order:1;font-size:13.5px;line-height:1.25;color:#e6e1ec;margin-bottom:2px}
+.edge .meta{order:3;font-size:12.5px;line-height:1.3;color:var(--mut);margin-top:2px}
+
+/* Top-to-bottom layout. */
+#l-stack:checked~main .flow{flex-direction:column;align-items:flex-start;width:auto;padding:24px clamp(14px,3vw,32px)}
+#l-stack:checked~main .canvas{overflow:visible;cursor:default}
+#l-stack:checked~main .node{flex:none;width:min(420px,100%)}
+#l-stack:checked~main .edge{flex:none;flex-direction:row;align-items:center;justify-content:flex-start;gap:12px;height:auto;min-height:64px;padding:4px 0 4px 26px;text-align:left;width:min(420px,100%)}
+#l-stack:checked~main .edge .h{display:none}
+#l-stack:checked~main .edge .v{display:block;width:24px;height:64px;flex:none;order:0}
+#l-stack:checked~main .edge .mode,#l-stack:checked~main .edge .meta{order:1;margin:0}
+#l-stack:checked~main .edge .mode{flex:0 1 auto}
+#l-stack:checked~main .zoom{display:none}
+/* Wide screens in top-to-bottom mode: days sit side by side as columns. */
+@media (min-width:980px){
+  #l-stack:checked~main .plan{grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:0 22px;align-items:start}
+  #t-b:checked~#l-stack:checked~main #plan-b,#t-a:checked~#l-stack:checked~main #plan-a,#t-compare:checked~#l-stack:checked~main #plan-compare,#t-whole:checked~#l-stack:checked~main #plan-whole{display:grid}
+  #l-stack:checked~main .plan-head,#l-stack:checked~main .panels,#l-stack:checked~main #plan-compare>.day{grid-column:1/-1}
+  #l-stack:checked~main .node,#l-stack:checked~main .edge{width:100%}
+}
+
+/* Compare lanes. */
+.pair>h4{margin:14px 0 6px;font:400 17px var(--hand)}
+.pair.A>h4{color:var(--train)}.pair.B>h4{color:var(--hotel)}
+.access{border-collapse:collapse;font-family:var(--hand);font-size:15px;min-width:min(560px,100%)}
+.access th,.access td{text-align:left;padding:6px 18px 6px 0;border-bottom:1px solid var(--line)}
+.access th{font-weight:400;color:var(--mut)}
+.access td:nth-child(2){color:var(--train)}.access td:nth-child(3){color:var(--hotel)}
+
+.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:30px}
+.panel{border:1.6px solid var(--c);background:var(--b);border-radius:14px 5px 12px 6px/6px 12px 5px 14px;padding:14px 18px}
+.panel h4{margin:0 0 8px;font:400 19px var(--hand);color:var(--c)}
+.panel ul{margin:0;padding-left:18px}
+.panel li{margin:3px 0;color:#ded9e7;font-size:14px}
+
+@media (max-width:640px){.top{position:static}.layout{margin-left:0}.node{flex-basis:210px}.edge{flex-basis:140px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.top,.zoom{display:none}.plan{display:block!important}.canvas{overflow:visible}}
