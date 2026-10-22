@@ -114,3 +114,23 @@ h1{font:400 clamp(34px,5vw,54px)/1.05 var(--hand);margin:0 0 12px;letter-spacing
 @media (max-width:640px){.top{position:static}.layout{margin-left:0}.node{flex-basis:210px}.edge{flex-basis:140px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.top,.zoom{display:none}.plan{display:block!important}.canvas{overflow:visible}}
+
+/* Alternative routes under transfer days. */
+.alts{margin:12px 0 0;border:1.6px dashed var(--train);border-radius:12px 5px 11px 6px;background:#1c1825;padding:10px 14px}
+.alts summary{cursor:pointer;font:400 17px var(--hand);color:var(--train)}
+.alt-wrap{overflow-x:auto;margin-top:8px}
+.alts table{border-collapse:collapse;width:100%;min-width:760px;font-size:13.5px}
+.alts th{font-weight:500;text-align:left;color:var(--mut);padding:4px 10px 6px 0;border-bottom:1px solid var(--line)}
+.alts td{padding:7px 10px 7px 0;border-bottom:1px solid var(--line);vertical-align:top;color:#ded9e7}
+.alts td:first-child{font-family:var(--hand);font-size:14.5px;color:var(--ink);min-width:190px}
+.alts tr.used td:first-child{color:var(--hotel)}
+.alts .tag{display:inline-block;white-space:nowrap;font-family:var(--hand);font-size:13px;border:1.4px solid var(--line);border-radius:6px 3px 7px 3px;padding:0 6px;color:var(--mut)}
+.alts tr.used .tag{border-color:var(--hotel);color:var(--hotel)}
+.alt-src{margin:6px 0 0;font-size:12.5px;color:var(--mut)}
+/* Narrow columns (top-to-bottom mode, phones): each route becomes a small stacked card. */
+#l-stack:checked~main .alts table,#l-stack:checked~main .alts tbody,#l-stack:checked~main .alts tr,#l-stack:checked~main .alts td{display:block;min-width:0;width:auto}
+#l-stack:checked~main .alts thead{display:none}
+#l-stack:checked~main .alts tr{padding:8px 0;border-bottom:1px solid var(--line)}
+#l-stack:checked~main .alts td{border:0;padding:1px 0}
+#l-stack:checked~main .alts td:nth-child(2){margin:2px 0 3px}
+#l-stack:checked~main .alts td:nth-child(4){color:var(--food)}
