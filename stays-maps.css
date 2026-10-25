@@ -5,6 +5,14 @@
 @media(max-width:720px){main{width:100%;padding:20px 14px 40px}.bar{flex-wrap:wrap;gap:8px;padding:8px 12px}.brand{font-size:16px}.links{order:3;flex-basis:100%;gap:18px}#theme{margin-left:auto}h1{font-size:34px}.section-title{display:block}.summary .card{display:block}.distance-controls{display:block}.distance-controls label{margin:10px 0}.distance-controls output{display:block}#pin-legend{columns:1}.card{padding:16px}.big{font-size:23px}}
 @media print{nav,.tabs,.distance-controls{display:none}main{width:100%}details>*{display:block!important}.card{break-inside:avoid}}
 
+/* City price panels keep their full tables and direct section links. */
+.stay-city-tabs{display:flex;gap:6px;padding:5px;background:var(--chip);border-radius:10px;margin:22px 0 8px}
+.stay-city-tabs button{flex:1;border:0;background:transparent;font-weight:600;white-space:nowrap}
+.stay-city-tabs button[aria-selected=true]{background:var(--fg);color:var(--bg)}
+[data-stay-panel]{margin-top:18px}
+.price-changes{min-width:620px;font-variant-numeric:tabular-nums}
+.price-changes small{max-width:34ch}.price-changes .change-up{color:var(--acc)}
+.price-changes .change-down{color:var(--acc2)}
 /* The comparison stays a table at every width; hotel cards are intentionally absent. */
 #prices{margin-top:12px}.quotes{min-width:920px}.quotes td:first-child{width:30%}.quotes td:nth-child(2),.quotes td:nth-child(3){width:18%}.quotes td:last-child{width:34%;font-size:13px}.quotes td{padding-top:18px;padding-bottom:18px}.estimate{display:block;font-size:11px;color:var(--acc);font-weight:600}.mobile-hint{display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}#checks{border-top:1px solid var(--line);padding-top:16px}#checks p{font-size:14px}@media(max-width:720px){.mobile-hint{display:block}.quotes{font-size:13px}.quotes td{padding:14px 10px}header{padding-bottom:10px}}
 

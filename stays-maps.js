@@ -2,6 +2,46 @@
 const root = document.documentElement;
 const $ = id => document.getElementById(id);
 const prefs = {get(k){try{return localStorage.getItem(k)}catch{return null}},set(k,v){try{localStorage.setItem(k,v)}catch{}}};
+// City tabs reveal the matching price panel, including when following a dated
+// section link. Without JavaScript all three panels remain readable.
+const stayTabs = [...document.querySelectorAll('[data-stay-tab]')];
+const stayPanels = [...document.querySelectorAll('[data-stay-panel]')];
+function selectStayCity(city, focus = false){
+ if(!stayPanels.some(panel=>panel.dataset.stayPanel===city))return;
+ stayTabs.forEach(tab=>{
+  const active=tab.dataset.stayTab===city;
+  tab.setAttribute('aria-selected',String(active));
+  tab.tabIndex=active?0:-1;
+  if(active&&focus)tab.focus();
+ });
+ stayPanels.forEach(panel=>panel.hidden=panel.dataset.stayPanel!==city);
+}
+function stayCityFromHash(){
+ const target=document.getElementById(location.hash.slice(1));
+ return target?.closest('[data-stay-panel]')?.dataset.stayPanel;
+}
+if(stayTabs.length){
+ document.getElementById('stay-city-tabs').hidden=false;
+ stayTabs.forEach((tab,index)=>{
+  tab.addEventListener('click',()=>selectStayCity(tab.dataset.stayTab));
+  tab.addEventListener('keydown',event=>{
+   let next;
+   if(event.key==='ArrowRight')next=(index+1)%stayTabs.length;
+   if(event.key==='ArrowLeft')next=(index+stayTabs.length-1)%stayTabs.length;
+   if(event.key==='Home')next=0;
+   if(event.key==='End')next=stayTabs.length-1;
+   if(next===undefined)return;
+   event.preventDefault();selectStayCity(stayTabs[next].dataset.stayTab,true);
+  });
+ });
+ document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>{
+  const target=document.getElementById(link.hash.slice(1));
+  const city=target?.closest('[data-stay-panel]')?.dataset.stayPanel;
+  if(city)selectStayCity(city);
+ }));
+ window.addEventListener('hashchange',()=>{const city=stayCityFromHash();if(city)selectStayCity(city)});
+ selectStayCity(stayCityFromHash()||'tokyo');
+}
 let planner, tiles, groups=[], allPins=[], selected=0, markers=new Map(), layers={}, connector;
 const categories={held:['Held stay','H','#70b7ff'],proposed:['Candidate stay','?','#f5bd58'],visit:['Itinerary','●','#f88185'],optional:['Optional','+','#75d3a2'],station:['Station','T','#c3c7cd']};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
