@@ -1,0 +1,146 @@
+{
+  "checked_date": "2026-10-26",
+  "scope": "Two adults; all eight hotel nights 20–28 Nov reserved; six nights prepaid; Start One payment not verified and still scheduled in latest confirmation.",
+  "flights": [
+    {
+      "date": "2026-11-20",
+      "route": "DEL–HAN–NRT",
+      "flights": [
+        "VJ972",
+        "VJ934"
+      ],
+      "site": "Goibibo",
+      "cash_paid_inr": 51815,
+      "status": "paid; e-ticket received; same PNR for both segments",
+      "checked_baggage_kg_per_adult": 20,
+      "combined_cabin_personal_item_kg_per_adult": 7
+    },
+    {
+      "date": "2026-11-28",
+      "route": "KIX–HAN–DEL",
+      "flights": [
+        "VJ939",
+        "VJ971"
+      ],
+      "site": "Trip.com",
+      "cash_paid_inr": 59414,
+      "status": "paid; tickets issued",
+      "checked_baggage_kg_per_adult": 20,
+      "combined_cabin_personal_item_kg_per_adult": 7
+    }
+  ],
+  "hotels": [
+    {
+      "property": "Start One Home Asakusa/Senzoku/B",
+      "checkin": "2026-11-20",
+      "checkout": "2026-11-22",
+      "nights": 2,
+      "room": "Apartment",
+      "reservation_status": "confirmed",
+      "payment_status": "scheduled; no payment receipt found",
+      "scheduled_payment": "2026-11-17",
+      "room_and_taxes_jpy": 10188,
+      "paylater_adjusted_jpy_equivalent": 10697,
+      "adjustment_percent": 5,
+      "free_cancel_before_jst": "2026-11-19T00:00:00+09:00",
+      "source": "latest Agoda confirmation found; current payment not independently revalidated"
+    },
+    {
+      "property": "Tokyo Ueno New Izu Hotel",
+      "checkin": "2026-11-22",
+      "checkout": "2026-11-23",
+      "nights": 1,
+      "room": "Economy Double Non-Smoking; private bath",
+      "reservation_status": "confirmed",
+      "payment_status": "paid",
+      "cash_paid_inr": 12701.87,
+      "wallet_used_inr": 1150,
+      "booking_value_inr": 13851.87,
+      "coupon": "IXIGOCCSTAY",
+      "coupon_off_inr": 1538,
+      "free_cancel_before_jst": "2026-11-16T23:59:00+09:00",
+      "latest_initial_checkin": "23:30 JST per voucher"
+    },
+    {
+      "property": "Smile Hotel Otsu Seta",
+      "checkin": "2026-11-23",
+      "checkout": "2026-11-25",
+      "nights": 2,
+      "room": "Double Non-Smoking; private bath",
+      "reservation_status": "confirmed",
+      "payment_status": "paid",
+      "cash_paid_inr": 13473.58,
+      "coupon": "AGODASPONSORED referral promotion",
+      "free_cancel_before_jst": "2026-11-22T00:00:00+09:00"
+    },
+    {
+      "property": "RTi Tennoji",
+      "checkin": "2026-11-25",
+      "checkout": "2026-11-28",
+      "nights": 3,
+      "room": "Queen Room; 25 m²; 1 queen and sofa bed; private bath",
+      "reservation_status": "confirmed",
+      "payment_status": "prepaid",
+      "cash_paid_inr": 12952.89,
+      "wallet_used_inr": 1000,
+      "booking_value_inr": 13952.89,
+      "coupon": "IXIGOCCSTAY verified in pre-purchase review",
+      "free_cancel_before_jst": "2026-11-17T23:59:00+09:00",
+      "latest_initial_checkin": "23:59 JST per voucher"
+    }
+  ],
+  "cancelled": [
+    {
+      "property": "RTi Tennoji",
+      "checkin": "2026-11-22",
+      "checkout": "2026-11-27",
+      "room": "Twin Room with Private Bathroom",
+      "status": "cancelled; confirmed by Agoda 26 Oct",
+      "amount_charged_inr": 0,
+      "cancellation_fee_inr": 0,
+      "old_nov13_payment_obligation": "cancelled"
+    }
+  ],
+  "cash_paid_for_three_new_hotels_inr": 39128.34,
+  "cash_paid_flights_inr": 111229,
+  "attractions": [
+    {
+      "name": "teamLab Biovortex",
+      "date": "2026-11-24",
+      "entry": "14:30–15:00 JST",
+      "adults": 2,
+      "paid_jpy": 8200,
+      "status": "purchase complete; confirmation found"
+    },
+    {
+      "name": "Universal Studios Japan",
+      "date": "2026-11-26",
+      "adults": 2,
+      "reported_total_jpy": 18800,
+      "status": "user-reported booked; final receipt/entry tickets not found in connected Gmail"
+    }
+  ],
+  "document_gaps": [
+    "Live eVISA issuance access notices for both: user-reported issued, files/access not verified",
+    "USJ final purchase confirmation and entry tickets",
+    "Travel insurance policy and emergency assistance details",
+    "Train confirmations after purchase"
+  ],
+  "india_trains": [
+    {
+      "traveller": "wife",
+      "date": "2026-11-11",
+      "route": "Chandigarh → Delhi",
+      "normal_60_day_open_date": "2026-09-12",
+      "status": "to book; departure not selected"
+    },
+    {
+      "traveller": "husband",
+      "date": "2026-11-18",
+      "route": "Chandigarh → Delhi",
+      "normal_60_day_open_date": "2026-09-19",
+      "status": "tentative date; to book"
+    }
+  ],
+  "privacy": "No booking references, PINs, passports, emails, private links or document folder URLs are published here."
+}

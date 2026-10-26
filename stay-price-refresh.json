@@ -6,7 +6,7 @@
     "adults": 2,
     "rooms": 1
   },
-  "scope": "Tokyo 22–23 Nov; Otsu 23–25 Nov; Osaka 25–28 Nov, final night 27–28. No booking or payment submitted.",
+  "scope": "Historical 26 Oct room-review comparisons; user-completed bookings/payments and cancelled hold are recorded separately in trip-status.json.",
   "verification": "Actual signed-in Chrome via Cua Driver. Prices are amounts displayed at room checkout/review; bank/payment validation not performed. Cheapest among current verified paths, not an exhaustive market guarantee.",
   "ixigo_quotes": [
     {
@@ -661,5 +661,6 @@
         ]
       }
     ]
-  }
+  },
+  "booking_status_file": "trip-status.json"
 }
