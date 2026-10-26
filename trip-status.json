@@ -1,6 +1,6 @@
 {
   "checked_date": "2026-10-26",
-  "scope": "Two adults; all eight hotel nights 20–28 Nov reserved; six nights prepaid; Start One payment not verified and still scheduled in latest confirmation.",
+  "scope": "Two adults; all eight hotel nights 20–28 Nov confirmed and prepaid; final Start One payment verified 26 October.",
   "flights": [
     {
       "date": "2026-11-20",
@@ -37,13 +37,18 @@
       "nights": 2,
       "room": "Apartment",
       "reservation_status": "confirmed",
-      "payment_status": "scheduled; no payment receipt found",
-      "scheduled_payment": "2026-11-17",
-      "room_and_taxes_jpy": 10188,
-      "paylater_adjusted_jpy_equivalent": 10697,
+      "payment_status": "paid",
       "adjustment_percent": 5,
       "free_cancel_before_jst": "2026-11-19T00:00:00+09:00",
-      "source": "latest Agoda confirmation found; current payment not independently revalidated"
+      "source": "Agoda updated confirmation and matching AU bank transaction alert, 26 October 2026",
+      "cash_paid_inr": 6473.93,
+      "room_paid_inr": 5118.14,
+      "taxes_fees_paid_inr": 1355.79,
+      "charged_currency": "INR",
+      "paid_ist": "2026-10-26T12:34:54+05:30",
+      "adjusted_jpy_equivalent_at_payment": 10696,
+      "adjustment_included_in_cash_paid": true,
+      "room_and_taxes_jpy_historical_base": 10188
     },
     {
       "property": "Tokyo Ueno New Izu Hotel",
@@ -101,7 +106,6 @@
       "old_nov13_payment_obligation": "cancelled"
     }
   ],
-  "cash_paid_for_three_new_hotels_inr": 39128.34,
   "cash_paid_flights_inr": 111229,
   "attractions": [
     {
@@ -121,7 +125,6 @@
     }
   ],
   "document_gaps": [
-    "Live eVISA issuance access notices for both: user-reported issued, files/access not verified",
     "USJ final purchase confirmation and entry tickets",
     "Travel insurance policy and emergency assistance details",
     "Train confirmations after purchase"
@@ -142,5 +145,9 @@
       "status": "tentative date; to book"
     }
   ],
-  "privacy": "No booking references, PINs, passports, emails, private links or document folder URLs are published here."
+  "privacy": "No booking references, PINs, passports, emails, private links or document folder URLs are published here.",
+  "cash_paid_all_hotels_inr": 45602.27,
+  "hotel_credits_redeemed_inr": 2150,
+  "hotel_booking_value_including_redeemed_credits_inr": 47752.27,
+  "physical_documents": "User confirmed passports and visas are physical; carry both original passports and visas. Digital scans are not requested."
 }
