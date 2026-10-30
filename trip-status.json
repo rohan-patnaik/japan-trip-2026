@@ -1,6 +1,6 @@
 {
-  "checked_date": "2026-10-26",
-  "scope": "Two adults; all eight hotel nights 20–28 Nov confirmed and prepaid; final Start One payment verified 26 October.",
+  "checked_date": "2026-10-30",
+  "scope": "All eight hotel nights prepaid (hotel evidence 26 October); Nozomi purchase and both dated USJ adult entry tickets verified in existing Chrome on 30 October.",
   "flights": [
     {
       "date": "2026-11-20",
@@ -120,14 +120,22 @@
       "name": "Universal Studios Japan",
       "date": "2026-11-26",
       "adults": 2,
-      "reported_total_jpy": 18800,
-      "status": "user-reported booked; final receipt/entry tickets not found in connected Gmail"
+      "status": "confirmed; two distinct adult 1-Day Studio Pass e-tickets opened and verified 30 October",
+      "paid_jpy": 18800,
+      "price_per_adult_jpy": 9400,
+      "tax_included": true,
+      "source": "Forwarded official USJ Ticket Order Confirmation and both original e-ticket pages",
+      "verified_date": "2026-10-30",
+      "express_pass_included": false,
+      "admission_document": "Print each full original e-ticket; ticket warns that images of tickets are not accepted",
+      "reentry_allowed": false
     }
   ],
   "document_gaps": [
-    "USJ final purchase confirmation and entry tickets",
+    "USJ: print both full original e-tickets; admission tickets verified, offline originals not yet saved by this check",
+    "Nozomi: obtain/print both boarding QR tickets or collect paper tickets; save receipt from 31 Oct JST",
     "Travel insurance policy and emergency assistance details",
-    "Train confirmations after purchase"
+    "Sagano, AONIYOSHI and India train confirmations after purchase"
   ],
   "india_trains": [
     {
@@ -149,5 +157,67 @@
   "cash_paid_all_hotels_inr": 45602.27,
   "hotel_credits_redeemed_inr": 2150,
   "hotel_booking_value_including_redeemed_credits_inr": 47752.27,
-  "physical_documents": "User confirmed passports and visas are physical; carry both original passports and visas. Digital scans are not requested."
+  "physical_documents": "User confirmed passports and visas are physical; carry both original passports and visas. Digital scans are not requested.",
+  "japan_trains": [
+    {
+      "date": "2026-11-23",
+      "route": "Tokyo → Kyoto",
+      "train": "Nozomi 21",
+      "departure_jst": "09:30",
+      "arrival_jst": "11:44",
+      "adults": 2,
+      "class": "Ordinary reserved",
+      "car": 2,
+      "seats": [
+        "17E",
+        "18E"
+      ],
+      "seat_note": "Two Fuji-side window seats, one row apart",
+      "status": "confirmed and paid; SmartEX completion page verified",
+      "paid_jpy": 28340,
+      "payment_currency": "JPY",
+      "approx_inr_at_0_60": 17004,
+      "verified_date": "2026-10-30",
+      "boarding_method_shown": "Scan QR-Ticket or pick up ticket",
+      "ic_cards_designated": false,
+      "boarding_documents_status": "Obtain/print both seat QR tickets or collect paper tickets; not yet saved by this verification",
+      "receipt_available_from_jst": "2026-10-31",
+      "baggage_each_cm": [
+        69,
+        29,
+        49
+      ],
+      "baggage_each_total_cm": 147,
+      "oversized_baggage_seat_required": false
+    }
+  ],
+  "kyoto_arrival_luggage": {
+    "date": "2026-11-23",
+    "recommended": "Crosta Kyoto storage, sightseeing, collect bags, then JR to Seta in the evening",
+    "storage_location": "Kyoto Station B1 below conventional-line Central Gate",
+    "hours_jst": "08:00–20:00",
+    "cost_per_item_jpy": 1000,
+    "two_suitcases_total_jpy": 2000,
+    "collect_target_jst": "19:35",
+    "card_payment_accepted": true,
+    "capacity_reserved": false,
+    "seta_train_minutes_estimate": [
+      17,
+      20
+    ],
+    "seta_one_way_fare_two_adults_jpy_estimate": 640,
+    "hotel_walk_minutes_estimate": 1,
+    "hotel_checkin_from_jst": "15:00",
+    "hotel_free_same_day_storage_before_checkin_and_after_checkout": true,
+    "hotel_first_detour_minutes_estimate": [
+      60,
+      90
+    ],
+    "hotel_first_extra_train_fare_two_adults_jpy_estimate": 1280,
+    "sources": [
+      "https://handsfree-japan.com/kyoto/",
+      "https://smile-hotels.com/hotels/otsuseta/"
+    ],
+    "verified_date": "2026-10-30"
+  }
 }

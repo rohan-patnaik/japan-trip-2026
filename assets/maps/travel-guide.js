@@ -705,7 +705,7 @@ const TRAVEL_GUIDE = {
         130,
         140
       ],
-      "note": "Book your reserved seats and any required oversized-baggage area separately.",
+      "note": "BOOKED 23 Nov: Nozomi 21 Tokyo 09:30 → Kyoto 11:44, ordinary Car 2 seats 17E + 18E, ¥28,340 paid for two. Each 147 cm suitcase is ordinary baggage. Obtain both boarding QR tickets or collect paper tickets; local connecting fares are extra.",
       "ticket": "shinkansen"
     },
     {
