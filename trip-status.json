@@ -218,6 +218,9 @@
       "https://handsfree-japan.com/kyoto/",
       "https://smile-hotels.com/hotels/otsuseta/"
     ],
-    "verified_date": "2026-10-30"
+    "verified_date": "2026-10-30",
+    "decision_status": "chosen by user",
+    "selected_plan": "Kyoto Station storage → sightseeing → collect both suitcases by 19:35 → dinner → evening JR to Seta",
+    "storage_reservation_status": "not reserved; capacity subject to availability"
   }
 }
