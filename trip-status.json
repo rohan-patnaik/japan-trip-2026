@@ -1,6 +1,6 @@
 {
-  "checked_date": "2026-10-30",
-  "scope": "All eight hotel nights prepaid (hotel evidence 26 October); Nozomi purchase and both dated USJ adult entry tickets verified in existing Chrome on 30 October.",
+  "checked_date": "2026-11-14",
+  "scope": "Latest update: AONIYOSHI payment verified in official purchase email 14 November; 25 November itinerary revised. Earlier hotel, flight, Nozomi and USJ evidence dates remain recorded per item.",
   "flights": [
     {
       "date": "2026-11-20",
@@ -135,7 +135,7 @@
     "USJ: print both full original e-tickets; admission tickets verified, offline originals not yet saved by this check",
     "Nozomi: obtain/print both boarding QR tickets or collect paper tickets; save receipt from 31 Oct JST",
     "Travel insurance policy and emergency assistance details",
-    "Sagano and AONIYOSHI confirmations if purchased; save both already-booked India train tickets"
+    "AONIYOSHI 25 Nov: carry live phone e-ticket from purchase email; keep data available; pay ¥1,520 basic fare for both separately by IC card. Both India trains are already booked."
   ],
   "india_trains": [
     {
@@ -196,6 +196,32 @@
       ],
       "baggage_each_total_cm": 147,
       "oversized_baggage_seat_required": false
+    },
+    {
+      "date": "2026-11-25",
+      "route": "Kintetsu Kyoto → Kintetsu-Nara",
+      "train": "AONIYOSHI",
+      "departure_jst": "14:55",
+      "arrival_jst": "15:28",
+      "adults": 2,
+      "class": "Twin, window-facing",
+      "car": 4,
+      "seats": [
+        "4C",
+        "4D"
+      ],
+      "status": "confirmed and paid; official purchase email verified 14 Nov",
+      "paid_jpy": 1460,
+      "payment_currency": "JPY",
+      "paid_ist": "2026-11-14T18:42:19+05:30",
+      "limited_express_charge_jpy_both": 1040,
+      "special_car_charge_jpy_both": 420,
+      "basic_fare_jpy_both": 1520,
+      "basic_fare_payment_status": "not included in online payment; pay separately at gates with one IC card per person",
+      "total_jpy_both_including_basic_fare": 2980,
+      "verified_date": "2026-11-14",
+      "boarding_method_shown": "Open the purchase email re-display Refund/Change/Ticketless link and display the live e-ticket on a smartphone; no station pickup required",
+      "boarding_documents_status": "Confirmation email received; carry a phone able to open the live e-ticket. Screenshots and printouts are not accepted. Keep booking references and ticket links private."
     }
   ],
   "kyoto_arrival_luggage": {
@@ -244,5 +270,64 @@
     "admission_jpy_for_two": 0,
     "details": "index.html#tokyo-viewpoints",
     "updated_date": "2026-11-14"
+  },
+  "removed_activities": [
+    {
+      "name": "Sagano Romantic Train",
+      "date": "2026-11-25",
+      "status": "removed from itinerary; sold out; do not remind to book"
+    }
+  ],
+  "anniversary_day": {
+    "date": "2026-11-25",
+    "seta_checkout_jst": "≈07:30",
+    "morning": "Relaxed Arashiyama bamboo/garden/riverside visit; no Sagano train",
+    "lunch": "Flexible Arashiyama lunch; Shigetsu optional and unbooked",
+    "kyoto_platform_target_jst": "14:30",
+    "aoniyoshi": "PAID 14:55 Kyoto → Nara 15:28; Car 4 4C+4D",
+    "nara_stop": "Short western Nara Park / Nakatanido mochi stop; aim to leave for JR Nara by ≈16:00. About45 minutes total local stop including walking is tight; full45 minutes in park needs later train.",
+    "jr_station_walk_minutes_estimate": [
+      15,
+      20
+    ],
+    "onward": {
+      "operator": "JR West",
+      "service": "Yamatoji Line Section Rapid",
+      "departure": "JR Nara",
+      "departure_jst": "16:25",
+      "arrival": "Tennoji",
+      "arrival_jst": "17:01",
+      "adults": 2,
+      "fare_jpy_both": 1020,
+      "reservation_status": "walk-up ordinary cars; no advance reservation needed",
+      "fallback_departure_jst": "16:40; recheck timetable on day"
+    },
+    "hotel_checkin_jst": "≈17:20–18:00 RTi Tennoji",
+    "dinner": {
+      "restaurant": "Table36, Swissôtel Nankai Osaka",
+      "time_jst": "20:00",
+      "adults": 2,
+      "status": "TOP pending booking; not booked or paid"
+    },
+    "sources": [
+      "https://timetable.jr-odekake.net/train-timetable/241921?date=20261125",
+      "https://www.kintetsu.co.jp/gyoumu/ticket/help/vs/en/faq.html"
+    ]
+  },
+  "booking_reminders": {
+    "updated_date": "2026-11-14",
+    "top_pending": "Table36, 25 Nov 20:00 for 2; unbooked",
+    "exclude": [
+      "Sagano removed/sold out",
+      "AONIYOSHI paid",
+      "Shibuya Sky declined",
+      "Both India trains booked"
+    ],
+    "optional_pending": [
+      "23 Nov kimono",
+      "23 Nov photographer",
+      "25 Nov Shigetsu lunch only if chosen"
+    ],
+    "prep_25_nov": "Carry phone live e-ticket for AONIYOSHI; pay ¥1,520 basic fare separately with one IC card per person."
   }
 }
