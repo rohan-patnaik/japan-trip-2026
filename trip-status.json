@@ -135,22 +135,29 @@
     "USJ: print both full original e-tickets; admission tickets verified, offline originals not yet saved by this check",
     "Nozomi: obtain/print both boarding QR tickets or collect paper tickets; save receipt from 31 Oct JST",
     "Travel insurance policy and emergency assistance details",
-    "Sagano, AONIYOSHI and India train confirmations after purchase"
+    "Sagano and AONIYOSHI confirmations if purchased; save both already-booked India train tickets"
   ],
   "india_trains": [
     {
       "traveller": "wife",
       "date": "2026-11-11",
-      "route": "Chandigarh → Delhi",
-      "normal_60_day_open_date": "2026-09-12",
-      "status": "to book; departure not selected"
+      "route": "Chandigarh → New Delhi",
+      "train": "12058 Jan Shatabdi",
+      "class": "AC Chair Car",
+      "departure_ist": "07:43",
+      "arrival_ist": "11:45",
+      "status": "confirmed; email verified 2 Nov"
     },
     {
       "traveller": "husband",
-      "date": "2026-11-18",
-      "route": "Chandigarh → Delhi",
-      "normal_60_day_open_date": "2026-09-19",
-      "status": "tentative date; to book"
+      "date": "2026-11-19",
+      "route": "Chandigarh → New Delhi",
+      "train": "12058 Jan Shatabdi",
+      "class": "AC Chair Car",
+      "departure_ist": "07:43",
+      "arrival_ist": "11:45",
+      "total_inr": 528.6,
+      "status": "confirmed; IRCTC email verified 11 Nov"
     }
   ],
   "privacy": "No booking references, PINs, passports, emails, private links or document folder URLs are published here.",
@@ -222,5 +229,20 @@
     "decision_status": "chosen by user",
     "selected_plan": "Kyoto Station storage → sightseeing → collect both suitcases by 19:35 → dinner → evening JR to Seta",
     "storage_reservation_status": "not reserved; capacity subject to availability"
+  },
+  "plan_updated_date": "2026-11-14",
+  "tokyo_viewpoint_choice": {
+    "status": "undecided; user will choose later",
+    "shibuya_sky": "declined; remove paid-ticket reminders",
+    "options": [
+      "Tokyo Metropolitan Government Building",
+      "Shibuya Hikarie Sky Lobby",
+      "Yebisu Garden Place Sky Lounge",
+      "Caretta Shiodome SKY VIEW",
+      "Asakusa Culture Tourist Information Center"
+    ],
+    "admission_jpy_for_two": 0,
+    "details": "index.html#tokyo-viewpoints",
+    "updated_date": "2026-11-14"
   }
 }
