@@ -285,7 +285,7 @@
     "lunch": "Flexible Arashiyama lunch; Shigetsu optional and unbooked",
     "kyoto_platform_target_jst": "14:30",
     "aoniyoshi": "PAID 14:55 Kyoto → Nara 15:28; Car 4 4C+4D",
-    "nara_stop": "Short western Nara Park / Nakatanido mochi stop; aim to leave for JR Nara by ≈16:00. About45 minutes total local stop including walking is tight; full45 minutes in park needs later train.",
+    "nara_stop": "Nara Park target ≈45 min, Nakatanidō mochi and optional kakinoha-zushi (usually fish-topped, for husband; not a vegetarian choice for wife). To catch JR 16:25, shorten the park stop and leave for JR Nara by ≈16:00; a full 45-minute park visit needs the later ≈16:40 walk-up train.",
     "jr_station_walk_minutes_estimate": [
       15,
       20
@@ -302,7 +302,7 @@
       "reservation_status": "walk-up ordinary cars; no advance reservation needed",
       "fallback_departure_jst": "16:40; recheck timetable on day"
     },
-    "hotel_checkin_jst": "≈17:20–18:00 RTi Tennoji",
+    "hotel_checkin_jst": "≈17:15–17:30 RTi Tennoji arrival/check-in target; allow extra station walking time",
     "dinner": {
       "restaurant": "Table36, Swissôtel Nankai Osaka",
       "time_jst": "20:00",
@@ -312,7 +312,8 @@
     "sources": [
       "https://timetable.jr-odekake.net/train-timetable/241921?date=20261125",
       "https://www.kintetsu.co.jp/gyoumu/ticket/help/vs/en/faq.html"
-    ]
+    ],
+    "nara_park_target_minutes": 45
   },
   "booking_reminders": {
     "updated_date": "2026-11-14",
