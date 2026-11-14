@@ -1,6 +1,6 @@
 {
   "checked_date": "2026-11-14",
-  "scope": "Latest update: AONIYOSHI payment verified in official purchase email 14 November; 25 November itinerary revised. Earlier hotel, flight, Nozomi and USJ evidence dates remain recorded per item.",
+  "scope": "Latest update: Table36 reservation accepted in Chrome and official TableCheck email, verified 14 November. AONIYOSHI payment verified the same day. Earlier hotel, flight, Nozomi and USJ evidence dates remain recorded per item.",
   "flights": [
     {
       "date": "2026-11-20",
@@ -307,7 +307,21 @@
       "restaurant": "Table36, Swissôtel Nankai Osaka",
       "time_jst": "20:00",
       "adults": 2,
-      "status": "TOP pending booking; not booked or paid"
+      "status": "BOOKED; Accepted in TableCheck completion page and confirmation email",
+      "service": "À La Carte × 2; table seating",
+      "occasion": "Wedding Anniversary",
+      "verified_date": "2026-11-14",
+      "confirmation_received_ist": "2026-11-14T20:08:28+05:30",
+      "source": "TableCheck completion page and Reservation booked confirmation email",
+      "restaurant_acceptance_pending": false,
+      "special_requests_recorded": "Wedding anniversary dinner. Window table with city view if possible. Could you please add a small candle or message on dessert. Guest 1 is vegetarian (no meat, no fish, no egg; dairy is fine): we plan the vegan Torched Carrot Tartare, vegan Roasted Pumpkin Rigatoni and Yuzu Granita. Guest 2 does not eat beef (chicken, fish, pork are fine). Thank you.",
+      "special_arrangements_status": "Recorded requests only; window table, candle/dessert message and specific dietary preparation are not separately guaranteed. No separate restaurant acknowledgement of these requests was verified.",
+      "payment_status": "Meal not prepaid; pay for à la carte orders at the restaurant. No card guarantee or deposit requested in the observed checkout.",
+      "cancellation_policy_shown": "Same-day cancellation or party-size change: 100% of selected course price. Separate advance-payment section states 100% within 24 hours. No precise à la carte cancellation deadline or separate no-show amount is specified.",
+      "no_show_fee_jpy": null,
+      "a_la_carte_cancellation_deadline_jst": null,
+      "leave_rti_by_jst": "19:30",
+      "access": "Leave RTi by 19:30; Midōsuji Line Tennoji → Namba, then Swissôtel Nankai Osaka 36F. Allow walking, Metro and lift time; travel timing is an estimate."
     },
     "sources": [
       "https://timetable.jr-odekake.net/train-timetable/241921?date=20261125",
@@ -317,18 +331,19 @@
   },
   "booking_reminders": {
     "updated_date": "2026-11-14",
-    "top_pending": "Table36, 25 Nov 20:00 for 2; unbooked",
+    "top_pending": "Visit Japan Web QR codes for both and travel insurance / pre-flight preparation; verify newer completion evidence first. No Table36 repeat booking.",
     "exclude": [
       "Sagano removed/sold out",
       "AONIYOSHI paid",
       "Shibuya Sky declined",
-      "Both India trains booked"
+      "Both India trains booked",
+      "Table36 accepted/booked 25 Nov 20:00 for two; à la carte, pay at restaurant"
     ],
     "optional_pending": [
       "23 Nov kimono",
       "23 Nov photographer",
       "25 Nov Shigetsu lunch only if chosen"
     ],
-    "prep_25_nov": "Carry phone live e-ticket for AONIYOSHI; pay ¥1,520 basic fare separately with one IC card per person."
+    "prep_25_nov": "Carry phone live e-ticket for AONIYOSHI; pay ¥1,520 basic fare separately with one IC card per person. Table36 BOOKED 20:00: leave RTi by 19:30, Midōsuji Line Tennoji → Namba, Swissôtel 36F. Window/candle/dietary requests recorded, not separately guaranteed."
   }
 }
