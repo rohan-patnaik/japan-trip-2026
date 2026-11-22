@@ -279,31 +279,36 @@
         option('Kaminoya Kaminarimon — monja / okonomiyaki', '1-34-4 Asakusa, Aqua Building 2F', 'Vegan okonomiyaki, or a pork version only after checking no beef', 'Vegan monja, vegan okonomiyaki or vegan yakisoba', [3500,5500], vegan, 'Friday food last order 21:00; allow about 30 minutes for cooking and a minimum drink order. Select the dedicated vegan menu and vegan broth for her. This is the current Kaminarimon branch.', sources.monja),
         option('Marugoto Vegan Dining Asakusa', '1-3-13 Hanakawado — near Asakusa Station', 'Plant-based curry / seasonal dinner main from the current menu', 'Seasonal vegan dinner plate or curry', [4000,6500], allVegan, 'Dinner service returns 13 Oct 2026. Reserve a dinner slot and check the November calendar and menu before going. A good shared vegan choice; no meat dishes.', sources.marugoto)
       ]}},
-    {date:21, label:'Sat 21 · Ginza / Kappabashi / Shibuya', route:'Iriya → Ginza shoe order → Kappabashi gifts → optional free viewpoint → PARCO → conditional Ginza collection',
-      breakfast:{time:'07:30–08:15 · before leaving', note:'Saturday morning reference. The Sumida River walk moves to Sunday.', options:breakfasts('Near the Senzoku / Iriya hotel', 'Eat before the Ginza / Kappabashi journey.', 0)},
+    {date:21, label:'Sat 21 · Ginza / Shibuya', route:'Ginza → Shibuya PARCO → Tokyo Tower',
+      breakfast:{time:'07:30–08:15 · before leaving', note:'Saturday morning reference. The Sumida River walk moves to Monday.', options:breakfasts('Near the Senzoku / Iriya hotel', 'Eat before the Ginza / Kappabashi journey.', 0)},
       lunch:{time:'12:00–12:30 · Ginza; or Asakusa before Kappabashi', note:'Jangara Ginza best fits the main route. Kaminoya adds an Asakusa detour and needs an earlier shoe-order finish. A packed meal is the fallback for a long queue. Leave Kappabashi around 14:15 for the Shibuya afternoon; the viewpoint choice is flexible.', options:[
         option('Kyushu Jangara Ginza', 'Ginza — lunch before the train to Tawaramachi', 'Bonshan pork ramen or spicy Karabon, after confirming no beef ingredients', 'Vegan black-garlic or vegan shoyu ramen', [2800,4200], vegan, 'Official shop list currently shows 11:00–22:30. Confirm the vegan bowl is available at this branch; regular ramen is not vegetarian. Aim to finish lunch by 12:30; queues could make takeaway more practical.', sources.jangara, ['https://kyushujangara.co.jp/en/shoplist/']),
         option('Kaminoya Kaminarimon — monja / okonomiyaki', '1-34-4 Asakusa, Aqua Building 2F — detour before Kappabashi', 'Vegan okonomiyaki, or a pork version only after checking no beef', 'Vegan monja, vegan okonomiyaki or vegan yakisoba', [3500,5500], vegan, 'Use only if the shoe order finishes early: travel to Asakusa, allow about 30 minutes for cooking, then walk toward Kappabashi. Recheck Saturday lunch hours. Select the dedicated vegan menu and broth for her; keep the 14:15 departure toward Shibuya.', sources.monja),
         option('Label-checked takeaway / packed lunch', 'Buy near the hotel or Ginza; eat only where permitted', 'Salmon or tuna-mayo onigiri + edamame + suitable drink', 'Two plain salt onigiri + edamame + nuts + milk or soy drink', [1200,2200], label, 'Fast fallback if the shoe queue runs late. Buy from a nearby 7-Eleven, FamilyMart or Lawson and inspect every label: check for meat, fish and egg, including in separate sauces and stocks. No beef ingredients for him. Carry plain oat crackers and nuts if no suitable rice balls are available.', sources.seven, [sources.family, sources.lawson])
       ]},
-      dinner:{time:'≈18:15 · Shibuya PARCO B1', note:'Confirm the shoe-collection deadline before leaving Ginza in the morning. If you order shoes, fit dinner around the agreed collection deadline.', options:[
+      dinner:{time:'≈18:15 · Shibuya PARCO B1', note:'Saturday dinner was at Jikasei MENSHO on PARCO B1.', options:[
         option('Jikasei MENSHO', 'Shibuya PARCO B1, 15-1 Udagawacho', 'Vegan miso ramen + pork-chashu topping if staff confirms availability and no beef', 'Vegan tantanmen or spicy vegan miso ramen', [3000,4500], vegan, '11:30–23:00, last order 22:00. His signature chicken-paitan bowl includes A5 wagyu: skip it. Use a vegan base for his pork addition; her bowl stays entirely vegan. Finish in time for any Ginza collection deadline.', sources.mensho),
         option('Vegan Izakaya Masaka', 'Shibuya PARCO B1 — fallback on the same floor', 'Vegan mains or small plates from the current menu', 'Vegan mains or small plates from the current menu', [3000,5000], allVegan, 'Check the menu and wait at the door.', 'https://shibuya.parco.jp/floor/detail/?f=b1f')
       ]}},
-    {date:22, label:'Sun 22 · Shin-chan', route:'Sumida → Ueno → Ginza → Akihabara → Kasukabe → Ueno',
-      breakfast:{time:'Early in Senzoku or during the Ginza wait', note:'Eat before checkout or once you have the Orange return time.', options:breakfasts('Asakusa / Iriya', 'Finish before the ≈08:45 checkout.', 1)},
-      lunch:{time:'Before the 13:05 Kasukabe train target', note:'Eat before leaving: LaLa Garden has no confirmed meal matching her restrictions. Jangara Akihabara is temporarily closed.', options:[
-        ts('ecute Akihabara — outside JR Electric Town gate'),
-        coco('Akihabara — check the nearest participating branch', 'Leave time for the 13:05 Kasukabe train target.', 'Pork-katsu curry on pork or vegetarian sauce'),
-        ts('JR Ueno Station 3F, inside gates near Iriya gate', 'Vegan ramen + rice / current side', 'Vegan sesame ramen, a different flavour from his')
+    {date:22, label:'Sun 22 · Shin-chan', route:'Ueno → Ginza / Kappabashi → Kasukabe → Ginza → Akihabara → optional Shinjuku',
+      breakfast:{time:'Before checkout or during the Ginza wait', note:'Pick up breakfast before leaving or while watching the Onitsuka queue.', options:breakfasts('Asakusa / Iriya or Ginza', 'Allow time for the bag drop and shoe queue.', 1)},
+      lunch:{time:'Before fitting · near Onitsuka Orange', note:'Watch the queue and keep enough time to get back to the store.', options:[
+        option('Kyushu Jangara Ginza', '6-12-17 Ginza', 'Tonkotsu ramen', 'Vegan shoyu ramen', [2800,4200], vegan, 'Choose this if the queue leaves enough time to sit down.', 'https://kyushujangara.co.jp/en/shoplist/ginza/'),
+        option('KOMEDA is, Higashi-Ginza', 'Higashi-Ginza', 'Plant-based sandwich and coffee', 'Plant-based sandwich and coffee', null, allVegan, 'Allow time for a sit-down meal and the walk back to Orange.', 'https://komeda-is.com/'),
+        option('Konbini takeaway', 'Near Onitsuka Orange, Ginza', 'Salmon onigiri and a drink', 'Plum or salted onigiri, yogurt and fruit', null, label, 'Fast fallback if token 78 is close. Check the rice seasoning and ingredients.', sources.seven)
       ]},
-      dinner:{time:'18:30–19:45 · Tokyo Station area', note:'Shop first or eat early. Ginza is an optional detour; the first two options stay at Tokyo Station.', options:[
-        soranoiro(),
-        ts('Gransta Tokyo B1 — outside JR gates'),
-        option('Kyushu Jangara Ginza', 'Ginza — about 20 minutes on foot from Tokyo Station', 'Bonshan pork ramen or spicy Karabon', 'Vegan black-garlic or vegan shoyu ramen', [2800,4200], vegan, 'Allow time for the Ginza detour and return. Official shop list currently shows 11:00–22:30, last order 22:15. Confirm the vegan bowl is available at this branch.', sources.jangara, ['https://kyushujangara.co.jp/en/shoplist/'])
+      snacks:{time:'≈16:00–16:35 · Kasukabe', note:'Choose one if it fits before the return train.', options:[
+        option('Smiley Crêpe', 'LaLa Garden Kasukabe 1F', 'Fruit-and-cream crêpe', 'Fruit-and-cream crêpe if the batter is suitable', null, check, 'Ask about egg if needed.', 'https://mitsui-shopping-park.com/lalag-kasukabe/shopguide/506035.html'),
+        option('Puratto Kasukabe', 'Near Kasukabe Station East Exit', 'Shin-chan packaged snack', 'Suitable packaged snack after checking the label', null, label, 'Stock is unconfirmed. Get the stamp first; the centre closes at 16:30.', 'https://visit-kasukabe.jp/pratkasukabe.html'),
+        option('Konbini snack', 'Near Kasukabe Station', 'Cut fruit and yogurt', 'Cut fruit and plain yogurt', null, label, 'Check the yogurt ingredients if avoiding gelatin.', sources.seven)
+      ]},
+      dinner:{time:'≈20:30 · Shinjuku', note:'Eat around Shinjuku Station if you continue west after Akihabara. If shopping runs late, eat near Akihabara or Ueno.', options:[
+        option('CoCo Ichibanya Shinjuku West Exit', '1-2-12 Nishi-Shinjuku', 'Chicken cutlet curry with pork sauce', 'CoCoICHI vegetarian curry', null, vegan, 'Ask for the named vegetarian curry and confirm branch availability.', 'https://tenpo.ichibanya.co.jp/map/1866/', ['https://www.ichibanya.co.jp/menu/detail.html?id=1327']),
+        option('AFURI Shinjuku', 'Lumine 1 B2', 'Chicken-and-dashi yuzu shio ramen', 'Rainbow Vegan Ramen', null, vegan, 'Listed until 22:00 or until soup runs out.', 'https://www.afuri.com/menu/', ['https://afuri.com/findus/']),
+        option('Sushiro Shinjuku West Exit', 'West side of Shinjuku Station', 'Salmon or tuna sushi', 'Cucumber rolls or edamame if available', null, check, 'Check the plant-only choices on the ordering screen and ask about sauces. Use CoCo if the wait is long or the vegetarian selection is limited.', 'https://www.akindo-sushiro.co.jp/en/shop/detail.php?id=2550&pref=13')
       ]}},
-    {date:23, label:'Mon 23 · To Kyoto', route:'Tokyo Station → Kyoto → hotel / station shops → optional Gion',
-      breakfast:{time:'07:00–08:00 · hotel / train takeaway', note:'Public holiday. Buy ahead; do not queue just before the ≈09:30 Nozomi to Kyoto.', options:breakfasts('Senzoku / Iriya; eat before check-out or take onto the train', 'Buy ahead for the transfer morning.', 2)},
+    {date:23, label:'Mon 23 · To Kyoto', route:'Ueno → Sumida River → Tokyo Station → Kyoto → Gion → Seta',
+      breakfast:{time:'Around 07:30 · takeaway on the way to Sumida River', note:'Pick up breakfast after checking out or at Tokyo Station if early. Allow a buffer for the booked 09:30 Nozomi.', options:breakfasts('Ueno New Izu / Inaricho or Tokyo Station', 'Buy on the way or pack ahead.', 2)},
       lunch:{time:'12:00–13:00 · Kyoto Station / Shichijo', note:'Leave bags at your Kyoto hotel before lunch; stay near the station for an indoor arrival afternoon.', options:[
         uno('Kyoto Station 10F · Kyoto Ramen Koji', 'Both vegan; allow for public-holiday queues.'),
         option('Veg Out', 'Shichijo / Kamo River, Kyoto', 'Seasonal vegan lunch plate', 'Vegan curry or plant-based lunch', [3200,5000], allVegan, 'Confirm Monday / public-holiday opening before walking from Kyoto Station; all food is vegan.', sources.vegout),
@@ -410,7 +415,8 @@
     dates.append(button);
     dayButtons.set(day.date, button);
   });
-  ['breakfast', 'lunch', 'dinner'].forEach(meal => {
+  const mealPeriods = ['breakfast', 'lunch', 'snacks', 'dinner'];
+  mealPeriods.forEach(meal => {
     const button = el('button', '', meal[0].toUpperCase() + meal.slice(1));
     button.type = 'button';
     button.setAttribute('aria-controls', panel.id);
@@ -421,12 +427,16 @@
   const price = cost => cost
     ? 'For 2: ≈¥' + cost.map(v => v.toLocaleString('en-US')).filter((v,i,a) => i === 0 || v !== a[0]).join('–') +
       ' / ≈₹' + cost.map(v => Math.round(v * 0.6099).toLocaleString('en-IN')).filter((v,i,a) => i === 0 || v !== a[0]).join('–')
-    : 'Cost varies · confirm airport / airline prices';
+    : 'Cost varies · check current prices';
   function render() {
     const day = days.find(item => item.date === selectedDay);
+    if (!day[selectedMeal]) selectedMeal = 'lunch';
     const meal = day[selectedMeal];
     dayButtons.forEach((button, key) => button.setAttribute('aria-pressed', String(key === selectedDay)));
-    mealButtons.forEach((button, key) => button.setAttribute('aria-pressed', String(key === selectedMeal)));
+    mealButtons.forEach((button, key) => {
+      button.hidden = !day[key];
+      button.setAttribute('aria-pressed', String(key === selectedMeal));
+    });
     panel.replaceChildren();
     panel.dataset.date = String(selectedDay);
     panel.dataset.meal = selectedMeal;
@@ -461,7 +471,7 @@
     panel.append(grid);
   }
   const followHash = () => {
-    const match = location.hash.match(/^#meals-(2[0-8])(?:-(breakfast|lunch|dinner))?$/);
+    const match = location.hash.match(/^#meals-(2[0-8])(?:-(breakfast|lunch|snacks|dinner))?$/);
     if (!match) return false;
     selectedDay = Number(match[1]);
     selectedMeal = match[2] || 'lunch';
@@ -476,7 +486,7 @@
   days.forEach(day => {
     const details = el('details', 'meal-full-day');
     details.append(el('summary', '', day.label + ' — all meals'));
-    ['breakfast','lunch','dinner'].forEach(period => {
+    mealPeriods.filter(period => day[period]).forEach(period => {
       details.append(el('h4', '', day[period].time));
       const list = el('ol');
       day[period].options.forEach(choice => {
