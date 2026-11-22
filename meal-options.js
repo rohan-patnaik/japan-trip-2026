@@ -290,20 +290,20 @@
         option('Jikasei MENSHO', 'Shibuya PARCO B1, 15-1 Udagawacho', 'Vegan miso ramen + pork-chashu topping if staff confirms availability and no beef', 'Vegan tantanmen or spicy vegan miso ramen', [3000,4500], vegan, '11:30–23:00, last order 22:00. His signature chicken-paitan bowl includes A5 wagyu: skip it. Use a vegan base for his pork addition; her bowl stays entirely vegan. Finish in time for any Ginza collection deadline.', sources.mensho),
         option('Vegan Izakaya Masaka', 'Shibuya PARCO B1 — fallback on the same floor', 'Vegan mains or small plates from the current menu', 'Vegan mains or small plates from the current menu', [3000,5000], allVegan, 'Check the menu and wait at the door.', 'https://shibuya.parco.jp/floor/detail/?f=b1f')
       ]}},
-    {date:22, label:'Sun 22 · Shin-chan', route:'Ueno → Ginza / Kappabashi → Kasukabe → Ginza → Akihabara → optional Shinjuku',
+    {date:22, label:'Sun 22 · Shin-chan', route:'Ueno → Ginza / Kappabashi → Kasukabe → Ginza → Harajuku → Shinjuku → Akihabara → Ueno',
       breakfast:{time:'Before checkout or during the Ginza wait', note:'Pick up breakfast before leaving or while watching the Onitsuka queue.', options:breakfasts('Asakusa / Iriya or Ginza', 'Allow time for the bag drop and shoe queue.', 1)},
       lunch:{time:'Before fitting · near Onitsuka Orange', note:'Watch the queue and keep enough time to get back to the store.', options:[
         option('Kyushu Jangara Ginza', '6-12-17 Ginza', 'Tonkotsu ramen', 'Vegan shoyu ramen', [2800,4200], vegan, 'Choose this if the queue leaves enough time to sit down.', 'https://kyushujangara.co.jp/en/shoplist/ginza/'),
         option('KOMEDA is, Higashi-Ginza', 'Higashi-Ginza', 'Plant-based sandwich and coffee', 'Plant-based sandwich and coffee', null, allVegan, 'Allow time for a sit-down meal and the walk back to Orange.', 'https://komeda-is.com/'),
         option('Konbini takeaway', 'Near Onitsuka Orange, Ginza', 'Salmon onigiri and a drink', 'Plum or salted onigiri, yogurt and fruit', null, label, 'Fast fallback if token 78 is close. Check the rice seasoning and ingredients.', sources.seven)
       ]},
-      snacks:{time:'≈16:00–16:35 · Kasukabe', note:'Choose one if it fits before the return train.', options:[
+      snacks:{time:'≈17:20 · Kasukabe', note:'Grab a quick snack or a rice ball to tide you over until dinner. Leave LaLa Garden by 17:25.', options:[
         option('Smiley Crêpe', 'LaLa Garden Kasukabe 1F', 'Fruit-and-cream crêpe', 'Fruit-and-cream crêpe if the batter is suitable', null, check, 'Ask about egg if needed.', 'https://mitsui-shopping-park.com/lalag-kasukabe/shopguide/506035.html'),
-        option('Puratto Kasukabe', 'Near Kasukabe Station East Exit', 'Shin-chan packaged snack', 'Suitable packaged snack after checking the label', null, label, 'Stock is unconfirmed. Get the stamp first; the centre closes at 16:30.', 'https://visit-kasukabe.jp/pratkasukabe.html'),
+        option('Yaoko', 'LaLa Garden Kasukabe 1F', 'Salmon onigiri or a small sushi pack', 'Plain inari or salted onigiri and vegetable sides', null, label, 'Check the label and what is on the shelf.', 'https://www.yaoko-net.com/store/store01/167.html'),
         option('Konbini snack', 'Near Kasukabe Station', 'Cut fruit and yogurt', 'Cut fruit and plain yogurt', null, label, 'Check the yogurt ingredients if avoiding gelatin.', sources.seven)
       ]},
-      dinner:{time:'≈20:30 · Shinjuku', note:'Eat around Shinjuku Station if you continue west after Akihabara. If shopping runs late, eat near Akihabara or Ueno.', options:[
-        option('CoCo Ichibanya Shinjuku West Exit', '1-2-12 Nishi-Shinjuku', 'Chicken cutlet curry with pork sauce', 'CoCoICHI vegetarian curry', null, vegan, 'Ask for the named vegetarian curry and confirm branch availability.', 'https://tenpo.ichibanya.co.jp/map/1866/', ['https://www.ichibanya.co.jp/menu/detail.html?id=1327']),
+      dinner:{time:'≈20:25 · Shinjuku', note:'Have dinner near Shinjuku Station after Harajuku. Take the JR local to Akihabara afterwards.', options:[
+        option('CoCo Ichibanya Shinjuku West Exit', '1-2-12 Nishi-Shinjuku', 'CoCoICHI vegetarian curry with chicken cutlet if staff confirms the topping is beef-free', 'CoCoICHI vegetarian curry with spinach', null, vegan, 'Ask for the named vegetarian curry and confirm branch availability.', 'https://tenpo.ichibanya.co.jp/map/1866/', ['https://www.ichibanya.co.jp/menu/detail.html?id=1327']),
         option('AFURI Shinjuku', 'Lumine 1 B2', 'Chicken-and-dashi yuzu shio ramen', 'Rainbow Vegan Ramen', null, vegan, 'Listed until 22:00 or until soup runs out.', 'https://www.afuri.com/menu/', ['https://afuri.com/findus/']),
         option('Sushiro Shinjuku West Exit', 'West side of Shinjuku Station', 'Salmon or tuna sushi', 'Cucumber rolls or edamame if available', null, check, 'Check the plant-only choices on the ordering screen and ask about sauces. Use CoCo if the wait is long or the vegetarian selection is limited.', 'https://www.akindo-sushiro.co.jp/en/shop/detail.php?id=2550&pref=13')
       ]}},
